@@ -1,0 +1,77 @@
+// start .sSearch
+.sSearch {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sSearch
+
+.search-block {
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(53);
+		padding-bottom: rem(53);
+	}
+	padding-top: rem(32);
+	padding-bottom: rem(32);
+	&__input-block {
+		max-width: rem(642);
+		width: 100%;
+		position: relative;
+	}
+	&__input-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__input {
+		padding: 8px;
+		padding-right: 40px;
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		border-radius: 42px;
+		border: 1px solid $primary;
+		line-height: calc(24 / 16);
+		font-size: rem(16);
+	}
+	&__btn {
+		position: absolute;
+		width: 28px;
+		height: 28px;
+		right: 4px;
+		top: 50%;
+		transform: translateY(-50%);
+		border: none;
+		background-color: transparent;
+		.icon {
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: $primary;
+		}
+	}
+	&__search-result {
+		max-width: rem(642);
+		width: 100%;
+		margin-top: rem(8);
+		font-size: rem(12);
+		color: #838990;
+	}
+}

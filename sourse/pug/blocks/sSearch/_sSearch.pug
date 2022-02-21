@@ -1,0 +1,19 @@
+mixin sSearch(data)
+	// start sSearch
+	+b.SECTION.sSearch.section#sSearch&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 sSearch
+				
+			.row
+	// end sSearch
+
+mixin search-block()
+	+b.search-block
+		.container
+			+e.input-wrap
+				+e.input-block
+					+e.INPUT.input(placeholder=`Введите`)
+					+e.BUTTON.btn(type="button")
+						+icon(`search`)
+				+e.search-result Найдено 56 результатов

@@ -1,0 +1,62 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= `Компоненты`
+	title= title
+block pagecontent
+	//- +mob-mnu()
+
+	+top-nav()
+	//- +headerBlock
+	.container.mt-4.mb-4
+		h2 Кнопки
+		.d-flex.mb-4(style="flex-wrap:wrap; align-items:center;")
+			a.btn.btn-primary.me-3(href="#") Button
+			a.btn.btn-primary.disable.me-3(href="#") Disable
+			a.btn.btn-primary.btn-icon.me-3(href="#") 
+				+icon(`chevron-right`)
+				span Button
+			a.btn.btn-primary.btn-icon.me-3(href="#")
+				span Button
+				+icon(`chevron-right`)
+			a.btn.btn-primary.btn-icon.me-3(href="#")
+				span Button
+				+icon(`chevron-right`)
+			a.btn.btn-primary.btn-icon.btn-no-text.me-3(href="#")
+				+icon(`chevron-right`)
+		.d-flex.mb-4(style="flex-wrap:wrap; align-items:center;")
+			a.btn.btn-outline-primary.me-3(href="#") Button
+			a.btn.btn-outline-primary.disable.me-3(href="#") Disable
+			a.btn.btn-outline-primary.btn-icon.me-3(href="#") 
+				+icon(`chevron-right`)
+				span Button
+			a.btn.btn-outline-primary.btn-icon.me-3(href="#")
+				span Button
+				+icon(`chevron-right`)
+			a.btn.btn-outline-primary.btn-icon.me-3(href="#")
+				span Button
+				+icon(`chevron-right`)
+			a.btn.btn-outline-primary.btn-icon.btn-no-text.me-3(href="#")
+				+icon(`chevron-right`)
+			
+	//- +footer()
+      
+
+
+
