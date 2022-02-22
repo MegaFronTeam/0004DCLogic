@@ -31,6 +31,20 @@ body {
 		}
 		margin-right: var(--spacing-end);
 	}
+	&::after{
+		content:'';
+		z-index: -1;
+		@include media-breakpoint-up(lg){
+			height: rem(875);
+		}
+		max-height: 100%;
+		height: rem(560);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: linear-gradient(180deg, #FFFFFF 0%, #F6F9FF 100%);
+	}
 	// min-width: 575px;
 	// -webkit-font-smoothing: antialiased;
 	// position: relative;

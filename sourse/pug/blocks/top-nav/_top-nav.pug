@@ -20,14 +20,38 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
+		.container-fluid
 			.row
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+				.col-auto
+					+e.logo-wrap
+						+e.logo(href="#")
+							img(src="img/svg/logo.svg", alt="")
+				.col
+					+e.menu-wrap
+						+e.menu
+							a(href="#") Решения
+							a(href="#") Отрасли
+							a(href="#") Информация
+							a(href="#") Контакты
+				.col-auto
+					+e.wrap
+						+e.search-btn(href="#")
+							+icon(`search`)
+						+e.info
+							p +7 (495) 989-62-27
+							p info@dclogic.ru
 	// end top-nav
+//- mixin top-nav() 
+//- 	// start top-nav
+//- 	+b.top-nav.block-with-lazy
+//- 		.container
+//- 			.row
+//- 				.col.order-lg-0.order-last
+//- 					.menu-mobile.menu-mobile--js
+//- 						.menu-mobile__inner
+//- 							+menu-toggle()
+//- 							+mnu()
+					
+//- 				.col-auto.d-lg-none
+//- 					+menu-toggle()
+//- 	// end top-nav

@@ -50,10 +50,10 @@
 
 .search-block {
 	@include media-breakpoint-up(lg) {
-		padding-top: rem(53);
+		padding-top: rem(56);
 		padding-bottom: rem(33);
 	}
-	padding-top: rem(32);
+	padding-top: rem(40);
 	padding-bottom: rem(32);
 	&__input-block {
 		max-width: rem(642);
