@@ -1,11 +1,8 @@
 mixin sSearch(data)
 	// start sSearch
-	+b.SECTION.sSearch.section#sSearch&attributes(attributes)
+	+b.sSearch.section#sSearch&attributes(attributes)
+		+links-wrap(searchTabs)
 		.container
-			+b.section-title.text-center
-				h2 sSearch
-				
-			.row
 	// end sSearch
 
 mixin search-block()

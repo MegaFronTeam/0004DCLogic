@@ -28,3 +28,13 @@ mixin addblock()
 		+e.btn--minus(type="button")
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
+
+mixin links-wrap(items)
+	+b.links-wrap
+		.swiper.links-wrap-slider
+			.swiper-wrapper
+				each item,index in items
+					if (index==0)
+						+e.btn.swiper-slide.active(href="#")=item
+					else
+						+e.btn.swiper-slide(href="#")=item

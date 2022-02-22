@@ -287,7 +287,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -350,6 +350,9 @@ function eventHandler() {
 		},
 	}
 
+	const tabsSlider = new Swiper('.links-wrap-slider', {
+		slidesPerView: 'auto',
+	});
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,

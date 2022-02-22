@@ -12,6 +12,9 @@
 	"social":[
 		"fb","instagram","telegram"
 	],
+	"searchTabs":[
+		"Все","Решения","Отрасли","Проекты","Мероприятия","Новости","СМИ о нас"
+	],
 	"index":{
 		"head": {
 			"title": "тест dffsdf dfsdтест 2222"

@@ -1,12 +1,13 @@
 // start .sSearch
 .sSearch {
-	// --sPT: ;
-	// --sPB: ;
+	--sPT: 0;
+	--sPB: #{rem(20)};
 	// --sTPB: ;
 
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
+
 	}
 	@include media-breakpoint-up(md) {
 	}
@@ -23,7 +24,7 @@
 .search-block {
 	@include media-breakpoint-up(lg) {
 		padding-top: rem(53);
-		padding-bottom: rem(53);
+		padding-bottom: rem(33);
 	}
 	padding-top: rem(32);
 	padding-bottom: rem(32);
