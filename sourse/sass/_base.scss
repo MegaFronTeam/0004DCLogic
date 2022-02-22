@@ -23,6 +23,7 @@ html {
 }
 
 body {
+	background-color: #f6f9ff;
 	&.fixed,
 	&.fancybox-active {
 		.header {
@@ -527,4 +528,32 @@ iframe {
 }
 .btn-outline-primary.disable {
 	--out-color: #dee5ed;
+}
+
+.breadcrumb {
+	display: flex;
+	list-style-type: none;
+	font-size: rem(12);
+	line-height: calc(16 / 12);
+	padding-left: 0;
+	a {
+		padding-right: rem(12);
+		position: relative;
+		&::after {
+			content: "/";
+			position: absolute;
+			top: 50%;
+			right: rem(2);
+			transform: translateY(-50%);
+			color: #031d3a;
+			opacity: 0.5;
+		}
+	}
+	li.active {
+		a {
+			&::after {
+				display: none;
+			}
+		}
+	}
 }
