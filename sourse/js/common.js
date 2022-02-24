@@ -327,6 +327,10 @@ function eventHandler() {
 
 	whenResize();
 
+	$(`.solution-content__show-text`).click(function(){
+		$(this).parent().toggleClass(`active`);
+		$(this).toggleClass(`active`);
+	});
 
 	$('.tabs-wrap__btn').click(function(){
 		let items = Array.from($(".tabs-wrap__btn"));

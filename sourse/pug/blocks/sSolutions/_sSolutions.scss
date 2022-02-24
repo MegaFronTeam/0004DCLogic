@@ -58,7 +58,8 @@
 			padding-top: rem(152);
 			padding-left: rem(16);
 			padding-right: rem(16);
-			padding-bottom: rem(8);
+			padding-bottom: rem(0);
+			overflow: hidden;
 			border-bottom: 1px solid rgba(1, 122, 255, 0.2);
 		}
 	}
@@ -147,6 +148,29 @@
 	ul {
 		list-style-type: none;
 		margin-bottom: 0;
+		position: relative;
+		@include media-breakpoint-up(lg){
+			max-height: none !important;
+			&::after{
+				display: none;
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			max-height: rem(217);
+			overflow: hidden;
+			padding-bottom: rem(60);
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: rem(147);
+				bottom: 0;
+				left: 0;
+				background: linear-gradient(180deg, rgba(255, 255, 255, 0) 1.7%, #FFFFFF 80.32%);
+			}
+		}
 		li {
 			padding-left: rem(36);
 			position: relative;
@@ -170,6 +194,14 @@
 			ul {
 				margin-left: rem(-30);
 				margin-top: rem(20);
+				@include media-breakpoint-down(lg) {
+					max-height: none;
+					overflow: unset;
+					padding-bottom: 0;
+					&::after{
+						display: none;
+					}
+				}
 				li {
 					font-weight: normal;
 					margin-bottom: rem(16);
@@ -188,6 +220,52 @@
 					}
 				}
 			}
+		}
+	}
+	ul.short{
+		@include media-breakpoint-down(lg){
+			&::after{
+				display: none !important;
+			}
+		}
+	}
+	ul.active{
+		@include media-breakpoint-down(lg){
+			max-height: none;
+			&::after{
+				display: none;
+			}
+		}
+	}
+	&__show-text {
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+		width: rem(189);
+		height: rem(40);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		z-index: 2;
+		bottom: rem(8);
+		left: 50%;
+		transform: translateX(-50%);
+		cursor: pointer;
+		color: $primary;
+		font-weight: 600;
+		font-size: rem(14);
+		line-height: calc(24 / 14);
+		.icon {
+			// transition-duration: 0.4s;
+			color: transparent;
+			stroke: $primary;
+			stroke-width: 2px;
+		}
+	}
+	&__show-text.active{
+		.icon{
+			transform: scaleY(-1);
 		}
 	}
 }
@@ -231,7 +309,7 @@
 		font-size: rem(13);
 		line-height: calc(16 / 13);
 	}
-	.swiper-pagination-bullet{
+	.swiper-pagination-bullet {
 		border: 1px solid transparent !important;
 		background-color: rgba($primary, 0.3) !important;
 	}
