@@ -328,6 +328,21 @@ function eventHandler() {
 	whenResize();
 
 
+	$('.tabs-wrap__btn').click(function(){
+		let items = Array.from($(".tabs-wrap__btn"));
+		if ($(this).hasClass(`active`)){
+			
+		}
+		else{
+			for(let i=0;i<items.length;i++){
+				if ($(items[i]).hasClass(`active`)){
+					$(items[i]).removeClass(`active`);
+				}
+			}
+			$(this).addClass(`active`);
+		}
+	});
+
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
