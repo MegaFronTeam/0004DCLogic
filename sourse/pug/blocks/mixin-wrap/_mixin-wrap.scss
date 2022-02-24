@@ -122,12 +122,10 @@
 }
 
 .tabs-wrap {
-	.tabs__caption{
-		@include media-breakpoint-up(lg){
-			margin-bottom: rem(54);
-		}
-		margin-bottom: rem(32);
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(54);
 	}
+	margin-bottom: rem(32);
 	&__btn {
 		@include media-breakpoint-up(lg) {
 			width: calc(100% / 7 - 24px / 7);

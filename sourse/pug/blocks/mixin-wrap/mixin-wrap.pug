@@ -40,15 +40,13 @@ mixin links-wrap(items)
 						+e.btn.swiper-slide(href="#")=item
 
 mixin tabs-wrap(items)
-	+b.tabs-wrap.tabs
+	+b.tabs-wrap
 		.swiper.tabs-wrap-slider
-			.swiper-wrapper.tabs__caption
+			.swiper-wrapper
 				each item,index in items
 					if (index==0)
-						+e.btn.tabs__btn.swiper-slide.active=item.caption
+						+e.btn.swiper-slide.active(href=`#${item.id}`)=item.caption
 							img(src=`img/svg/${item.img}.svg`, alt="")
 					else
-						+e.btn.tabs__btn.swiper-slide=item.caption
+						+e.btn.swiper-slide(href=`#${item.id}`)=item.caption
 							img(src=`img/svg/${item.img}.svg`, alt="")
-			.tabs__content-wrap
-				block

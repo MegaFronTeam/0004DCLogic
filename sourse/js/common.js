@@ -1,5 +1,5 @@
 "use strict";
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 
@@ -21,8 +21,8 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -77,7 +77,7 @@ const JSCCommon = {
 		}
 
 	},
-	mobileMenu() { 
+	mobileMenu() {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
@@ -295,7 +295,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -355,6 +355,13 @@ function eventHandler() {
 	});
 	const tabsSlider = new Swiper('.tabs-wrap-slider', {
 		slidesPerView: 'auto',
+	});
+	const industriesSlider = new Swiper('.industries-slider', {
+		slidesPerView: 'auto',
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
 	});
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
