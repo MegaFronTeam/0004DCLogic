@@ -31,10 +31,10 @@ body {
 		}
 		margin-right: var(--spacing-end);
 	}
-	&::after{
-		content:'';
+	&::after {
+		content: "";
 		z-index: -1;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			height: rem(875);
 		}
 		max-height: 100%;
@@ -43,7 +43,7 @@ body {
 		top: 0;
 		left: 0;
 		width: 100%;
-		background: linear-gradient(180deg, #FFFFFF 0%, #F6F9FF 100%);
+		background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%);
 	}
 	// min-width: 575px;
 	// -webkit-font-smoothing: antialiased;
@@ -575,4 +575,11 @@ iframe {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+}
+
+body.tabs-page {
+	background-color: #eef3fa;
+	&::after {
+		background: linear-gradient(180deg, #ffffff 0%, #eef3fa 44.74%);
+	}
 }

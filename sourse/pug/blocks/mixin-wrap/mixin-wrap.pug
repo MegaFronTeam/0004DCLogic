@@ -38,3 +38,17 @@ mixin links-wrap(items)
 						+e.btn.swiper-slide.active(href="#")=item
 					else
 						+e.btn.swiper-slide(href="#")=item
+
+mixin tabs-wrap(items)
+	+b.tabs-wrap.tabs
+		.swiper.tabs-wrap-slider
+			.swiper-wrapper.tabs__caption
+				each item,index in items
+					if (index==0)
+						+e.btn.tabs__btn.swiper-slide.active=item.caption
+							img(src=`img/svg/${item.img}.svg`, alt="")
+					else
+						+e.btn.tabs__btn.swiper-slide=item.caption
+							img(src=`img/svg/${item.img}.svg`, alt="")
+			.tabs__content-wrap
+				block

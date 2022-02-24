@@ -12,7 +12,7 @@ mixin footer()
 							a(href="#") Информация
 						li
 							a(href="#") Контакты
-					+e.logo(href="/")
+					+e.logo
 						img(src="img/svg/logo-2.svg", alt="")
 				+e.info-block
 					+e.info
@@ -45,15 +45,15 @@ mixin footer()
 							img(src="img/svg/whatsapp.svg", alt="")
 						a(href="#")
 							img(src="img/svg/vk.svg", alt="")
-			+e.sub-menu
-				+e.menu-logo(href="/")
-					img(src="img/svg/logo.svg", alt="")
-				+e.menu-btns
-					+e.menu-btn--tel(href="#")
-						+icon(`phone`)
-					+e.menu-btn--mail(href="#")
-						+icon(`mail`)
-					+e.menu-btn--search(href="#")
-						+icon(`search`)
-					+e.menu-btn--menu(href="#")
-						+icon(`menu`)
+			//- +e.sub-menu
+			//- 	+e.menu-logo
+			//- 		img(src="img/svg/logo.svg", alt="")
+			//- 	+e.menu-btns
+			//- 		+e.menu-btn--tel(href="#")
+			//- 			+icon(`phone`)
+			//- 		+e.menu-btn--mail(href="#")
+			//- 			+icon(`mail`)
+			//- 		+e.menu-btn--search(href="#")
+			//- 			+icon(`search`)
+			//- 		+e.menu-btn--menu(href="#")
+			//- 			+icon(`menu`)

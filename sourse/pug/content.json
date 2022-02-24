@@ -33,5 +33,35 @@
 			"title": "заловок 33",
 			"text": "текст"
 			}
+		],
+		"solutionTabs":[
+			{
+				"caption": "Вычислительная инфраструктура",
+				"img": "solutionTabs-1"
+			},
+			{
+				"caption": "Цифровизация предприятий",
+				"img": "solutionTabs-2"
+			},
+			{
+				"caption": "Информационная безопасность",
+				"img": "solutionTabs-3"
+			},
+			{
+				"caption": "Импортозамещение",
+				"img": "solutionTabs-4"
+			},
+			{
+				"caption": "Передовые направления",
+				"img": "solutionTabs-5"
+			},
+			{
+				"caption": "Услуги",
+				"img": "solutionTabs-6"
+			},
+			{
+				"caption": "Промышленная автоматизация",
+				"img": "solutionTabs-7"
+			}
 		]
 	}

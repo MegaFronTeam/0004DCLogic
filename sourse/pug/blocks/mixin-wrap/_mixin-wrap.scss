@@ -102,14 +102,14 @@
 		}
 		&:hover {
 			color: $primary;
-			&::after{
+			&::after {
 				background-color: $primary;
 			}
 		}
 	}
 	&__btn.active {
 		color: $primary;
-		&::after{
+		&::after {
 			background-color: $primary;
 		}
 	}
@@ -119,4 +119,79 @@
 		}
 	}
 	border-bottom: 1px solid #dee5ed;
+}
+
+.tabs-wrap {
+	.tabs__caption{
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(54);
+		}
+		margin-bottom: rem(32);
+	}
+	&__btn {
+		@include media-breakpoint-up(lg) {
+			width: calc(100% / 7 - 24px / 7);
+			min-width: rem(173);
+		}
+		overflow: hidden;
+		padding-right: rem(34);
+		padding-top: rem(20);
+		padding-bottom: rem(20);
+		padding-left: rem(13);
+		color: $body-color;
+		transition-duration: 0.4s;
+		background-color: $white;
+		position: relative;
+		cursor: pointer;
+		width: rem(173);
+		height: rem(72);
+		margin-right: rem(4);
+		font-weight: 600;
+		font-size: rem(13);
+		line-height: calc(16 / 13);
+		img {
+			transition-duration: 0.4s;
+			filter: grayscale(1);
+			width: rem(35);
+			height: rem(53);
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			width: calc(100% - 3px);
+			height: 2px;
+			z-index: 2;
+			bottom: 0;
+			left: 0;
+			background-color: transparent;
+			transition-duration: 0.4s;
+		}
+		&:hover {
+			background-color: rgba(1, 122, 255, 0.09);
+			color: $primary;
+			img {
+				filter: grayscale(0);
+			}
+			&::after {
+				background-color: $primary;
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__btn.active {
+		background-color: rgba(1, 122, 255, 0.09);
+		color: $primary;
+		img {
+			filter: grayscale(0);
+		}
+		&::after {
+			background-color: $primary;
+		}
+	}
 }

@@ -33,7 +33,16 @@ mixin top-nav()
 							a(href="#") Отрасли
 							a(href="#") Информация
 							a(href="#") Контакты
-				.col-auto
+					+e.menu-btns
+						+e.menu-btn--tel(href="tel:+74959896227")
+							+icon(`phone`)
+						+e.menu-btn--mail(href="mailto:info@dclogic.ru")
+							+icon(`mail`)
+						+e.menu-btn--search(href="#")
+							+icon(`search`)
+						+e.menu-btn--menu(href="#")
+							+icon(`menu`)
+				.col-auto.d-none.d-lg-block
 					+e.wrap
 						+e.search-btn(href="#")
 							+icon(`search`)

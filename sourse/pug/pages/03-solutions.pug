@@ -1,0 +1,26 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sSolutions/_sSolutions.pug 
+
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'tabs-page' 
+	- let  bg= null
+
+block title
+	- let  title= `Решения`
+	title= title
+block pagecontent
+	//- +mob-mnu()
+
+	+top-nav()
+	+sSolutions
+	+footer()
+      
+
+
+

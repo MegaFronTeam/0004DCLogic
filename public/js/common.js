@@ -350,7 +350,10 @@ function eventHandler() {
 		},
 	}
 
-	const tabsSlider = new Swiper('.links-wrap-slider', {
+	const linksSlider = new Swiper('.links-wrap-slider', {
+		slidesPerView: 'auto',
+	});
+	const tabsSlider = new Swiper('.tabs-wrap-slider', {
 		slidesPerView: 'auto',
 	});
 	const swiper4 = new Swiper('.sBanners__slider--js', {
