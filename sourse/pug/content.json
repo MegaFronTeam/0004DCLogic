@@ -70,5 +70,42 @@
 				"img": "solutionTabs-7",
 				"id" : "industrial"
 			}
+		],
+		"industriesTabs":[
+			{
+				"caption": "Промышленность",
+				"img": "industries-slider-1",
+				"id" : "industry"
+			},
+			{
+				"caption": "Торговые сети (retail)",
+				"img": "industries-slider-2",
+				"id" : "retail"
+			},
+			{
+				"caption": "Государственные структры",
+				"img": "industries-slider-3",
+				"id" : "state"
+			},
+			{
+				"caption": "Логистика",
+				"img": "industries-slider-4",
+				"id" : "logistics"
+			},
+			{
+				"caption": "Банки, Финансовые организации и Страхование",
+				"img": "industries-slider-5",
+				"id" : "banks"
+			},
+			{
+				"caption": "Строительство и девелоперы",
+				"img": "industries-slider-6",
+				"id" : "construction"
+			},
+			{
+				"caption": "Образование, НИИ",
+				"img": "industries-slider-7",
+				"id" : "study"
+			}
 		]
 	}
