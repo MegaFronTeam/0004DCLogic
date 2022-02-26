@@ -71,7 +71,7 @@
 			</div>
 			<!-- end top-nav-->
 			<div class="sOneSolution section">
-				<div class="container-fluid">
+				<div class="container-xl">
 					<div class="sOneSolution__breadcrumb-wrap">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
@@ -180,12 +180,146 @@
 					</div>
 					<div class="sOneSolution__projects">
 						<h3>Проекты</h3>
-						<div class="sOneSolution__projects-slider">
+						<div class="sOneSolution__projects-slider swiper">
+							<div class="swiper-wrapper">
+								<div class="project-slider-item swiper-slide">
+									<div class="project-slider-item__logo">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/project-slider-logo-1.webp"/><img src="img/@2x/project-slider-logo-1.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--><span>Роскосмос</span>
+									</div>
+									<div class="project-slider-item__title">Поставка персональных систем производства и МФУ HP
+									</div>
+									<div class="project-slider-item__caption">Вычислительная инфраструктура, Цифровизация предприятий
+									</div>
+									<ul>
+										<li>Оптимизировать «бумажные» потоки в компании</li>
+										<li>Минимизация потребления электроэнергии</li>
+										<li>Увеличение эффективности для обеспечения уровня необходимой производительности</li>
+										<li>Наличие резервного запаса (неснижаемый остаток) на складе поставщика</li>
+									</ul>
+									<a class="project-slider-item__btn" href="#">Читать отзыв заказчика
+									</a>
+								</div>
+								<div class="project-slider-item swiper-slide">
+									<div class="project-slider-item__logo">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/project-slider-logo-2.webp"/><img src="img/@2x/project-slider-logo-2.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--><span>Промтех</span>
+									</div>
+									<div class="project-slider-item__title">Поставка персональных систем производства HP
+									</div>
+									<div class="project-slider-item__caption">Поставка персональных систем производства HP
+									</div>
+									<ul>
+										<li>Увеличение эффективности для обеспечения уровня необходимой производительности</li>
+										<li>Минимизация потребления электроэнергии</li>
+									</ul>
+									<a class="project-slider-item__btn" href="#">Читать отзыв заказчика
+									</a>
+								</div>
+								<div class="project-slider-item swiper-slide">
+									<div class="project-slider-item__logo">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/project-slider-logo-3.webp"/><img src="img/@2x/project-slider-logo-3.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--><span>Росатом</span>
+									</div>
+									<div class="project-slider-item__title">Поставка компьютерного оборудования производства HP
+									</div>
+									<div class="project-slider-item__caption">Вычислительная инфраструктура
+									</div>
+									<ul>
+										<li>Увеличение эффективности для обеспечения уровня необходимой производительности</li>
+										<li>Минимизация потребления электроэнергии</li>
+									</ul>
+									<a class="project-slider-item__btn" href="#">Читать отзыв заказчика
+									</a>
+								</div>
+								<div class="project-slider-item swiper-slide">
+									<div class="project-slider-item__logo">
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/project-slider-logo-4.webp"/><img src="img/@2x/project-slider-logo-4.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--><span>ДельтаКредит</span>
+									</div>
+									<div class="project-slider-item__title">Поставка лицензий Oracle
+									</div>
+									<div class="project-slider-item__caption">Вычислительная инфраструктура, Цифровизация предприятий
+									</div>
+									<ul>
+										<li>Быстрый заказ лицензий на продление, этим мы избежали увеличения стоимости лицензий для Заказчика</li>
+										<li>Беспрерывное оказание услуг сервисной поддержки компанией Oracle</li>
+									</ul>
+									<a class="project-slider-item__btn" href="#">Читать отзыв заказчика
+									</a>
+								</div>
+							</div>
 						</div>
 						<div class="sOneSolution__projects-btns">
+							<div class="sOneSolution__project-btn sOneSolution__project-btn--prev swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+								<svg class="icon icon-chevron-left ">
+									<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+								</svg>
+							</div>
+							<div class="sOneSolution__project-btn sOneSolution__project-btn--next swiper-button-hand swiper-button-hand-next swiper-button-next">
+								<svg class="icon icon-chevron-right ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+								</svg>
+							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+			<!-- start sForm-->
+			<section class="sForm section" id="sForm">
+				<div class="container-xl">
+					<div class="form-wrap">
+						<form>
+							<h2>Оставить заявку</h2>
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Название компании</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите название компании"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Контактный телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Введите номер"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">Cопроводительное письмо</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="sForm__btn-wrap">
+								<div class="sForm__btn btn btn-primary">Отправить</div>
+							</div>
+							<div class="sForm__agree">Нажимая кнопку «Отправить», я даю свое согласие<br>на обработку своих <a href="#">персональных данных</a></div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<!-- end sForm-->
+			<div class="sSolutionPrev">
+				<a class="sSolutionPrev__btn btn btn-outline-primary" href="#">Вернуться ко всем решениям
+				</a>
 			</div>
 			<footer class="footer">
 				<div class="footer__menu-btns">

@@ -375,6 +375,13 @@ function eventHandler() {
 	const tabsSlider = new Swiper('.tabs-wrap-slider', {
 		slidesPerView: 'auto',
 	});
+	const solutionSlider = new Swiper('.sOneSolution__projects-slider', {
+		slidesPerView: 'auto',
+		navigation: {
+			prevEl: ".sOneSolution__project-btn--prev",
+			nextEl: ".sOneSolution__project-btn--next",
+		}
+	});
 	const industriesSlider = new Swiper('.industries-slider', {
 		slidesPerView: 'auto',
 		pagination: {

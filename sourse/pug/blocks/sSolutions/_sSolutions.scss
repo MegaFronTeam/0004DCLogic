@@ -12,7 +12,7 @@
 		margin-bottom: rem(16);
 		text-align: center;
 	}
-	.container-fluid {
+	.container-xl {
 		@include media-breakpoint-down(lg) {
 			padding: 0;
 		}
@@ -321,10 +321,11 @@
 
 .sOneSolution {
 	--sPT: 0;
+	--sPB: 0;
 	@include media-breakpoint-up(lg) {
 		--sPB: #{rem(40)};
 	}
-	.container-fluid {
+	.container-xl {
 		@include media-breakpoint-down(lg) {
 			padding: 0;
 		}
@@ -418,7 +419,7 @@
 		}
 		font-size: rem(19);
 		margin-bottom: rem(24);
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			padding-left: rem(16);
 			padding-right: rem(16);
 		}
@@ -428,16 +429,30 @@
 		flex-wrap: wrap;
 		margin-bottom: rem(24);
 	}
-	&__projects{
+	&__projects {
 		position: relative;
-		h3{
-			@include media-breakpoint-up(lg){
+		h3 {
+			@include media-breakpoint-up(lg) {
 				padding-left: rem(38);
 				margin-bottom: rem(33);
 				text-align: left;
 			}
 			text-align: center;
 			margin-bottom: rem(24);
+		}
+	}
+
+	&__projects {
+		position: relative;
+	}
+	&__projects-btns {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 0;
+		right: rem(40);
+		@include media-breakpoint-down(lg) {
+			display: none;
 		}
 	}
 }
@@ -448,7 +463,7 @@
 		min-height: rem(542);
 		padding: rem(40);
 	}
-	@include media-breakpoint-down(lg){
+	@include media-breakpoint-down(lg) {
 		padding-top: rem(24);
 		padding-bottom: rem(32);
 		padding-left: rem(16);
@@ -456,7 +471,7 @@
 	}
 	position: relative;
 	width: 100%;
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(lg) {
 		&:nth-child(1) {
 			background-color: $white;
 		}
@@ -464,13 +479,13 @@
 			background-color: $white;
 		}
 		&:nth-child(2) {
-			background-color: #f8fafd
+			background-color: #f8fafd;
 		}
 		&:nth-child(3) {
-			background-color: #f8fafd
+			background-color: #f8fafd;
 		}
 	}
-	@include media-breakpoint-down(lg){
+	@include media-breakpoint-down(lg) {
 		&:nth-child(1) {
 			background-color: $white;
 		}
@@ -478,14 +493,14 @@
 			background-color: $white;
 		}
 		&:nth-child(2) {
-			background-color: #f8fafd
+			background-color: #f8fafd;
 		}
 		&:nth-child(4) {
-			background-color: #f8fafd
+			background-color: #f8fafd;
 		}
 	}
-	&__title{
-		@include media-breakpoint-up(lg){
+	&__title {
+		@include media-breakpoint-up(lg) {
 			font-size: rem(40);
 			margin-bottom: rem(30);
 		}
@@ -493,33 +508,33 @@
 		margin-bottom: rem(23);
 		max-width: 74.5%;
 	}
-	&__img{
+	&__img {
 		width: rem(44);
 		height: rem(40);
 		position: absolute;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			top: rem(45);
 			right: rem(40);
 		}
 		top: rem(29);
 		right: rem(16);
-		img{
+		img {
 			width: 100%;
 			height: 100%;
 			max-width: 100%;
 			max-height: 100%;
 		}
 	}
-	ul{
+	ul {
 		margin-bottom: 0;
 		list-style-type: none;
 	}
-	li{
+	li {
 		position: relative;
 		padding-left: rem(32);
 		margin-bottom: rem(16);
-		&::after{
-			content:'';
+		&::after {
+			content: "";
 			position: absolute;
 			width: 4px;
 			height: 4px;
@@ -529,7 +544,92 @@
 			top: rem(10);
 		}
 	}
-	&__caption{
-		line-height: calc(24/16);
+	&__caption {
+		line-height: calc(24 / 16);
+	}
+}
+
+.project-slider-item {
+	@include media-breakpoint-up(lg) {
+		width: rem(360);
+		height: rem(713);
+		margin-right: rem(6);
+		padding: rem(16);
+		padding-bottom: rem(48);
+	}
+	padding: rem(12);
+	padding-bottom: rem(28);
+	width: rem(328);
+	height: rem(645);
+	background-color: $white;
+	&:nth-child(odd) {
+		background-color: $primary;
+		color: $white;
+		.project-slider-item__caption {
+			color: rgba($white, 0.56);
+		}
+		.project-slider-item__btn {
+			color: $white;
+			border-color: $white;
+		}
+		li {
+			&::before {
+				background-image: url("../img/svg/project-slider-list-1.svg");
+			}
+		}
+	}
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	&__logo {
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(16);
+		}
+		margin-bottom: rem(8);
+		picture {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-right: 8px;
+		}
+	}
+	&__title {
+		font-size: rem(19);
+		margin-bottom: rem(8);
+	}
+	&__caption {
+		font-size: rem(12);
+		color: #838990;
+		margin-bottom: rem(18);
+	}
+	ul {
+		margin-bottom: 0;
+		list-style-type: none;
+	}
+	li {
+		font-size: rem(12);
+		margin-bottom: rem(20);
+		padding-left: rem(38);
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: rem(32);
+			height: rem(27);
+			left: 0;
+			top: rem(-5);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image: url("../img/svg/project-slider-list-2.svg");
+		}
+	}
+	&__btn {
+		@extend .btn;
+		width: 100%;
+		border-color: $primary;
+		color: $primary;
 	}
 }

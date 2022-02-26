@@ -4,6 +4,7 @@ include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/sSolutions/_sSolutions.pug 
+include ../blocks/sForm/_sForm.pug 
 
 include ../blocks/footer/_footer.pug
 
@@ -19,6 +20,8 @@ block pagecontent
 
 	+top-nav()
 	+sOneSolution
+	+sForm(`Оставить заявку`)
+	+sSolutionPrev
 	+footer()
       
 

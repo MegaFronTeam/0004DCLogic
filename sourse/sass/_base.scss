@@ -583,3 +583,45 @@ body.tabs-page {
 		background: linear-gradient(180deg, #ffffff 0%, #eef3fa 44.74%);
 	}
 }
+
+.swiper-button-hand {
+	position: relative;
+	top: unset;
+	left: unset;
+	right: unset;
+	bottom: unset;
+	width: rem(32);
+	height: rem(32);
+	border: 2px solid $primary;
+	background-color: transparent;
+	margin-left: 4px;
+	margin-right: 4px;
+	.icon {
+		color: transparent;
+		stroke-width: 2px;
+		stroke: $primary;
+		width: rem(24);
+		height: rem(24);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.form-wrap__input-title {
+	font-size: rem(12);
+	color: #838990;
+	margin-bottom: rem(8);
+	display: inline-block;
+}
+.form-wrap__input {
+	border: 1px solid $primary;
+	font-size: rem(16);
+	line-height: calc(24/16);
+	padding: rem(8);
+	border-radius: 8px;
+}
+textarea.form-wrap__input {
+	min-height: rem(192);
+}

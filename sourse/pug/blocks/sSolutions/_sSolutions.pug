@@ -1,7 +1,7 @@
 mixin sSolutions(data)
 	// start sSolutions
 	+b.SECTION.sSolutions.section#sSolutions&attributes(attributes)
-		.container-fluid
+		.container-xl
 			h1 Решения
 			+tabs-wrap(solutionTabs)
 			+computing-inf
@@ -278,7 +278,7 @@ mixin industrial()
 		
 mixin sOneSolution
 	+b.sOneSolution.section
-		.container-fluid
+		.container-xl
 			+e.breadcrumb-wrap
 				+breadcrumb(`Главная`,`Главная`,`Системы Хранения Данных (классические и программно определяемые)`)
 			+e.preview.bg-wrap
@@ -295,8 +295,55 @@ mixin sOneSolution
 				+description-item(`4`,`В чем польза решения`,`no`,`Благодаря Системе Хранения Данных значительно уменьшается размер использования в ИТ-инфраструктуре подсистем хранения данных.`)
 			+e.projects
 				h3 Проекты
-				+e.projects-slider
+				+e.projects-slider.swiper
+					.swiper-wrapper
+						+b.project-slider-item.swiper-slide
+							+e.logo
+								+pic(`project-slider-logo-1.png`,'',0)
+								span Роскосмос
+							+e.title Поставка персональных систем производства и МФУ HP
+							+e.caption Вычислительная инфраструктура, Цифровизация предприятий
+							ul
+								li Оптимизировать «бумажные» потоки в компании
+								li Минимизация потребления электроэнергии
+								li Увеличение эффективности для обеспечения уровня необходимой производительности
+								li Наличие резервного запаса (неснижаемый остаток) на складе поставщика
+							+e.btn(href="#") Читать отзыв заказчика
+						+b.project-slider-item.swiper-slide
+							+e.logo
+								+pic(`project-slider-logo-2.png`,'',0)
+								span Промтех
+							+e.title Поставка персональных систем производства HP
+							+e.caption Поставка персональных систем производства HP
+							ul
+								li Увеличение эффективности для обеспечения уровня необходимой производительности
+								li Минимизация потребления электроэнергии
+							+e.btn(href="#") Читать отзыв заказчика
+						+b.project-slider-item.swiper-slide
+							+e.logo
+								+pic(`project-slider-logo-3.png`,'',0)
+								span Росатом
+							+e.title Поставка компьютерного оборудования производства HP
+							+e.caption Вычислительная инфраструктура
+							ul
+								li Увеличение эффективности для обеспечения уровня необходимой производительности
+								li Минимизация потребления электроэнергии
+							+e.btn(href="#") Читать отзыв заказчика
+						+b.project-slider-item.swiper-slide
+							+e.logo
+								+pic(`project-slider-logo-4.png`,'',0)
+								span ДельтаКредит
+							+e.title Поставка лицензий Oracle
+							+e.caption Вычислительная инфраструктура, Цифровизация предприятий
+							ul
+								li Быстрый заказ лицензий на продление, этим мы избежали увеличения стоимости лицензий для Заказчика
+								li Беспрерывное оказание услуг сервисной поддержки компанией Oracle
+							+e.btn(href="#") Читать отзыв заказчика
 				+e.projects-btns
+					+e.project-btn--prev.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+						+icon('chevron-left')
+					+e.project-btn--next.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+						+icon('chevron-right')
 
 
 
@@ -312,3 +359,8 @@ mixin description-item(img,title,list,caption)
 				li Объектное хранилище
 		else
 			+e.caption!=caption
+
+
+mixin sSolutionPrev()
+	+b.sSolutionPrev
+		+e.btn.btn.btn-outline-primary(href="#") Вернуться ко всем решениям
