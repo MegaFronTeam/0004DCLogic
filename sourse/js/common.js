@@ -378,8 +378,22 @@ function eventHandler() {
 	const solutionSlider = new Swiper('.sOneSolution__projects-slider', {
 		slidesPerView: 'auto',
 		navigation: {
-			prevEl: ".sOneSolution__project-btn--prev",
-			nextEl: ".sOneSolution__project-btn--next",
+			prevEl: ".swiper-button-hand-prev",
+			nextEl: ".swiper-button-hand-next",
+		}
+	});
+	const solutionIndustriesSlider = new Swiper('.solution-content__projects-slider', {
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		navigation: {
+			prevEl: ".swiper-button-hand-prev",
+			nextEl: ".swiper-button-hand-next",
+		},
+		breakpoints:{
+			992:{
+				slidesPerView: '1',
+				spaceBetween: 1,
+			}
 		}
 	});
 	const industriesSlider = new Swiper('.industries-slider', {

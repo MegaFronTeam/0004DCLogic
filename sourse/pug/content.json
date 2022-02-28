@@ -74,37 +74,37 @@
 		"industriesTabs":[
 			{
 				"caption": "Промышленность",
-				"img": "industries-slider-1",
+				"img": "industries-tabs-1",
 				"id" : "industry"
 			},
 			{
 				"caption": "Торговые сети (retail)",
-				"img": "industries-slider-2",
+				"img": "industries-tabs-2",
 				"id" : "retail"
 			},
 			{
 				"caption": "Государственные структры",
-				"img": "industries-slider-3",
+				"img": "industries-tabs-3",
 				"id" : "state"
 			},
 			{
 				"caption": "Логистика",
-				"img": "industries-slider-4",
+				"img": "industries-tabs-4",
 				"id" : "logistics"
 			},
 			{
 				"caption": "Банки, Финансовые организации и Страхование",
-				"img": "industries-slider-5",
+				"img": "industries-tabs-5",
 				"id" : "banks"
 			},
 			{
 				"caption": "Строительство и девелоперы",
-				"img": "industries-slider-6",
+				"img": "industries-tabs-6",
 				"id" : "construction"
 			},
 			{
 				"caption": "Образование, НИИ",
-				"img": "industries-slider-7",
+				"img": "industries-tabs-7",
 				"id" : "study"
 			}
 		]

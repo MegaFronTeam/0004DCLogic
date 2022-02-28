@@ -1,7 +1,7 @@
 // start .sIndusries
 .sIndustries {
 	--sPT: 0;
-	// --sPB: ;
+	--sPB: #{rem(40)};
 	// --sTPB: ;
 	&__header {
 		@include media-breakpoint-up(lg) {

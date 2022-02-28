@@ -6,7 +6,7 @@
 	padding-bottom: rem(56);
 	margin-top: auto;
 	position: relative;
-	.container-fluid {
+	.container-xl {
 		@include media-breakpoint-down(lg) {
 			padding: 0;
 		}
