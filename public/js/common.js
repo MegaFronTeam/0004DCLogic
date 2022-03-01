@@ -327,19 +327,19 @@ function eventHandler() {
 
 	whenResize();
 
-	$(`.solution-content__show-text`).click(function(){
+	$(`.solution-content__show-text`).click(function () {
 		$(this).parent().toggleClass(`active`);
 		$(this).toggleClass(`active`);
 	});
 
-	$('.tabs-wrap__btn').click(function(){
+	$('.tabs-wrap__btn').click(function () {
 		let items = Array.from($(".tabs-wrap__btn"));
-		if ($(this).hasClass(`active`)){
-			
+		if ($(this).hasClass(`active`)) {
+
 		}
-		else{
-			for(let i=0;i<items.length;i++){
-				if ($(items[i]).hasClass(`active`)){
+		else {
+			for (let i = 0; i < items.length; i++) {
+				if ($(items[i]).hasClass(`active`)) {
 					$(items[i]).removeClass(`active`);
 				}
 			}
@@ -382,6 +382,19 @@ function eventHandler() {
 			nextEl: ".swiper-button-hand-next",
 		}
 	});
+	const contentSlider = new Swiper('.sContent__slider--js', {
+		slidesPerView: '1',
+		spaceBetween: 0,
+		navigation: {
+			prevEl: ".swiper-button-hand-prev",
+			nextEl: ".swiper-button-hand-next",
+		},
+		breakpoints: {
+			1280: {
+				spaceBetween: 40
+			}
+		}
+	});
 	const solutionIndustriesSlider = new Swiper('.solution-content__projects-slider', {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
@@ -389,8 +402,8 @@ function eventHandler() {
 			prevEl: ".swiper-button-hand-prev",
 			nextEl: ".swiper-button-hand-next",
 		},
-		breakpoints:{
-			992:{
+		breakpoints: {
+			992: {
 				slidesPerView: '1',
 				spaceBetween: 1,
 			}

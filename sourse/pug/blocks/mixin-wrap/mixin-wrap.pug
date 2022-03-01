@@ -50,3 +50,6 @@ mixin tabs-wrap(items)
 					else
 						+e.btn.swiper-slide(href=`#${item.id}`)=item.caption
 							img(src=`img/svg/${item.img}.svg`, alt="")
+
+mixin badge(title,color)
+	+b.badge(class=(color ? `--${color}` : ``))!=title

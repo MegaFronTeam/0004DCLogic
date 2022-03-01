@@ -1,9 +1,88 @@
-mixin sContent()
+mixin sContent(news)
 	// start sContent
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContent
-				
-			.row
+			h1 DCLogic выступил спонсором ежегодного конгресса «Подмосковные вечера»
+			if news
+				p.mini 06 октября 2021
+			else
+				h4 06 октября — 10 октября
+			p.big DCLogic выступил спонсором ежегодного конгресса «Подмосковные вечера», который прошел с 26 по 28 сентября в отеле Ареал. Организатором мероприятия выступил клуб Топ-менеджеров «4CIO».
+			h2 DCLogic
+			p В этом году на конгрессе обсуждались самые важные, интересные и волнующие вопросы ИТ и <a href="#">смежных сфер деятельности.</a> Помимо насыщенной деловой программы и выставки решений от партнеров, организаторы подготовили для участников гала-ужин и чемпионат по футболу.
+			ul
+				li Совершенствуйте свой бизнес в России с новым Dell Global Partner
+				li DCLogic признан крупнейшим ИТ-поставщиком в ритейле
+					ul
+						li Совершенствуйте свой бизнес в России с новым Dell Global Partner
+						li Совершенствуйте свой бизнес в России с новым Dell Global Partner
+				li DCLogic признан крупнейшим ИТ-поставщиком в ритейле
+			+pic(`content-1.jpg`,'',0)
+				p.description Description
+			h6 DCLogic
+			+e.table-wrap
+				table
+					thead
+						tr
+							th Maecenas
+							th Phasellus
+							th Gravida
+							th Integer
+					tbody
+						tr
+							td Nullam
+							td Tincidunt
+							td At elementum
+							td Dapibus
+						tr
+							td Luctus
+							td Mauris
+							td Felis
+							td Aenean
+						tr
+							td Dignissim
+							td Vestibulum
+							td Fusce
+							td Donec
+			p.quote Это было круто! Я регулярно приезжаю на «Подмосковные вечера» и каждый раз нахожу что-то новое и интересное для себя. Приятно было встретить знакомых, пообщаться и обсудить последние тенденции отрасли. Заметил много новых людей. Здорово, что конгресс притягивает все больше специалистов!
+			h3 DCLogic
+			p Совместно с нашим партнером Juniper Networks мы представили на выставке новые сетевые решения для безопасности.<br>От лица DCLogic в конгрессе приняли участие Денис Тищенко, заместитель генерального директора по работе с ключевыми заказчиками и Алексей Орлов, ведущий менеджер по продажам.
+			ol
+				li DCLogic признан крупнейшим ИТ-поставщиком в ритейле
+				li Совершенствуйте свой бизнес в России с новым Dell Global Partner
+					ol 
+						li DCLogic — крупнейшая IT-компания России
+						li DCLogic признан крупнейшим ИТ-поставщиком в ритейле
+				li Совершенствуйте свой бизнес в России с новым Dell Global Partner
+			h4 DCLogic
+			h5 DCLogic выступил спонсором ежегодного конгресса «Подмосковные вечера»
+			p Совместно с нашим партнером Juniper Networks мы представили на выставке новые сетевые решения для безопасности.<br>От лица DCLogic в конгрессе приняли участие Денис Тищенко, заместитель генерального директора по работе с ключевыми заказчиками и Алексей Орлов, ведущий менеджер по продажам.
+			+e.slider--js.swiper
+				.swiper-wrapper
+					.swiper-slide
+						+pic(`content-1.jpg`,'',0)
+							p.description Description
+					.swiper-slide
+						+pic(`content-2.jpg`,'',0)
+							p.description Description
+					.swiper-slide
+						+pic(`content-1.jpg`,'',0)
+							p.description Description
+				+arrow
+			+e.youtube
+				iframe(src='https://www.youtube.com/embed/7qBfdcI-d1Q' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+			if news
+			else
+				+badge(`Выездное мероприятие`,`gray`)
+			+e.share-block
+				p Поделиться
+				+e.share-wrap
+					a(href="#")
+						img(src="img/svg/facebook.svg", alt="")
+					a(href="#")
+						img(src="img/svg/facebook.svg", alt="")
+					a(href="#")
+						img(src="img/svg/facebook.svg", alt="")
+					a(href="#")
+						img(src="img/svg/facebook.svg", alt="")
 	// end sContent

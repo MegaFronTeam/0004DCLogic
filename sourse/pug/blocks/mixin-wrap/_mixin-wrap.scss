@@ -193,3 +193,17 @@
 		}
 	}
 }
+
+.badge {
+	display: inline-block;
+	background-color: grey;
+	font-size: rem(12);
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-radius: 8px;
+	&--gray {
+		background-color: #dee5ed;
+	}
+}
