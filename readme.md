@@ -9,3 +9,4 @@
 1. <https://megafronteam.github.io/0004DCLogic/public/08-info-news.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/09-info-certificates.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/10-info-partners.html>
+1. <https://megafronteam.github.io/0004DCLogic/public/11-info-events.html>

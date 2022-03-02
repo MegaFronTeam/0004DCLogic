@@ -15,7 +15,7 @@ mixin sInfoNews(data)
 
 mixin sInfoCertificates(data)
 	// start sInfoCertificates
-	+b.SECTION.sInfoNews--certificates.section#sInfoCertificates&attributes(attributes)
+	+b.SECTION.sInfoNews.section#sInfoCertificates&attributes(attributes)
 		h1 Информация
 		+links-wrap(infoCertificatesTabs)
 		.container
@@ -34,7 +34,7 @@ mixin sInfoCertificates(data)
 	// end sInfoCertificates
 
 mixin sInfoPartners(data)
-	+b.SECTION.sInfoNews--certificates.section#sInfoPartners&attributes(attributes)
+	+b.SECTION.sInfoNews.section#sInfoPartners&attributes(attributes)
 		h1 Информация
 		+links-wrap(infoPartnersTabs)
 		.container-xl
@@ -56,3 +56,24 @@ mixin sInfoPartners(data)
 									img(src="img/svg/icon-popup.svg", alt="")
 					- for(x = 0; x<20;x++)
 						+item()
+
+mixin sInfoEvents(data)
+	+b.SECTION.sInfoNews.section#sInfoEvents&attributes(attributes)
+		h1 Информация
+		+links-wrap(infoEventsTabs)
+		.container
+			+e.events-wrap
+				+info-event-item
+				+info-event-item
+				+info-event-item
+				+info-event-item
+		+e.btn-wrap
+			+e.BUTTON.btn.btn.btn-outline-primary Показать ещё мероприятия
+
+mixin info-event-item()
+	+b.info-event-item
+		+e.text
+			+e.title PAPA Regatta – 2021
+			+e.caption В октябре в водах Центральной Далмации Хорватии прошла четвертая PAPA Regatta. Это ежегодное мероприятие с захватывающими гонками на яхтах и интересной развлекательной программой на берегу.
+			+badge(`Вебинар`,`gray`)
+		+pic(`info-event-item.jpg`,``,0)
