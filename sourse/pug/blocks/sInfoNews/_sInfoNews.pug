@@ -12,3 +12,23 @@ mixin sInfoNews(data)
 		+e.btn-wrap
 			+e.BUTTON.btn.btn.btn-outline-primary Показать ещё новости
 	// end sInfoNews
+
+mixin sInfoCertificates(data)
+	// start sInfoCertificates
+	+b.SECTION.sInfoNews--certificates.section#sInfoCertificates&attributes(attributes)
+		h1 Информация
+		+links-wrap(infoCertificatesTabs)
+		.container
+			p Наша проектная деятельность подтверждается сертификатами и лицензиями СРО на строительство и проектирование. Выбирая нас, вы получите мультивендорный мультивендорный продуктовый портфель, отлаженную систему управления проектами и логистики, собственный сервисный центр
+		.container-xl
+			+e.certificates-wrap
+				.row
+					mixin item()
+						.col-lg-3.col-6
+							+b.certificates-item(href="#" data-fancybox data-src="img/@2x/certificate.jpg")
+								img(src="img/@2x/certificate.jpg", alt="")
+								+e.zoom
+									img(src="img/svg/certificate-zoom.svg", alt="")
+					- for(x = 0; x<14;x++)
+						+item()
+	// end sInfoCertificates

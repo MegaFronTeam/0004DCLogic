@@ -7,3 +7,4 @@
 1. <https://megafronteam.github.io/0004DCLogic/public/06-event.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/07-news.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/08-info-news.html>
+1. <https://megafronteam.github.io/0004DCLogic/public/09-info-certificates.html>

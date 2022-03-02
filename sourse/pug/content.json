@@ -72,6 +72,36 @@
 			"active":"0"
 		}
 	],
+	"infoCertificatesTabs":[
+		{
+			"title":"Проекты",
+			"active":"0"
+		},
+		{
+			"title":"Новости",
+			"active":"0"
+		},
+		{
+			"title":"Сертификаты",
+			"active":"1"
+		},
+		{
+			"title":"Партнеры",
+			"active":"0"
+		},
+		{
+			"title":"Мероприятия",
+			"active":"0"
+		},
+		{
+			"title":"Команда",
+			"active":"0"
+		},
+		{
+			"title":"СМИ о нас",
+			"active":"0"
+		}
+	],
 	"index":{
 		"head": {
 			"title": "тест dffsdf dfsdтест 2222"
