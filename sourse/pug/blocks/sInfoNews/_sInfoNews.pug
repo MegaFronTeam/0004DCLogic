@@ -32,3 +32,27 @@ mixin sInfoCertificates(data)
 					- for(x = 0; x<14;x++)
 						+item()
 	// end sInfoCertificates
+
+mixin sInfoPartners(data)
+	+b.SECTION.sInfoNews--certificates.section#sInfoPartners&attributes(attributes)
+		h1 Информация
+		+links-wrap(infoPartnersTabs)
+		.container-xl
+			+e.partners-wrap
+				.row
+					mixin item()
+						.col-lg-3.col-6
+							+b.partners-item
+								+e.logo
+									img(src="img/svg/partner-logo.svg", alt="")
+								+e.text
+									span.title Статус:
+									span.caption TITANIUM Partner
+								+e.text
+									span.title Партнеры:
+									span.caption с 2012 г
+								+e.more(href="#")
+									span Подробнее
+									img(src="img/svg/icon-popup.svg", alt="")
+					- for(x = 0; x<20;x++)
+						+item()
