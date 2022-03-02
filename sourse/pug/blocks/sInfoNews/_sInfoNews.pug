@@ -77,3 +77,27 @@ mixin info-event-item()
 			+e.caption В октябре в водах Центральной Далмации Хорватии прошла четвертая PAPA Regatta. Это ежегодное мероприятие с захватывающими гонками на яхтах и интересной развлекательной программой на берегу.
 			+badge(`Вебинар`,`gray`)
 		+pic(`info-event-item.jpg`,``,0)
+
+
+mixin sInfoMedia(data)
+	+b.SECTION.sInfoNews--media.section#sInfoEvents&attributes(attributes)
+		h1 Информация
+		+links-wrap(infoMediaTabs)
+		.container
+			+e.events-wrap
+				+info-media-item
+				+info-media-item
+				+info-media-item
+				+info-media-item
+		+e.btn-wrap
+			+e.BUTTON.btn.btn.btn-outline-primary Показать ещё статьи
+
+mixin info-media-item
+	+b.info-media-item
+		+pic(`info-media-item.jpg`,``,0)
+		+e.text
+			+e.title Предприятия "Норникеля" продолжают автоматизировать учет энергоресурсов
+			+e.caption В Норильском обеспечивающем комплексе (группа предприятий «Норникеля») работы по подключению к автоматизированной системе стартовали в январе 2019 года.
+			+e.more(href="#")
+				span Подробнее
+				img(src="img/svg/icon-popup.svg", alt="")
