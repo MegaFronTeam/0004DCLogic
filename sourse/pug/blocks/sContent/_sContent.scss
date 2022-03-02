@@ -263,6 +263,54 @@
 		margin-bottom: rem(24);
 		color: #838990;
 	}
+	&__mob-menu {
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+		margin-bottom: rem(24);
+		padding-bottom: rem(8);
+		border-bottom: 1px solid #eef3fa;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: rem(7);
+		padding-right: rem(7);
+	}
+	&__btn-prev {
+		margin-right: 10px;
+		display: flex;
+		align-items: center;
+		.icon {
+			color: transparent;
+			stroke: $body-color;
+			stroke-width: 2px;
+			stroke-linejoin: round;
+			margin-right: rem(8);
+			width: 16px;
+			height: 16px;
+		}
+		span {
+			line-height: calc(24 / 18);
+		}
+	}
+	&__btn-down {
+		position: relative;
+		width: rem(24);
+		height: rem(24);
+		border-radius: 50%;
+		background-color: $primary;
+		.icon {
+			position: absolute;
+			width: rem(16);
+			height: rem(16);
+			color: transparent;
+			stroke: $white;
+			stroke-width: 2px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
 	@include media-breakpoint-up(md) {
 	}
 	@include media-breakpoint-up(sm) {
@@ -302,8 +350,8 @@
 .sContentSlider {
 	padding-top: 0;
 	position: relative;
-	&__slider{
-		@include media-breakpoint-up(sm){
+	&__slider {
+		@include media-breakpoint-up(sm) {
 			overflow: unset;
 		}
 	}

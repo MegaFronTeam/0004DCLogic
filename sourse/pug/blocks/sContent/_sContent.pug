@@ -1,6 +1,12 @@
 mixin sContent(news)
 	// start sContent
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
+		+e.mob-menu
+			+e.btn-prev(href="#")
+				+icon(`chevron-left`)
+				span Новости
+			+e.btn-down(href="#")
+				+icon(`chevron-down`)
 		.container
 			h1 DCLogic выступил спонсором ежегодного конгресса «Подмосковные вечера»
 			if news
