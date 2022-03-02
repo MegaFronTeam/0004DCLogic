@@ -86,3 +86,19 @@ mixin sContent(news)
 					a(href="#")
 						img(src="img/svg/facebook.svg", alt="")
 	// end sContent
+
+mixin sContentSlider
+	+b.sContentSlider
+		.container-xl
+			+e.slider--js.swiper
+				h2 Посмотреть другие новости
+				.swiper-wrapper
+					+info-news-item(`swiper`)
+					+info-news-item(`swiper`)
+					+info-news-item(`swiper`)
+					+info-news-item(`swiper`)
+					+info-news-item(`swiper`)
+					+info-news-item(`swiper`)
+				+e.btns
+					+arrow
+				.swiper-pagination

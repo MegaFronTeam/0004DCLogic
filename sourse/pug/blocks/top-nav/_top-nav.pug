@@ -17,7 +17,7 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(active) 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container-xl
@@ -29,10 +29,10 @@ mixin top-nav()
 				.col
 					+e.menu-wrap
 						+e.menu
-							a(href="#") Решения
-							a(href="#") Отрасли
-							a(href="#") Информация
-							a(href="#") Контакты
+							a(href="#" class=(active==1 ? `active` : ``)) Решения
+							a(href="#" class=(active==2 ? `active` : ``)) Отрасли
+							a(href="#" class=(active==3 ? `active` : ``)) Информация
+							a(href="#" class=(active==4 ? `active` : ``)) Контакты
 					+e.menu-btns
 						+e.menu-btn--tel(href="tel:+74959896227")
 							+icon(`phone`)

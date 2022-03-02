@@ -1,0 +1,14 @@
+mixin sInfoNews(data)
+	// start sInfoNews
+	+b.SECTION.sInfoNews.section#sInfoNews&attributes(attributes)
+		h1 Информация
+		+links-wrap(infoNewsTabs)
+		.row
+			mixin item()
+				.col-lg-3.col-sm-6
+					+info-news-item
+			- for(x = 0; x < 16; x++)
+				+item
+		+e.btn-wrap
+			+e.BUTTON.btn.btn.btn-outline-primary Показать ещё новости
+	// end sInfoNews

@@ -395,6 +395,22 @@ function eventHandler() {
 			}
 		}
 	});
+	const contenProjectSlider = new Swiper('.sContentSlider__slider--js', {
+		slidesPerView: 1,
+		navigation: {
+			prevEl: ".swiper-button-hand-prev",
+			nextEl: ".swiper-button-hand-next",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			576: {
+				slidesPerView:'auto',
+			}
+		}
+	});
 	const solutionIndustriesSlider = new Swiper('.solution-content__projects-slider', {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
