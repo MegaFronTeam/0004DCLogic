@@ -11,3 +11,4 @@
 1. <https://megafronteam.github.io/0004DCLogic/public/10-info-partners.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/11-info-events.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/12-info-media.html>
+1. <https://megafronteam.github.io/0004DCLogic/public/13-info-team.html>
