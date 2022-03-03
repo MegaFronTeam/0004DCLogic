@@ -71,7 +71,7 @@ mixin sInfoEvents(data)
 			+e.BUTTON.btn.btn.btn-outline-primary Показать ещё мероприятия
 
 mixin info-event-item()
-	+b.info-event-item
+	+b.info-event-item(href="#")
 		+e.text
 			+e.title PAPA Regatta – 2021
 			+e.caption В октябре в водах Центральной Далмации Хорватии прошла четвертая PAPA Regatta. Это ежегодное мероприятие с захватывающими гонками на яхтах и интересной развлекательной программой на берегу.
@@ -80,7 +80,7 @@ mixin info-event-item()
 
 
 mixin sInfoMedia(data)
-	+b.SECTION.sInfoNews--media.section#sInfoEvents&attributes(attributes)
+	+b.SECTION.sInfoNews--media.section#sInfoMedia&attributes(attributes)
 		h1 Информация
 		+links-wrap(infoMediaTabs)
 		.container
@@ -93,11 +93,110 @@ mixin sInfoMedia(data)
 			+e.BUTTON.btn.btn.btn-outline-primary Показать ещё статьи
 
 mixin info-media-item
-	+b.info-media-item
+	+b.info-media-item(href="#")
 		+pic(`info-media-item.jpg`,``,0)
 		+e.text
 			+e.title Предприятия "Норникеля" продолжают автоматизировать учет энергоресурсов
 			+e.caption В Норильском обеспечивающем комплексе (группа предприятий «Норникеля») работы по подключению к автоматизированной системе стартовали в январе 2019 года.
-			+e.more(href="#")
+			+e.more
 				span Подробнее
 				img(src="img/svg/icon-popup.svg", alt="")
+
+
+
+mixin sInfoTeam(data)
+	+b.SECTION.sInfoNews.section#sInfoTeam&attributes(attributes)
+		h1 Информация
+		+links-wrap(infoTeamTabs)
+		.container
+			+e.team-caption Коллектив DCLogic- это более 123  сертифицированных сотрудников, которые любят и знают свою работу
+		+e.container.container
+			+b.info-team-slider.swiper
+				.swiper-wrapper
+					+e.item.swiper-slide
+						img(src="img/info-team-slider.jpg", alt="")
+					+e.item.swiper-slide
+						img(src="img/info-team-slider.jpg", alt="")
+					+e.item.swiper-slide
+						img(src="img/info-team-slider.jpg", alt="")
+					+e.item.swiper-slide
+						img(src="img/info-team-slider.jpg", alt="")
+				.swiper-pagination
+				+arrow
+		.container-xl
+			+e.team-wrap
+				.row
+					mixin item(pic,name,job,caption)
+						.col-sm-6
+							+b.info-team-item
+								+pic(`info-team-${pic}.png`,``,0)
+								+e.block
+									+e.name!=name
+									+e.job!=job
+									+e.caption!=caption
+					+item(`1`,`Андреев Дмитрий `,`Владелец`,`Генеральный директор компании DCLogic`)
+					+item(`2`,`Акимова Камила`,`Менеджер по работе с партнёрами`,`Специалист из Москвы, менеджер по работе с вендорами`)
+					+item(`3`,`Тищенко Денис `,`Заместитель директора`,`Заместитель директора по работе с ключевыми клиентами и партнерами`)
+					+item(`4`,`Шутова Анна`,`Маркетолог`,`До августа 2021 года - офис-менеджер DCLogic`)
+				h3 Мы ценим вклад каждого сотрудника и даем возможность карьерного роста
+			+e.vacancy-wrap
+				h2 Наши вакансии
+				+vacancy-item()
+				+vacancy-item()
+				+vacancy-item()
+				+vacancy-item()
+				+vacancy-item()
+				+vacancy-item()
+
+
+mixin vacancy-item()
+	+b.vacancy-item
+		+e.head
+			+e.title Менеджер по продажам в B2B
+			+e.more(href="#")
+				img(src="img/svg/icon-popup.svg", alt="")
+		+e.salary-wrap
+			+e.salary от 150 000 ₽
+			+e.toggle-main
+				+icon('chevron-down')
+		+e.body
+			+e.info
+				+e.info-title Обязанности
+					+icon(`chevron-down`)
+				+e.info-body
+					ul 
+						li Администрирование нагруженной инфраструктуры, развернутой в ЦОДах
+						li Администрирование платформы виртуализации VmWare ESXi 6.0-7.0
+						li Администрирование платформы VmWare Horizon, DEM, UAG
+						li Администрирование нагруженной инфраструктуры, развернутой в ЦОДах
+						li Администрирование платформы виртуализации VmWare ESXi 6.0-7.0
+						li Администрирование платформы VmWare Horizon, DEM, UAG
+						li Администрирование нагруженной инфраструктуры, развернутой в ЦОДах
+						li Администрирование платформы виртуализации VmWare ESXi 6.0-7.0
+						li Администрирование платформы VmWare Horizon, DEM, UAG
+			+e.info
+				+e.info-title Требования
+					+icon(`chevron-down`)
+				+e.info-body
+					ul 
+						li Администрирование нагруженной инфраструктуры, развернутой в ЦОДах
+						li Администрирование платформы виртуализации VmWare ESXi 6.0-7.0
+						li Администрирование платформы VmWare Horizon, DEM, UAG
+			+e.info
+				+e.info-title Условия
+					+icon(`chevron-down`)
+				+e.info-body
+					ul 
+						li Администрирование нагруженной инфраструктуры, развернутой в ЦОДах
+						li Администрирование платформы виртуализации VmWare ESXi 6.0-7.0
+						li Администрирование платформы VmWare Horizon, DEM, UAG
+			+e.info
+				+e.info-title Тип занятости
+					+icon(`chevron-down`)
+				+e.info-body
+					ul 
+						li Администрирование нагруженной инфраструктуры, развернутой в ЦОДах
+						li Администрирование платформы виртуализации VmWare ESXi 6.0-7.0
+						li Администрирование платформы VmWare Horizon, DEM, UAG
+			+e.responce.btn.btn-primary(href="#") Откликнуться
+				

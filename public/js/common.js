@@ -331,6 +331,14 @@ function eventHandler() {
 		$(this).parent().toggleClass(`active`);
 		$(this).toggleClass(`active`);
 	});
+	$(`.vacancy-item__toggle-main`).click(function () {
+		$(this).toggleClass(`active`);
+		$(this).parent().next().slideToggle();
+	});
+	$(`.vacancy-item__info-title`).click(function () {
+		$(this).toggleClass(`active`);
+		$(this).next().slideToggle();
+	});
 
 	$('.tabs-wrap__btn').click(function () {
 		let items = Array.from($(".tabs-wrap__btn"));
@@ -407,9 +415,31 @@ function eventHandler() {
 		},
 		breakpoints: {
 			576: {
-				slidesPerView:'auto',
+				slidesPerView: 'auto',
 			}
 		}
+	});
+	const infoTeamSlider = new Swiper('.info-team-slider', {
+		slidesPerView: 1,
+		spaceBetween: 8,
+		loop: true,
+		navigation: {
+			prevEl: ".swiper-button-hand-prev",
+			nextEl: ".swiper-button-hand-next",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			1280: {
+				spaceBetween: 104,
+			}
+		},
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
 	});
 	const solutionIndustriesSlider = new Swiper('.solution-content__projects-slider', {
 		slidesPerView: 'auto',

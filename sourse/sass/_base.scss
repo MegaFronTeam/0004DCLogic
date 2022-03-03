@@ -24,6 +24,7 @@ html {
 
 body {
 	background-color: #f6f9ff;
+	--fancybox-bg: rgba(1,122,255, 0.9) !important;
 	&.fixed,
 	&.fancybox-active {
 		.header {
