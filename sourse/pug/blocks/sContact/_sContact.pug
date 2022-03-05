@@ -1,9 +1,28 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+		+e.head
+			+e.head-block
+				h1 Контакты
+				+e.tel(href="tel:+74959896227") 8 (495) 989-62-27 
+				+e.mail(href="mailto:info@dclogic.ru") info@dclogic.ru
+				+soc-wrap
+			+e.bg
+				img(src="img/svg/contact-bg.svg", alt="")
+		.container-xl
+			+e.map-block
+				+e.map-info
+					h2 Наш офис
+					+e.address 121151, Москва, ул. Можайский вал, дом 8С, офис 801
+					+e.time пн-пт с 9:00 до 18:00
+				+e.map--office
+					script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
+					+e.map-widget#map-office
+			+e.map-block--reverse
+				+e.map-info
+					h2 Наш склад
+					+e.address Россия, Московская область,<br>Ленинский район, г. Видное,<br>Проектируемый проезд №253, вл. 20
+				+e.map--warehouse
+					script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
+					+e.map-widget#map-warehouse
 	// end sContact

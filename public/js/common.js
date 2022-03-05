@@ -489,3 +489,71 @@ if (document.readyState !== 'loading') {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+if (document.querySelector('.sContact__map--office')) {
+	ymaps.ready(function () {
+		var myMap = new ymaps.Map('map-office', {
+			center: [55.743684, 37.555148],
+			zoom: 17,
+			controls: [`zoomControl`]
+		}, {
+			searchControlProvider: 'yandex#search'
+		}),
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
+			}, {
+				// Опции.
+				// Необходимо указать данный тип макета.
+				iconLayout: 'default#image',
+				// Своё изображение иконки метки.
+				iconImageHref: '',
+				// Размеры метки.
+				iconImageSize: [53, 80],
+				// Смещение левого верхнего угла иконки относительно
+				// её "ножки" (точки привязки).
+				iconImageOffset: [0, -48]
+			});
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			//... отключаем перетаскивание карты
+			myMap.behaviors.disable('drag');
+			myMap.zoom = 17;
+		}
+		myMap.geoObjects
+			.add(myPlacemark)
+	});
+	
+}
+if (document.querySelector('.sContact__map--warehouse')) {
+	ymaps.ready(function () {
+		var myMap = new ymaps.Map('map-warehouse', {
+			center: [55.566074, 37.751538],
+			zoom: 16,
+			controls: [`zoomControl`]
+		}, {
+			searchControlProvider: 'yandex#search'
+		}),
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
+			}, {
+				// Опции.
+				// Необходимо указать данный тип макета.
+				iconLayout: 'default#image',
+				// Своё изображение иконки метки.
+				iconImageHref: '',
+				// Размеры метки.
+				iconImageSize: [53, 80],
+				// Смещение левого верхнего угла иконки относительно
+				// её "ножки" (точки привязки).
+				iconImageOffset: [0, -48]
+			});
+			
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			//... отключаем перетаскивание карты
+			myMap.behaviors.disable('drag');
+			myMap.zoom = 17;
+		}
+		myMap.geoObjects
+			.add(myPlacemark)
+	});
+}

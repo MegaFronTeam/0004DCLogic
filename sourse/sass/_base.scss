@@ -24,7 +24,7 @@ html {
 
 body {
 	background-color: #f6f9ff;
-	--fancybox-bg: rgba(1,122,255, 0.9) !important;
+	--fancybox-bg: rgba(1, 122, 255, 0.9) !important;
 	&.fixed,
 	&.fancybox-active {
 		.header {
@@ -626,3 +626,26 @@ body.tabs-page {
 textarea.form-wrap__input {
 	min-height: rem(192);
 }
+.ymaps-2-1-79-image {
+	background-image: url("../img/svg/map-icon.svg") !important;
+	background-repeat: no-repeat;
+}
+.ymaps-2-1-79-map-copyrights-promo,
+.ymaps-2-1-79-copyright__link,
+.ymaps-2-1-79-copyright__text {
+	display: none;
+}
+// .ymaps-2-1-79-events-pane {
+// 	position: relative;
+// 	&::after{
+// 		content: '';
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 		background-color: $primary;
+// 		opacity: 0.5;
+// 		z-index: 2;
+// 	}
+// }
