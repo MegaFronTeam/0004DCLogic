@@ -1,15 +1,15 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		+e.head
-			+e.head-block
-				h1 Контакты
-				+e.tel(href="tel:+74959896227") 8 (495) 989-62-27 
-				+e.mail(href="mailto:info@dclogic.ru") info@dclogic.ru
-				+soc-wrap
-			+e.bg
-				img(src="img/svg/contact-bg.svg", alt="")
 		.container-xl
+			+e.head
+				+e.head-block
+					h1 Контакты
+					+e.tel(href="tel:+74959896227") 8 (495) 989-62-27 
+					+e.mail(href="mailto:info@dclogic.ru") info@dclogic.ru
+					+soc-wrap
+				+e.bg
+					img(src="img/svg/contact-bg.svg", alt="")
 			+e.map-block
 				+e.map-info
 					h2 Наш офис
