@@ -13,3 +13,4 @@
 1. <https://megafronteam.github.io/0004DCLogic/public/12-info-media.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/13-info-team.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/14-contacts.html>
+1. <https://megafronteam.github.io/0004DCLogic/public/404.html>

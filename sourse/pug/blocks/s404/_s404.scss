@@ -1,0 +1,125 @@
+// start .s404
+.s404 {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	min-height: 100vh;
+	width: 100vw;
+	position: relative;
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		min-height: 100vh;
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(40);
+		}
+	}
+	&__title {
+		@include media-breakpoint-up(lg) {
+			font-size: rem(225);
+		}
+		font-size: rem(120);
+		margin-bottom: rem(16);
+		text-align: center;
+		font-weight: bold;
+		color: $primary;
+		line-height: 1;
+		position: relative;
+		z-index: 2;
+	}
+	p {
+		text-align: center;
+		position: relative;
+		z-index: 2;
+		max-width: 400px;
+	}
+	&__btn {
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+		position: relative;
+		z-index: 2;
+	}
+	&__bg{
+		position: absolute;
+		img{
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+		&--bg1{
+			@include media-breakpoint-up(lg){
+				width: 13.79vw;
+				height: 8.985vw;
+				left: 31.875vw;
+				top: 67.5vh;
+			}
+			@include media-breakpoint-down(lg){
+				width: 146px;
+				height: 96px;
+				bottom: 0;
+				left: 21.7vw;
+			}
+		}
+		&--bg2{
+			@include media-breakpoint-up(lg){
+				width: 27.3vw;
+				height: 32.03vw;
+				left: 59.45vw;
+				top: 24.17vh;
+			}
+			@include media-breakpoint-down(lg){
+				width: 215px;
+				height: 252px;
+				top: -51px;
+				right: -81px;
+			}
+		}
+		&--bg3{
+			@include media-breakpoint-up(lg){
+				width: 6.17vw;
+				height: 3.83vw;
+				left: 61.41vw;
+				top: 20.56vh;
+			}
+			@include media-breakpoint-down(lg){
+				width: 118px;
+				height: 73px;
+				bottom: 75px;
+				right: -24px;
+			}
+		}
+		&--bg4{
+			@include media-breakpoint-up(lg){
+				width: 8.28vw;
+				height: 7.73vw;
+				left: 16.41vw;
+				top: 64.44vh;
+			}
+			@include media-breakpoint-down(lg){
+				width: 99px;
+				height: 92px;
+				bottom: 107px;
+				left: -16px;
+			}
+		}
+		&--bg5{
+			@include media-breakpoint-up(lg){
+				width: 14.34vw;
+				height: 26.60vw;
+				left: 19.61vw;
+				top: 17.22vh;
+			}
+			@include media-breakpoint-down(lg){
+				width: 122px;
+				height: 227px;
+				top: -59px;
+				left: -20px;
+			}
+		}
+	}
+} // end.s404
