@@ -3,7 +3,7 @@
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(64)};
+		--sPT: #{rem(10)};
 		--sPB: #{rem(44)};
 	}
 	--sPT: 6px;
@@ -109,7 +109,8 @@
 	tbody {
 		tr {
 			background-color: transparent;
-			&:nth-child(even) {
+			transition-duration: 0.4s;
+			&:hover{
 				background-color: rgba(#dee5ed, 0.5);
 			}
 		}
