@@ -12,13 +12,13 @@
 	}
 	h1 {
 		text-align: center;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(40);
 		}
 		margin-bottom: 16px;
 	}
-	.tabs-wrap{
-		@include media-breakpoint-up(lg){
+	.tabs-wrap {
+		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(40);
 		}
 		margin-bottom: rem(16);
@@ -38,3 +38,196 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sIndusries
+
+.project-industry-slider-item {
+	background: linear-gradient(180deg, rgba(238, 243, 250, 0.63) 0%, #eef3fa 100%);
+	@include media-breakpoint-up(lg) {
+		// width: calc(100% - 1px);
+		height: rem(502);
+		// margin-right: rem(6);
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__bg {
+		@include media-breakpoint-up(lg) {
+			width: 594px;
+			min-width: 594px;
+			padding-bottom: 10px;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+	&__body {
+		@include media-breakpoint-up(lg) {
+			padding: rem(48);
+		}
+	}
+	&__logo {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(16);
+		picture {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-right: 8px;
+		}
+	}
+	&__title {
+		font-size: rem(32);
+		margin-bottom: rem(8);
+		@include media-breakpoint-up(lg) {
+			max-width: rem(510);
+		}
+	}
+	&__caption {
+		color: #838990;
+		font-size: rem(16);
+		margin-bottom: rem(32);
+	}
+	ul {
+		&::after {
+			display: none !important;
+		}
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				margin-right: rem(52);
+				max-width: 270px;
+				font-size: rem(12);
+				font-weight: normal;
+				&:nth-child(even) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	display: flex;
+	@include media-breakpoint-down(lg) {
+		&__bg {
+			margin-bottom: 10px;
+			width: 100%;
+			height: 309px;
+			img {
+				max-width: 100%;
+			}
+		}
+		&__body {
+			padding: rem(12);
+			padding-bottom: rem(28);
+		}
+		width: rem(328);
+		height: rem(645);
+		background: linear-gradient(180deg, rgba(238, 243, 250, 0.63) 0%, #eef3fa 100%);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		&__logo {
+			display: flex;
+			align-items: center;
+			margin-bottom: rem(8);
+			picture {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				overflow: hidden;
+				margin-right: 8px;
+			}
+		}
+		&__title {
+			font-size: rem(19);
+			margin-bottom: rem(8);
+		}
+		&__caption {
+			font-size: rem(12);
+			margin-bottom: rem(18);
+		}
+		ul {
+			margin-bottom: 0;
+			list-style-type: none;
+		}
+		li {
+			font-size: rem(12);
+			margin-bottom: rem(20);
+			padding-left: rem(38);
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				width: rem(32);
+				height: rem(27);
+				left: 0;
+				top: rem(-5);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-image: url("../img/svg/project-slider-list-2.svg");
+			}
+		}
+	}
+	&:nth-child(odd) {
+		background: $primary;
+		color: $white;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row-reverse;
+		}
+		.project-industry-slider-item__caption {
+			color: rgba($white, 0.56);
+		}
+		.project-industry-slider-item__btn {
+			color: $white;
+			border-color: $white;
+		}
+		li {
+			&::before {
+				background-image: url("../img/svg/project-slider-list-1.svg");
+			}
+		}
+	}
+	&__btn {
+		@extend .btn;
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+		border-color: $primary;
+		color: $primary;
+	}
+}
+
+.solution-content__projects-slider--variant {
+	.project-industry-slider-item__btn {
+		color: $primary !important;
+		border-color: $primary !important;
+	}
+	.project-industry-slider-item {
+		background: linear-gradient(180deg, rgba(238, 243, 250, 0.63) 0%, #eef3fa 100%);
+		color: $body-color;
+		&:nth-child(even) {
+			background: $primary;
+			color: $white;
+			.project-industry-slider-item__caption {
+				color: rgba($white, 0.56);
+			}
+			.project-industry-slider-item__btn {
+				color: $white !important;
+				border-color: $white !important;
+			}
+			li {
+				&::before {
+					background-image: url("../img/svg/project-slider-list-1.svg");
+				}
+			}
+		}
+	}
+	li {
+		&::before {
+			background-image: url("../img/svg/project-slider-list-2.svg");
+		}
+	}
+}
+.solution-content--industries .project-industry-slider-item ul:after {
+	display: none !important;
+}

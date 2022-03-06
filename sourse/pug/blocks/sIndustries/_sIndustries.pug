@@ -15,6 +15,154 @@ mixin sIndustries(data)
 				+study
 	// end sIndusries
 
+mixin project-slider(variant)
+	if variant
+		+e.projects-slider--variant.swiper
+			h3 Проекты
+			.swiper-wrapper
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-2.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-2.png`,'',0)
+							span Промтех
+						+e.title Поставка персональных систем производства HP
+						+e.caption Поставка персональных систем производства HP
+						ul
+							li Увеличение эффективности для обеспечения уровня необходимой производительности
+							li Минимизация потребления электроэнергии
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-1.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-1.png`,'',0)
+							span Роскосмос
+						+e.title Поставка персональных систем производства и МФУ HP
+						+e.caption Вычислительная инфраструктура, Цифровизация предприятий
+						ul
+							li Оптимизировать «бумажные» потоки в компании
+							li Минимизация потребления электроэнергии
+							li Увеличение эффективности для обеспечения уровня необходимой производительности
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-4.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-4.png`,'',0)
+							span ДельтаКредит
+						+e.title Поставка лицензий Oracle
+						+e.caption Вычислительная инфраструктура, Цифровизация предприятий
+						ul
+							li Быстрый заказ лицензий на продление, этим мы избежали увеличения стоимости лицензий для Заказчика
+							li Беспрерывное оказание услуг сервисной поддержки компанией Oracle
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-3.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-3.png`,'',0)
+							span Росатом
+						+e.title Поставка компьютерного оборудования производства HP
+						+e.caption Вычислительная инфраструктура
+						ul
+							li Увеличение эффективности для обеспечения уровня необходимой производительности
+							li Минимизация потребления электроэнергии
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-5.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-5.png`,'',0)
+							span Альфа-банк
+						+e.title Поставки компьютерного оборудования
+						+e.caption Вычислительная инфраструктура, Цифровизация предприятий
+						ul
+							li Укреплена надежность информационной структуры компании
+							li Повышен уровень инвестиционной защиты
+							li Минимизация потребления электроэнергии
+						+e.btn(href="#") Читать отзыв заказчика
+			+e.projects-btns
+				+arrow
+	else
+		+e.projects-slider.swiper
+			h3 Проекты
+			.swiper-wrapper
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-1.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-1.png`,'',0)
+							span Роскосмос
+						+e.title Поставка персональных систем производства и МФУ HP
+						+e.caption Вычислительная инфраструктура, Цифровизация предприятий
+						ul
+							li Оптимизировать «бумажные» потоки в компании
+							li Минимизация потребления электроэнергии
+							li Увеличение эффективности для обеспечения уровня необходимой производительности
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-2.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-2.png`,'',0)
+							span Промтех
+						+e.title Поставка персональных систем производства HP
+						+e.caption Поставка персональных систем производства HP
+						ul
+							li Увеличение эффективности для обеспечения уровня необходимой производительности
+							li Минимизация потребления электроэнергии
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-3.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-3.png`,'',0)
+							span Росатом
+						+e.title Поставка компьютерного оборудования производства HP
+						+e.caption Вычислительная инфраструктура
+						ul
+							li Увеличение эффективности для обеспечения уровня необходимой производительности
+							li Минимизация потребления электроэнергии
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-4.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-4.png`,'',0)
+							span ДельтаКредит
+						+e.title Поставка лицензий Oracle
+						+e.caption Вычислительная инфраструктура, Цифровизация предприятий
+						ul
+							li Быстрый заказ лицензий на продление, этим мы избежали увеличения стоимости лицензий для Заказчика
+							li Беспрерывное оказание услуг сервисной поддержки компанией Oracle
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-5.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-5.png`,'',0)
+							span Альфа-банк
+						+e.title Поставки компьютерного оборудования
+						+e.caption Вычислительная инфраструктура, Цифровизация предприятий
+						ul
+							li Укреплена надежность информационной структуры компании
+							li Повышен уровень инвестиционной защиты
+							li Минимизация потребления электроэнергии
+						+e.btn(href="#") Читать отзыв заказчика
+			+e.projects-btns
+				+arrow
+
 mixin industry
 	+b.solution-content--industries#industry
 		+e.body
@@ -66,17 +214,7 @@ mixin industry
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider
 			h3 Металлургия
 			+e.caption Кстати, ключевые особенности структуры проекта представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть превращены в посмешище, хотя само их существование приносит несомненную пользу обществу.
 			ul
@@ -120,17 +258,7 @@ mixin industry
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider(`variant`)
 			h3 Химическая и нефтехимическая промышленность
 			+e.caption Также как граница обучения кадров позволяет выполнить важные задания по разработке соответствующих условий активизации. Есть над чем задуматься: непосредственные участники технического прогресса разоблачены.
 			ul
@@ -174,17 +302,7 @@ mixin industry
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider
 			h3 Энергетика
 			+e.caption Но действия представителей оппозиции неоднозначны и будут заблокированы в рамках своих собственных рациональных ограничений. Разбавленное изрядной долей эмпатии, рациональное мышление позволяет выполнить важные задания по разработке дальнейших направлений развития.
 			ul
@@ -228,17 +346,7 @@ mixin industry
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider(`var`)
 			h3 Морские порты, склады, транспортные терминалы, аэропорты
 			+e.caption Но тщательные исследования конкурентов могут быть объединены в целые кластеры себе подобных. Предварительные выводы неутешительны: сплочённость команды профессионалов играет определяющее значение для кластеризации усилий.
 			ul
@@ -282,17 +390,7 @@ mixin industry
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider
 			h3 Агропромышленный комплекс
 			+e.caption Цифровизация предприятий, передовые направления, услуги, информационная безопасность, автоматизация, импортозамещение, вычислительная инфраструктура
 			ul
@@ -336,17 +434,7 @@ mixin industry
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider(`var`)
 
 mixin retail()
 	+b.solution-content--industries#retail
@@ -383,17 +471,7 @@ mixin retail()
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider
 
 mixin state()
 	+b.solution-content--industries#state
@@ -430,17 +508,7 @@ mixin state()
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider(`var`)
 
 mixin logistics()
 	+b.solution-content--industries#logistics
@@ -477,17 +545,7 @@ mixin logistics()
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider
 
 mixin banks()
 	+b.solution-content--industries#banks
@@ -524,17 +582,7 @@ mixin banks()
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider(`var`)
 
 mixin construction()
 	+b.solution-content--industries#construction
@@ -571,17 +619,7 @@ mixin construction()
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider
 
 mixin study()
 	+b.solution-content--industries#study
@@ -618,14 +656,4 @@ mixin study()
 					span Показать решения
 					+icon(`chevron-down`)
 			+e.projects
-				+e.projects-slider.swiper
-					h3 Проекты
-					.swiper-wrapper
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-						+b.project-industry-slider-item.swiper-slide
-					+e.projects-btns
-						+arrow
+				+project-slider(`var`)
