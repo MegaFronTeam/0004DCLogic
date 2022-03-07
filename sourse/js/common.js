@@ -455,6 +455,30 @@ function eventHandler() {
 			}
 		}
 	});
+	const IndexPartnersSlider = new Swiper('.sInfoNews__partners-wrap-slider', {
+		slidesPerView:'auto',
+		spaceBetween:8,
+		navigation: {
+			prevEl: ".swiper-button-hand-prev",
+			nextEl: ".swiper-button-hand-next",
+		},
+		grid: {
+			rows: 1,
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 4,
+				grid: {
+					rows: 2,
+				},
+				spaceBetween:30,
+			}
+		}
+	});
 	const industriesSlider = new Swiper('.industries-slider', {
 		slidesPerView: 'auto',
 		pagination: {
@@ -521,7 +545,7 @@ if (document.querySelector('.sContact__map--office')) {
 		myMap.geoObjects
 			.add(myPlacemark)
 	});
-	
+
 }
 if (document.querySelector('.sContact__map--warehouse')) {
 	ymaps.ready(function () {
@@ -547,7 +571,7 @@ if (document.querySelector('.sContact__map--warehouse')) {
 				// её "ножки" (точки привязки).
 				iconImageOffset: [0, -48]
 			});
-			
+
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 			//... отключаем перетаскивание карты
 			myMap.behaviors.disable('drag');

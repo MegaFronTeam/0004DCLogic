@@ -138,6 +138,7 @@
 		position: fixed;
 		bottom: rem(12);
 		right: rem(12);
+		z-index: 20;
 		@include media-breakpoint-down(lg){
 			display: none;
 		}

@@ -639,3 +639,15 @@ textarea.form-wrap__input {
 	mix-blend-mode: color;
 	background-color: rgb(53, 146, 255);
 }
+.swiper-pagination-bullet {
+	border: 1px solid transparent !important;
+	background-color: rgba($primary, 0.3) !important;
+}
+.swiper-pagination-bullet-active {
+	border: 1px solid #017aff !important;
+	background-color: rgba($white, 0.5) !important;
+}
+.swiper-grid-column > .swiper-wrapper {
+	flex-wrap: wrap;
+	flex-direction: column;
+}
