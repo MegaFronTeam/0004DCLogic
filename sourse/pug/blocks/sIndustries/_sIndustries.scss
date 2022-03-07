@@ -89,6 +89,7 @@
 		margin-bottom: rem(32);
 	}
 	ul {
+		margin-bottom: 16px !important;
 		&::after {
 			display: none !important;
 		}
@@ -104,6 +105,25 @@
 					margin-right: 0;
 				}
 			}
+		}
+	}
+	ul {
+		list-style-type: none;
+		li {
+			position: relative;
+			margin-bottom: 1.5rem;
+			padding-left: 2.25rem;
+		}
+		li::before {
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: "";
+			height: 1.875rem;
+			left: 0;
+			position: absolute;
+			top: -0.25rem;
+			width: 1.875rem;
+			background-image: url('../img/svg/project-slider-list-2.svg');
 		}
 	}
 	display: flex;
@@ -219,6 +239,11 @@
 				&::before {
 					background-image: url("../img/svg/project-slider-list-1.svg");
 				}
+			}
+		}
+		li {
+			&::before {
+				background-image: url("../img/svg/project-slider-list-2.svg");
 			}
 		}
 	}

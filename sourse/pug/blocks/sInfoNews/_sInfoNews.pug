@@ -200,3 +200,80 @@ mixin vacancy-item()
 						li Администрирование платформы VmWare Horizon, DEM, UAG
 			+e.responce.btn.btn-primary(href="#") Откликнуться
 				
+
+mixin sInfoProjects(data)
+	+b.SECTION.sInfoNews.section#sInfoProjects&attributes(attributes)
+		h1 Информация
+		+links-wrap(infoProjectsTabs)
+		.container-xl
+			+tabs-wrap(industriesTabs)
+			+e.cases-wrap
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-1.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-1.png`,'',0)
+							span Роскосмос
+						+e.title Поставка персональных систем производства и МФУ HP
+						+e.caption Вычислительная инфраструктура, Цифровизация предприятий
+						ul
+							li Оптимизировать «бумажные» потоки в компании
+							li Минимизация потребления электроэнергии
+							li Увеличение эффективности для обеспечения уровня необходимой производительности
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-2.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-2.png`,'',0)
+							span Промтех
+						+e.title Поставка персональных систем производства HP
+						+e.caption Поставка персональных систем производства HP
+						ul
+							li Увеличение эффективности для обеспечения уровня необходимой производительности
+							li Минимизация потребления электроэнергии
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-3.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-3.png`,'',0)
+							span Росатом
+						+e.title Поставка компьютерного оборудования производства HP
+						+e.caption Вычислительная инфраструктура
+						ul
+							li Увеличение эффективности для обеспечения уровня необходимой производительности
+							li Минимизация потребления электроэнергии
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-4.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-4.png`,'',0)
+							span ДельтаКредит
+						+e.title Поставка лицензий Oracle
+						+e.caption Вычислительная инфраструктура, Цифровизация предприятий
+						ul
+							li Быстрый заказ лицензий на продление, этим мы избежали увеличения стоимости лицензий для Заказчика
+							li Беспрерывное оказание услуг сервисной поддержки компанией Oracle
+						+e.btn(href="#") Читать отзыв заказчика
+				+b.project-industry-slider-item.swiper-slide
+					+e.bg
+						img(src="img/svg/project-industry-slider-item-5.svg", alt="")
+					+e.body
+						+e.logo
+							+pic(`project-slider-logo-5.png`,'',0)
+							span Альфа-банк
+						+e.title Поставки компьютерного оборудования
+						+e.caption Вычислительная инфраструктура, Цифровизация предприятий
+						ul
+							li Укреплена надежность информационной структуры компании
+							li Повышен уровень инвестиционной защиты
+							li Минимизация потребления электроэнергии
+						+e.btn(href="#") Читать отзыв заказчика
+		+e.btn-wrap
+			+e.BUTTON.btn.btn.btn-outline-primary Показать ещё статьи

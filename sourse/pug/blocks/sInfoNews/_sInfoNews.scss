@@ -3,7 +3,12 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
-
+	.tabs-wrap {
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(42);
+		}
+		margin-bottom: rem(74);
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -162,6 +167,28 @@
 				font-size: rem(40);
 			}
 			font-size: rem(25);
+		}
+	}
+	.project-industry-slider-item{
+		@include media-breakpoint-up(lg){
+			&__bg{
+				max-width: 50%;
+				min-width: unset;
+			}
+			&__body{
+				width: 50%;
+				min-width: 708px;
+			}
+		}
+		@include media-breakpoint-down(lg){
+			width: 100%;
+			&__bg{
+				display: flex;
+				justify-content: center;
+				img{
+					max-height: 309px
+				}
+			}
 		}
 	}
 } // end.sInfoNews
@@ -575,22 +602,22 @@
 			stroke: $primary;
 			stroke-width: 2px;
 		}
-		&.active{
-			.icon{
+		&.active {
+			.icon {
 				transform: translate(-50%, -50%) scaleY(-1);
 			}
 		}
 	}
-	&__body{
+	&__body {
 		margin-top: rem(16);
 		padding-top: rem(8);
 		border-top: 1px solid #dee5ed;
 		display: none;
 	}
-	&__info{
+	&__info {
 		border-bottom: 1px solid #dee5ed;
 	}
-	&__info-title{
+	&__info-title {
 		font-weight: 600;
 		font-size: rem(18);
 		padding-right: rem(24);
@@ -598,7 +625,7 @@
 		padding-bottom: rem(8);
 		position: relative;
 		cursor: pointer;
-		.icon{
+		.icon {
 			position: absolute;
 			right: 4px;
 			width: 16px;
@@ -606,30 +633,30 @@
 			top: 50%;
 			transform: translateY(-50%);
 			transition-duration: 0.4s;
-			color:transparent;
+			color: transparent;
 			stroke: $body-color;
 			stroke-width: 2px;
 		}
-		&.active{
-			.icon{
+		&.active {
+			.icon {
 				transform: translateY(-50%) scaleY(-1);
 			}
 		}
 	}
-	&__info-body{
+	&__info-body {
 		padding-bottom: rem(24);
 		display: none;
-		ul{
+		ul {
 			padding-left: rem(24);
 		}
-		li{
+		li {
 			margin-bottom: 8px;
-			line-height: calc(24/16);
+			line-height: calc(24 / 16);
 		}
 	}
-	&__responce{
+	&__responce {
 		margin-top: rem(16);
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			width: 100%;
 		}
 		padding-top: rem(12);

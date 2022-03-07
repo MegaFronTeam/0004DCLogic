@@ -548,6 +548,9 @@
 			display: none;
 		}
 	}
+	&__projects-slider{
+		overflow: unset;
+	}
 }
 
 .description-item {
@@ -753,6 +756,17 @@
 		a {
 			color: #b4beca;
 			pointer-events: none;
+		}
+	}
+}
+
+.sContentCaseSlider{
+	h3{
+		@include media-breakpoint-down(lg){
+			max-width: 260px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 48px;
 		}
 	}
 }
