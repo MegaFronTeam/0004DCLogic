@@ -371,8 +371,25 @@ mixin sInfoPartnersIndex(data)
 							+e.more(href="#")
 								span Подробнее
 								img(src="img/svg/icon-popup.svg", alt="")
-					- for(x = 0; x<20;x++)
+					- for(x = 0; x<16;x++)
 						+item()
 				.swiper-pagination
 				+e.partners-wrap-slider-btns
 					+arrow
+
+mixin sInfoNewsIndex(data)
+	// start sInfoNews
+	+b.SECTION.sInfoNews--index.section#sInfoNews&attributes(attributes)
+		h2 Новости
+		.sInfoNewsIndex-slider-wrap
+			.sInfoNewsIndex-slider.swiper
+				.swiper-wrapper
+					mixin item()
+						.col-3.swiper-slide
+							+info-news-item
+					- for(x = 0; x < 16; x++)
+						+item
+				.swiper-pagination
+		+e.btn-wrap
+			+e.BUTTON.btn.btn.btn-outline-primary Показать ещё новости
+	// end sInfoNews

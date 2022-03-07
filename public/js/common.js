@@ -479,6 +479,13 @@ function eventHandler() {
 			}
 		}
 	});
+	const sInfoNewsIndexSlider = new Swiper('.sInfoNewsIndex-slider', {
+		slidesPerView: '1',
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	});
 	const industriesSlider = new Swiper('.industries-slider', {
 		slidesPerView: 'auto',
 		pagination: {
