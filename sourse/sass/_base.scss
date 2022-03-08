@@ -651,3 +651,32 @@ textarea.form-wrap__input {
 	flex-wrap: wrap;
 	flex-direction: column;
 }
+// .fancybox__slide{
+// 	@include media-breakpoint-down(lg){
+// 		padding: 0 !important;
+// 	}
+// }
+// .fancybox__content{
+// 	@include media-breakpoint-down(lg){
+// 		height: 100%;
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 	}
+// }
+.fancybox__content {
+}
+.modal-fancy {
+	@include media-breakpoint-down(lg) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		overflow-y: auto;
+		padding: 0;
+		.container-xl {
+			padding: 0;
+		}
+	}
+}

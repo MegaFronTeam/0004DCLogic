@@ -358,6 +358,12 @@ function eventHandler() {
 		$(this).parents('.top-nav__search').toggleClass("active")
 			.find('.block-search-wrap').toggleClass("active")
 	})
+	$(".btn-show-popup").click(function () {
+		$(this).next().toggleClass("active");
+	})//для демонстрации
+	$(".after-search__close").click(function () {
+		$(this).parent().toggleClass("active");
+	})//для демонстрации
 
 	document.addEventListener('mouseup', (event) => {
 		let container2 = event.target.closest(" .top-nav__search.active");

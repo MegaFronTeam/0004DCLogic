@@ -20,5 +20,16 @@ block pagecontent
 			mixin btn(id, name)
 				.col-auto.mb-2
 					a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")= name
-			+btn("modal-call", "modal-call")
+			+btn("modal-request", "Оставить заявку")
+			+btn("modal-write", "Напишите нам")
+			+btn("modal-call", "Обратный звонок")
+			+btn("modal-vacancies", "Откликнуться")
+			.col-auto.mb-2
+				.wrap
+					.btn.btn-primary.btn-show-popup Показать куки
+					+cookies 
+			.col-auto.mb-2
+				.wrap
+					.btn.btn-primary.btn-show-popup Показать Заявка Отправлена
+					+after-search 
 

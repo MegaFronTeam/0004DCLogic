@@ -11,8 +11,8 @@
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
-	// min-height: 100%; 
+	width: 900px;
+	// min-height: 100%;
 	padding: 40px;
 
 	.modal-content {
@@ -25,8 +25,36 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+	form {
+		max-width: 100%;
+	}
+	@include media-breakpoint-down(lg) {
+		padding: 0;
+		.container-xl {
+			padding: 0;
+		}
+		min-height: 100vh;
+	}
+	&--call {
+		h2 {
+			margin-bottom: 16px !important;
+		}
+		p {
+			text-align: center;
+		}
+	}
 }
-
+.modal-win + .is-close {
+	@include media-breakpoint-down(lg) {
+		position: absolute;
+		top: 13px !important;
+		right: 13px !important;
+		svg {
+			stroke: $body-color !important;
+			filter: none;
+		}
+	}
+}
 a {
 	outline: 0 !important;
 }
@@ -50,7 +78,7 @@ a {
 	top: 0;
 	text-decoration: none;
 	text-align: center;
-	opacity: .65; // padding: 0 0 18px 10px;
+	opacity: 0.65; // padding: 0 0 18px 10px;
 	// color: #fff;
 	font-style: normal;
 	font-size: 28px;
@@ -101,48 +129,158 @@ a {
 	}
 }
 
+//
+@include media-breakpoint-up(xl) {
+}
 
-// 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(lg) {
+}
 
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(md) {
+}
 
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(sm) {
+}
 
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(xs) {
+}
 
-@include media-breakpoint-up(xs) {}
+//
+@include media-breakpoint-between(md, xl) {
+}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+//
+@include media-breakpoint-only(xs) {
+}
 
-// 
-@include media-breakpoint-only(xs) {}
+@include media-breakpoint-only(sm) {
+}
 
-@include media-breakpoint-only(sm) {}
+@include media-breakpoint-only(md) {
+}
 
-@include media-breakpoint-only(md) {}
+@include media-breakpoint-only(lg) {
+}
 
-@include media-breakpoint-only(lg) {}
+@include media-breakpoint-only(xl) {
+}
 
-@include media-breakpoint-only(xl) {}
+//
+@include media-breakpoint-down(xl) {
+}
 
-// 
-@include media-breakpoint-down(xl) {}
+@include media-breakpoint-down(lg) {
+}
 
-@include media-breakpoint-down(lg) {}
+@include media-breakpoint-down(md) {
+}
 
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-down(sm) {
+}
 
 @include media-breakpoint-down(xs) {
-
 	.fancybox__container {
 		width: 100% !important;
-		min-height: 100%; 
+		min-height: 100%;
 		transform: none !important;
 	}
 }
 
+.cookies {
+	display: none;
+	position: fixed;
+	bottom: 12px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 771px;
+	max-width: calc(100vw - 20px);
+	color: $white;
+	padding: rem(16);
+	background-color: $primary;
+	border-radius: 8px;
+	@include media-breakpoint-up(lg) {
+		flex-direction: row;
+		padding-left: rem(32);
+		padding-right: rem(32);
+		align-items: center;
+	}
+	flex-direction: column;
+	&__btn {
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+		@extend .btn;
+		background-color: $white;
+		color: $primary;
+		font-size: 14px;
+		padding-left: 24px;
+		padding-right: 24px;
+		padding-top: 7px !important;
+		padding-bottom: 7px !important;
+		border-color: transparent;
+	}
+	p {
+		font-size: 12px;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+			margin-right: rem(12);
+		}
+		margin-bottom: 8px;
+	}
+}
+.cookies.active {
+	display: flex;
+}
 
+.after-search {
+	display: none;
+	align-items: center;
+	border-radius: 4px;
+	border: 1px solid #c9cad1;
+	padding: 15px;
+	padding-right: 28px;
+	position: fixed;
+	filter: drop-shadow(0px 2px 8px rgba(90, 148, 255, 0.21));
+	background-color: $white;
+	z-index: 20;
+	@include media-breakpoint-up(lg) {
+		top: 86px;
+		right: 24px;
+	}
+	width: 348px;
+	max-width: calc(100vw - 16px);
+	@include media-breakpoint-down(lg) {
+		left: 50%;
+		bottom: 61px;
+		transform: translateX(-50%);
+	}
+	p {
+		margin-bottom: 0;
+	}
+	.icon {
+		margin-right: 9px;
+		width: 24px;
+		height: 24px;
+		color: $primary;
+	}
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		top: 6px;
+		right: 6px;
+		width: 12px;
+		height: 12px;
+		.icon {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			stroke: #6c6c6c;
+		}
+	}
+}
+.after-search.active {
+	display: flex;
+}
