@@ -74,3 +74,11 @@ mixin soc-wrap()
 			img(src="img/svg/linkedin.svg", alt="")
 		+e.item(href="#")
 			img(src="img/svg/instagram.svg", alt="")
+
+
+mixin topNav-search-block()
+	+b.topNav-search-block
+		form
+			input(type="text" placeholder="Поиск")
+			button
+				+icon("search")

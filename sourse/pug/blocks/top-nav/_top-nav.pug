@@ -44,8 +44,11 @@ mixin top-nav(active)
 							+icon(`menu`)
 				.col-auto.d-none.d-lg-block
 					+e.wrap
-						+e.search-btn(href="#")
-							+icon(`search`)
+						+e.search
+							+e.search-btn(href="#")
+								+icon(`search`)
+							.block-search-wrap
+								+topNav-search-block()
 						+e.info
 							p +7 (495) 989-62-27
 							p info@dclogic.ru
