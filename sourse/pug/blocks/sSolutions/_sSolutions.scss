@@ -26,7 +26,7 @@
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(39)};
+		--sPT: #{rem(103)};
 		--sPB: #{rem(64)};
 	}
 	@include media-breakpoint-up(md) {
@@ -430,6 +430,7 @@
 	--sPB: 0;
 	@include media-breakpoint-up(lg) {
 		--sPB: #{rem(40)};
+		--sPT:#{rem(64)}
 	}
 	.container-xl {
 		@include media-breakpoint-down(lg) {
@@ -746,8 +747,9 @@
 }
 
 .breadcrumb-wrap {
-	padding-top: 8px;
+	margin-top: 66px;
 	border-top: 1px solid #dee5ed;
+	padding-top: 8px;
 	margin-bottom: rem(54);
 	@include media-breakpoint-down(lg) {
 		display: none;

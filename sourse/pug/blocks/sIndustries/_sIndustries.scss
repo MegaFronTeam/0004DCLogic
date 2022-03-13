@@ -3,6 +3,9 @@
 	--sPT: 0;
 	--sPB: #{rem(40)};
 	// --sTPB: ;
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(64)};
+	}
 	&__header {
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(56);

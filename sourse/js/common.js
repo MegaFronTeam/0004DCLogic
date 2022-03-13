@@ -306,7 +306,7 @@ function eventHandler() {
 
 
 	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
+		let topNav = document.querySelector('.top-nav');
 		if (!topNav) return;
 		window.scrollY > 0
 			? topNav.classList.add('fixed')
@@ -520,6 +520,19 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+	// $('.page-head__row--fix').hcSticky({
+	// 	stickTo: $('.sticky-wrapper'),
+	// 	top: 128,
+	// 	innerTop: 64,
+	// 	// bottomEnd: 100,
+	// 	responsive: {
+	// 		992: {
+	// 			top: 96,
+	// 			innerTop: 48,
+	// 			// disable: true,
+	// 		}
+	// 	}
+	// });
 	// modal window
 
 };
