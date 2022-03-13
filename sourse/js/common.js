@@ -471,6 +471,18 @@ function eventHandler() {
 			}
 		}
 	});
+	const sRatingsSlider = new Swiper('.sRating__slider--js', {
+		slidesPerView: '1',
+		spaceBetween: 0,
+		navigation: {
+			prevEl: ".swiper-button-hand-prev",
+			nextEl: ".swiper-button-hand-next",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	});
 	const IndexPartnersSlider = new Swiper('.sInfoNews__partners-wrap-slider', {
 		slidesPerView: 'auto',
 		spaceBetween: 8,

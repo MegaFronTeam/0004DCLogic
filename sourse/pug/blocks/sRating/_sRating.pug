@@ -1,0 +1,48 @@
+mixin sRating(data)
+	// start sRating
+	+b.SECTION.sRating.section#sRating&attributes(attributes)
+		.container-xl
+			+e.caption-block
+				h2 Почему DCLogic?
+				+e.caption Наша проектная деятельность подтверждается сертификатами и лицензиями СРО на строительство и проектирование. Выбирая нас, вы получите мультивендорный мультивендорный продуктовый портфель, отлаженную систему управления проектами и логистики, собственный сервисный центр
+			+e.ratings
+				+e.ratings-caption
+					h2 Рейтинги
+					p Высокий уровень компетентности, подтвержденный статусами крупных вендоров ИТ-оборудования
+					+e.bg
+						img(src="img/svg/sRatings.svg", alt="")
+				+e.slider--js.swiper
+					.swiper-wrapper
+						mixin item()
+							+e.slide.swiper-slide
+								+e.rating-string
+									+e.rating-string-title
+										p Топ
+										+e.rating-string-title-number 30
+									+e.rating-string-caption
+										+e.rating-string-img
+											img(src="img/svg/rating-string-img.svg", alt="")
+										+e.rating-string-text Российских компаний на рынке информационной безопасности по версии TAdviser
+								+e.rating-string
+									+e.rating-string-title
+										p Топ
+										+e.rating-string-title-number 30
+									+e.rating-string-caption
+										+e.rating-string-img
+											img(src="img/svg/rating-string-img.svg", alt="")
+										+e.rating-string-text Российских компаний на рынке информационной безопасности по версии TAdviser
+								+e.rating-string
+									+e.rating-string-title
+										p Топ
+										+e.rating-string-title-number 30
+									+e.rating-string-caption
+										+e.rating-string-img
+											img(src="img/svg/rating-string-img.svg", alt="")
+										+e.rating-string-text Российских компаний на рынке информационной безопасности по версии TAdviser
+						+item()
+						+item()
+						+item()
+					.swiper-pagination
+					+e.arrow-wrap
+						+arrow
+	// end sRating

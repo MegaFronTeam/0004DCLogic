@@ -10,6 +10,7 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sInfoNews/_sInfoNews.pug
+include ../blocks/sRating/_sRating.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -17,13 +18,14 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= index.head.title
+	- let  title= 'Главная'
 	title= title
 block pagecontent
 	//- +mob-mnu()
 
 	+top-nav()
 	+headerBlock
+	+sRating
 	+sInfoProjectsIndex
 	+sInfoPartnersIndex
 	+sInfoNewsIndex
