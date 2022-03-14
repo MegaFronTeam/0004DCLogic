@@ -419,6 +419,23 @@ function eventHandler() {
 			}
 		}
 	});
+	const indexSlider = new Swiper('.index-slider--js', {
+		slidesPerView: `auto`,
+		spaceBetween: 8,
+		navigation: {
+			prevEl: ".swiper-button-hand-prev",
+			nextEl: ".swiper-button-hand-next",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: '4',
+			}
+		}
+	});
 	const contenProjectSlider = new Swiper('.sContentSlider__slider--js', {
 		slidesPerView: 1,
 		navigation: {
