@@ -234,6 +234,9 @@
 		border-top: 1px solid #eef3fa;
 		padding: rem(32);
 		padding-top: rem(16);
+		@include media-breakpoint-down(lg) {
+			padding: rem(16);
+		}
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;

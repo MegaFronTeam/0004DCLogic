@@ -44,7 +44,9 @@
 		@include media-breakpoint-up(sm) {
 			max-width: rem(291);
 		}
+		
 		width: 100%;
+		font-weight: 600;
 	}
 } // end.sSearch
 
@@ -104,6 +106,7 @@
 	}
 }
 .search-item {
+	display: block;
 	padding-bottom: rem(26);
 	margin-bottom: rem(28);
 	@include media-breakpoint-up(lg) {
@@ -123,10 +126,16 @@
 		@include media-breakpoint-up(lg) {
 			font-size: rem(24);
 		}
+		display: inline-block;
+		color: $body-color;
+		transition-duration: 0.4s;
 		font-size: rem(19);
 		line-height: calc(32 / 24);
 		font-weight: 600;
 		margin-bottom: rem(8);
+		&:hover {
+			color: $primary;
+		}
 	}
 	&__caption {
 		font-size: rem(16);
@@ -146,6 +155,7 @@
 	}
 	&__col {
 		margin-top: 0 !important;
+		padding-top: rem(40);
 	}
 	&__info {
 		@include media-breakpoint-up(lg) {

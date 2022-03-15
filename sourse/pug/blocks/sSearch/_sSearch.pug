@@ -36,7 +36,7 @@ mixin search-item(title,caption,img,breadcrumb)
 						+breadcrumb(`Информация`,`Мероприятия`)
 					else
 						+breadcrumb(`Решения`)
-					+e.title!=title
+					+e.title(href="#")!=title
 					+e.caption!=caption
 			+e.col.col-lg-auto.order-0.order-lg-1
 				+pic(`search-item-${img}.jpg`,``,0)
