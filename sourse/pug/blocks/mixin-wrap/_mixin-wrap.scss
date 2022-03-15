@@ -210,6 +210,10 @@
 
 .info-news-item {
 	display: block;
+	--title-color: #{$body-color};
+	&:hover {
+		--title-color: #{$primary};
+	}
 	@include media-breakpoint-up(sm) {
 		// width: rem(318);
 		height: rem(447);
@@ -249,7 +253,8 @@
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
-		color: $body-color;
+		color: var(--title-color);
+		transition-duration: 0.3s;
 	}
 	&__caption {
 		font-size: rem(12);
@@ -299,7 +304,7 @@
 		padding-right: rem(40);
 		border-radius: 42px;
 		border: 1px solid $primary;
-		line-height: calc(24/16);
+		line-height: calc(24 / 16);
 	}
 	button {
 		position: absolute;

@@ -139,7 +139,7 @@
 		bottom: rem(12);
 		right: rem(12);
 		z-index: 20;
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			display: none;
 		}
 	}
@@ -162,15 +162,20 @@
 			margin-left: rem(8);
 			position: relative;
 			transition-duration: 0.4s;
-			&:hover{
+			&:hover {
 				box-shadow: 0px 4px 10px $gray-700;
 			}
 			&:first-child {
 				margin-left: 0;
 			}
 		}
+		&--tel {
+			color: transparent;
+			stroke: $primary;
+			stroke-width: 2px;
+		}
 	}
-	
+
 	@include media-breakpoint-up(xl) {
 	}
 

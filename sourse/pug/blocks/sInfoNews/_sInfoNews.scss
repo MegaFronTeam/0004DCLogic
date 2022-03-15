@@ -3,6 +3,28 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	&__caption-text-block{
+		margin-top: rem(32);
+		background-color: $white;
+		border: 1px solid #DEE5ED;
+		text-align: center;
+		@include media-breakpoint-up(lg){
+			padding: rem(56);
+		}
+		@include media-breakpoint-down(lg){
+			padding-top: rem(32);
+			padding-bottom: rem(32);
+			padding-left: rem(8);
+			padding-right: rem(8);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: rem(24);
+		}
+		font-size: rem(19);
+		a{
+			font-weight: 700;
+		}
+	}
 	.tabs-wrap {
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(42);
