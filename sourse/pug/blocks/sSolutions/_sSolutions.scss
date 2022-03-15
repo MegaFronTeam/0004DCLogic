@@ -137,6 +137,9 @@
 			max-width: 75.2%;
 		}
 		margin-bottom: rem(28);
+		&--industries{
+			color: rgba($body-color, 0.56);
+		}
 	}
 	.row {
 		@include media-breakpoint-up(xl) {
@@ -355,15 +358,15 @@
 		margin-bottom: rem(40);
 		h3 {
 			@include media-breakpoint-up(lg) {
-				padding-left: rem(38);
+				// padding-left: rem(38);
 				margin-bottom: rem(33);
 				text-align: left;
 			}
 			text-align: center;
-			margin-bottom: rem(24);
+			margin-bottom: rem(48);
 		}
 	}
-	
+
 	&__projects-btns {
 		position: absolute;
 		display: flex;
@@ -430,7 +433,7 @@
 	--sPB: 0;
 	@include media-breakpoint-up(lg) {
 		--sPB: #{rem(40)};
-		--sPT:#{rem(64)}
+		--sPT: #{rem(64)};
 	}
 	.container-xl {
 		@include media-breakpoint-down(lg) {
@@ -549,7 +552,7 @@
 			display: none;
 		}
 	}
-	&__projects-slider{
+	&__projects-slider {
 		overflow: unset;
 	}
 }
@@ -762,9 +765,9 @@
 	}
 }
 
-.sContentCaseSlider{
-	h3{
-		@include media-breakpoint-down(lg){
+.sContentCaseSlider {
+	h3 {
+		@include media-breakpoint-down(lg) {
 			max-width: 260px;
 			margin-left: auto;
 			margin-right: auto;
