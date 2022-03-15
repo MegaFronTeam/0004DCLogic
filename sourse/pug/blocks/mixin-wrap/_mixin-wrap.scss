@@ -133,7 +133,7 @@
 		}
 		overflow: hidden;
 		padding-right: rem(34);
-		padding-top: rem(20);
+		padding-top: rem(12);
 		padding-bottom: rem(20);
 		padding-left: rem(13);
 		color: $body-color;
@@ -274,8 +274,8 @@
 	flex-wrap: wrap;
 	align-items: center;
 	&__item {
-		width: 24px;
-		height: 24px;
+		width: 32px;
+		height: 32px;
 		margin-right: 4px;
 		margin-bottom: 8px;
 		img {

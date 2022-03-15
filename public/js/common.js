@@ -438,6 +438,7 @@ function eventHandler() {
 	});
 	const contenProjectSlider = new Swiper('.sContentSlider__slider--js', {
 		slidesPerView: 1,
+		loop:true,
 		navigation: {
 			prevEl: ".swiper-button-hand-prev",
 			nextEl: ".swiper-button-hand-next",

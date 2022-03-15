@@ -137,7 +137,7 @@
 			max-width: 75.2%;
 		}
 		margin-bottom: rem(28);
-		&--industries{
+		&--industries {
 			color: rgba($body-color, 0.56);
 		}
 	}
@@ -513,6 +513,8 @@
 		@include media-breakpoint-up(lg) {
 			font-size: rem(24);
 			margin-bottom: rem(32);
+			padding-left: rem(15);
+			padding-right: rem(15);
 		}
 		font-size: rem(19);
 		margin-bottom: rem(24);
@@ -775,3 +777,4 @@
 		}
 	}
 }
+

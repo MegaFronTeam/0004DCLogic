@@ -4,7 +4,7 @@
 	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(10)};
-		--sPB: #{rem(44)};
+		--sPB: #{rem(104)};
 	}
 	--sPT: 6px;
 	--sPB: 38px;
@@ -191,7 +191,10 @@
 	&__slider {
 		position: relative;
 		picture {
-			margin-bottom: 0;
+			margin-bottom: 0 !important;
+		}
+		.description{
+			margin-bottom: 0 !important;
 		}
 		@include media-breakpoint-up(xl) {
 			width: calc(100% + 80px);
@@ -460,7 +463,6 @@
 			display: none;
 		}
 		margin-top: rem(12);
-		text-align: left;
 	}
 	&__btns {
 		position: absolute;

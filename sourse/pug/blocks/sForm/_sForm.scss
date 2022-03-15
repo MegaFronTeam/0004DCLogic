@@ -53,6 +53,9 @@
 	&__agree {
 		font-size: rem(12);
 		text-align: center;
+		a{
+			text-decoration: underline;
+		}
 	}
 	@include media-breakpoint-up(md) {
 	}
@@ -96,6 +99,8 @@
 		padding-bottom: rem(68);
 	}
 	padding-bottom: rem(20);
+	padding-left: rem(16);
+	padding-right: rem(16);
 	display: flex;
 	justify-content: center;
 	&__btn{
