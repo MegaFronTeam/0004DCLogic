@@ -16,3 +16,4 @@
 1. <https://megafronteam.github.io/0004DCLogic/public/15-info-projects.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/404.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/00-modal.html>
+1. <https://megafronteam.github.io/0004DCLogic/public/inputs.html>

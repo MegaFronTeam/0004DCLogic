@@ -1,0 +1,111 @@
+extends ../layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Инпуты'
+	title= title
+block pagecontent
+	//- +topLine()
+	script(load="part/head.html")
+	.container.mt-4
+		+form-wrap
+			.row(style="--bs-gutter-x:24px;--bs-gutter-y:48px")
+				.col-lg-3
+					h4.mb-3 Input
+					+input(`Input`,`text`,`Lable`)
+				.col-lg-3
+					h4.mb-3 Input Disabled
+					.form-wrap__input-wrap.disabled.form-group
+						label
+							span.form-wrap__input-title Lable
+							input.form-wrap__input.disabled.form-control(name='text' type='text' placeholder='Input' disabled)
+				.col-lg-3
+					h4.mb-3 Input Error
+					.form-wrap__input-wrap.error.form-group
+						label
+							span.form-wrap__input-title Lable
+							input.form-wrap__input.error.form-control(name='text' type='text' placeholder='Input')
+							span.form-wrap__input-error Error text
+				.col-lg-3
+					h4.mb-3 Input no lable
+					.form-wrap__input-wrap.form-group
+						label
+							input.form-wrap__input.error.form-control(name='text' type='text' placeholder='Input')
+							span.form-wrap__input-error Error text
+				.col-lg-3
+					h4.mb-3 Input icons
+					.form-wrap__input-wrap.form-group.mb-3
+						label
+							span.form-wrap__input-title Lable
+							input.form-wrap__input.form-control.icon-left(name='text' type='text' placeholder='Input' )
+							svg.icon.icon-input-icon1.input-icon.input-icon--left
+								use(xlink:href='img/svg/sprite.svg#input-icon1')
+					.form-wrap__input-wrap.form-group.mb-3
+						label
+							span.form-wrap__input-title Lable
+							input.form-wrap__input.form-control.icon-right(name='text' type='text' placeholder='Input' )
+							svg.icon.icon-input-icon2.input-icon.input-icon--right
+								use(xlink:href='img/svg/sprite.svg#input-icon2')
+					.form-wrap__input-wrap.form-group
+						label
+							span.form-wrap__input-title Lable
+							input.form-wrap__input.form-control.icon-left.icon-right(name='text' type='text' placeholder='Input' )
+							svg.icon.icon-input-icon1.input-icon.input-icon--left
+								use(xlink:href='img/svg/sprite.svg#input-icon1')
+							svg.icon.icon-input-icon2.input-icon.input-icon--right
+								use(xlink:href='img/svg/sprite.svg#input-icon2')
+				.col-lg-3
+					h4.mb-3 Input icons disabled
+					.form-wrap__input-wrap.form-group.disabled.mb-3
+						label
+							span.form-wrap__input-title Lable
+							input.form-wrap__input.form-control.disabled.icon-left(name='text' type='text' placeholder='Input' disabled)
+							svg.icon.icon-input-icon1.input-icon.input-icon--left
+								use(xlink:href='img/svg/sprite.svg#input-icon1')
+					.form-wrap__input-wrap.form-group.disabled.mb-3
+						label
+							span.form-wrap__input-title Lable
+							input.form-wrap__input.form-control.disabled.icon-right(name='text' type='text' placeholder='Input' disabled)
+							svg.icon.icon-input-icon2.input-icon.input-icon--right
+								use(xlink:href='img/svg/sprite.svg#input-icon2')
+					.form-wrap__input-wrap.disabled.form-group
+						label
+							span.form-wrap__input-title Lable
+							input.form-wrap__input.form-control.icon-left.disabled.icon-right(name='text' type='text' placeholder='Input' disabled)
+							svg.icon.icon-input-icon1.input-icon.input-icon--left
+								use(xlink:href='img/svg/sprite.svg#input-icon1')
+							svg.icon.icon-input-icon2.input-icon.input-icon--right
+								use(xlink:href='img/svg/sprite.svg#input-icon2')
+				.col-lg-3
+					h4.mb-3 Input icons error
+					.form-wrap__input-wrap.form-group.error.mb-3
+						label
+							span.form-wrap__input-title Lable
+							input.form-wrap__input.form-control.error.icon-left(name='text' type='text' placeholder='Input')
+							span.form-wrap__input-error Error text
+							svg.icon.icon-input-icon1.input-icon.input-icon--left
+								use(xlink:href='img/svg/sprite.svg#input-icon1')
+					.form-wrap__input-wrap.form-group.error.mb-3
+						label
+							span.form-wrap__input-title Lable
+							input.form-wrap__input.form-control.error.icon-right(name='text' type='text' placeholder='Input')
+							span.form-wrap__input-error Error text
+							svg.icon.icon-input-icon2.input-icon.input-icon--right
+								use(xlink:href='img/svg/sprite.svg#input-icon2')
+					.form-wrap__input-wrap.error.form-group
+						label
+							span.form-wrap__input-title Lable
+							input.form-wrap__input.form-control.icon-left.error.icon-right(name='text' type='text' placeholder='Input')
+							span.form-wrap__input-error Error text
+							svg.icon.icon-input-icon1.input-icon.input-icon--left
+								use(xlink:href='img/svg/sprite.svg#input-icon1')
+							svg.icon.icon-input-icon2.input-icon.input-icon--right
+								use(xlink:href='img/svg/sprite.svg#input-icon2')

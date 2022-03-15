@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Инпуты</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Raleway:wght@400;600&amp;display=swap" rel="stylesheet"/>
+		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="css/main.min.css?v=0.0.1" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<script load="part/head.html"></script>
+			<div class="container mt-4">
+				<div class="form-wrap">
+					<form>
+						<div class="row" style="--bs-gutter-x:24px;--bs-gutter-y:48px">
+							<div class="col-lg-3">
+								<h4 class="mb-3">Input</h4>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Lable</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Input"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-3">
+								<h4 class="mb-3">Input Disabled</h4>
+								<div class="form-wrap__input-wrap disabled form-group">
+									<label><span class="form-wrap__input-title">Lable</span>
+										<input class="form-wrap__input disabled form-control" name="text" type="text" placeholder="Input" disabled>
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<h4 class="mb-3">Input Error</h4>
+								<div class="form-wrap__input-wrap error form-group">
+									<label><span class="form-wrap__input-title">Lable</span>
+										<input class="form-wrap__input error form-control" name="text" type="text" placeholder="Input"><span class="form-wrap__input-error">Error text</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<h4 class="mb-3">Input no lable</h4>
+								<div class="form-wrap__input-wrap form-group">
+									<label>
+										<input class="form-wrap__input error form-control" name="text" type="text" placeholder="Input"><span class="form-wrap__input-error">Error text</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<h4 class="mb-3">Input icons</h4>
+								<div class="form-wrap__input-wrap form-group mb-3">
+									<label><span class="form-wrap__input-title">Lable</span>
+										<input class="form-wrap__input form-control icon-left" name="text" type="text" placeholder="Input">
+										<svg class="icon icon-input-icon1 input-icon input-icon--left">
+											<use xlink:href="img/svg/sprite.svg#input-icon1"></use>
+										</svg>
+									</label>
+								</div>
+								<div class="form-wrap__input-wrap form-group mb-3">
+									<label><span class="form-wrap__input-title">Lable</span>
+										<input class="form-wrap__input form-control icon-right" name="text" type="text" placeholder="Input">
+										<svg class="icon icon-input-icon2 input-icon input-icon--right">
+											<use xlink:href="img/svg/sprite.svg#input-icon2"></use>
+										</svg>
+									</label>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Lable</span>
+										<input class="form-wrap__input form-control icon-left icon-right" name="text" type="text" placeholder="Input">
+										<svg class="icon icon-input-icon1 input-icon input-icon--left">
+											<use xlink:href="img/svg/sprite.svg#input-icon1"></use>
+										</svg>
+										<svg class="icon icon-input-icon2 input-icon input-icon--right">
+											<use xlink:href="img/svg/sprite.svg#input-icon2"></use>
+										</svg>
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<h4 class="mb-3">Input icons disabled</h4>
+								<div class="form-wrap__input-wrap form-group disabled mb-3">
+									<label><span class="form-wrap__input-title">Lable</span>
+										<input class="form-wrap__input form-control disabled icon-left" name="text" type="text" placeholder="Input" disabled>
+										<svg class="icon icon-input-icon1 input-icon input-icon--left">
+											<use xlink:href="img/svg/sprite.svg#input-icon1"></use>
+										</svg>
+									</label>
+								</div>
+								<div class="form-wrap__input-wrap form-group disabled mb-3">
+									<label><span class="form-wrap__input-title">Lable</span>
+										<input class="form-wrap__input form-control disabled icon-right" name="text" type="text" placeholder="Input" disabled>
+										<svg class="icon icon-input-icon2 input-icon input-icon--right">
+											<use xlink:href="img/svg/sprite.svg#input-icon2"></use>
+										</svg>
+									</label>
+								</div>
+								<div class="form-wrap__input-wrap disabled form-group">
+									<label><span class="form-wrap__input-title">Lable</span>
+										<input class="form-wrap__input form-control icon-left disabled icon-right" name="text" type="text" placeholder="Input" disabled>
+										<svg class="icon icon-input-icon1 input-icon input-icon--left">
+											<use xlink:href="img/svg/sprite.svg#input-icon1"></use>
+										</svg>
+										<svg class="icon icon-input-icon2 input-icon input-icon--right">
+											<use xlink:href="img/svg/sprite.svg#input-icon2"></use>
+										</svg>
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<h4 class="mb-3">Input icons error</h4>
+								<div class="form-wrap__input-wrap form-group error mb-3">
+									<label><span class="form-wrap__input-title">Lable</span>
+										<input class="form-wrap__input form-control error icon-left" name="text" type="text" placeholder="Input"><span class="form-wrap__input-error">Error text</span>
+										<svg class="icon icon-input-icon1 input-icon input-icon--left">
+											<use xlink:href="img/svg/sprite.svg#input-icon1"></use>
+										</svg>
+									</label>
+								</div>
+								<div class="form-wrap__input-wrap form-group error mb-3">
+									<label><span class="form-wrap__input-title">Lable</span>
+										<input class="form-wrap__input form-control error icon-right" name="text" type="text" placeholder="Input"><span class="form-wrap__input-error">Error text</span>
+										<svg class="icon icon-input-icon2 input-icon input-icon--right">
+											<use xlink:href="img/svg/sprite.svg#input-icon2"></use>
+										</svg>
+									</label>
+								</div>
+								<div class="form-wrap__input-wrap error form-group">
+									<label><span class="form-wrap__input-title">Lable</span>
+										<input class="form-wrap__input form-control icon-left error icon-right" name="text" type="text" placeholder="Input"><span class="form-wrap__input-error">Error text</span>
+										<svg class="icon icon-input-icon1 input-icon input-icon--left">
+											<use xlink:href="img/svg/sprite.svg#input-icon1"></use>
+										</svg>
+										<svg class="icon icon-input-icon2 input-icon input-icon--right">
+											<use xlink:href="img/svg/sprite.svg#input-icon2"></use>
+										</svg>
+									</label>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--  start modals-->
+		<div class="modal-fancy" id="modal-request" style="display: none">
+			<div class="modal-win">
+				<div class="sForm">
+					<div class="container-xl">
+						<div class="form-wrap">
+							<form>
+								<h2>Оставить заявку </h2>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Название компании</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите название компании"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Контактный телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Введите номер"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Cопроводительное письмо</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="sForm__btn-wrap">
+									<div class="sForm__btn btn btn-primary">Отправить</div>
+								</div>
+								<div class="sForm__agree">Нажимая кнопку «Отправить», я даю свое согласие<br>на обработку своих <a href="#">персональных данных</a></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-request-->
+		<div class="modal-fancy" id="modal-write" style="display: none">
+			<div class="modal-win">
+				<div class="sForm">
+					<div class="container-xl">
+						<div class="form-wrap">
+							<form>
+								<h2>Напишите нам</h2>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Контактный телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Введите номер"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Сообщение</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="sForm__btn-wrap">
+									<div class="sForm__btn btn btn-primary">Отправить</div>
+								</div>
+								<div class="sForm__agree">Нажимая кнопку «Отправить», я даю свое согласие<br>на обработку своих <a href="#">персональных данных</a></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-write-->
+		<div class="modal-fancy" id="modal-call" style="display: none">
+			<div class="modal-win modal-win--call">
+				<div class="sForm">
+					<div class="container-xl">
+						<div class="form-wrap">
+							<form>
+								<h2>Обратный звонок</h2>
+								<p>Оставьте заявку и наши специалисты свяжутся с вами</p>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Контактный телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Введите номер"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="sForm__btn-wrap">
+									<div class="sForm__btn btn btn-primary">Отправить</div>
+								</div>
+								<div class="sForm__agree">Нажимая кнопку «Отправить», я даю свое согласие<br>на обработку своих <a href="#">персональных данных</a></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div class="modal-fancy" id="modal-vacancies" style="display: none">
+			<div class="modal-win">
+				<div class="sForm">
+					<div class="container-xl">
+						<div class="form-wrap">
+							<form>
+								<h2>Откликнуться</h2>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Контактный телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Введите номер"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Сообщение</span><textarea class="form-wrap__input form-control" name="textarea" placeholder=""></textarea>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="sForm__btn-wrap">
+									<div class="sForm__btn btn btn-primary">Отправить</div>
+								</div>
+								<div class="sForm__agree">Нажимая кнопку «Отправить», я даю свое согласие<br>на обработку своих <a href="#">персональных данных</a></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-vacancies-->
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/common.js?v=0.0.1"></script>
+	</body>
+</html>
