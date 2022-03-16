@@ -3,7 +3,7 @@
 	--sPT: 0;
 	--sPB: #{rem(40)};
 	// --sTPB: ;
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(64)};
 	}
 	&__header {
@@ -44,6 +44,10 @@
 
 .project-industry-slider-item {
 	background: linear-gradient(180deg, rgba(238, 243, 250, 0.63) 0%, #eef3fa 100%);
+	position: relative;
+	@include media-breakpoint-up(xl) {
+		flex-direction: row-reverse;
+	}
 	@include media-breakpoint-up(lg) {
 		// width: calc(100% - 1px);
 		height: rem(502);
@@ -53,6 +57,20 @@
 		justify-content: space-between;
 	}
 	&__bg {
+		@include media-breakpoint-up(xl) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			max-width: none;
+			height: 100%;
+			img{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				max-width: none;
+			}
+		}
+		position: relative;
 		@include media-breakpoint-up(lg) {
 			width: 594px;
 			min-width: 594px;
@@ -127,7 +145,7 @@
 			position: absolute;
 			top: -0.25rem;
 			width: 1.875rem;
-			background-image: url('../img/svg/project-slider-list-2.svg');
+			background-image: url("../img/svg/project-slider-list-2.svg");
 		}
 	}
 	display: flex;
@@ -195,11 +213,28 @@
 	&:nth-child(odd) {
 		background: $primary;
 		color: $white;
+		@include media-breakpoint-up(xl) {
+			flex-direction: row;
+		}
 		@include media-breakpoint-up(lg) {
 			flex-direction: row-reverse;
 		}
 		.project-industry-slider-item__caption {
 			color: rgba($white, 0.56);
+		}
+		.project-industry-slider-item__bg{
+			@include media-breakpoint-up(xl) {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				max-width: none;
+				height: 100%;
+				left: auto;
+				img{
+					right: 0;
+					left: auto;
+				}
+			}
 		}
 		.project-industry-slider-item__btn {
 			color: $white;
@@ -217,7 +252,7 @@
 		@include media-breakpoint-down(lg) {
 			width: 100%;
 		}
-		box-shadow:0px 4px 10px #9AC0FF;
+		box-shadow: 0px 4px 10px #9ac0ff;
 		border-color: $primary;
 		color: $primary;
 	}
@@ -227,7 +262,7 @@
 	.project-industry-slider-item__btn {
 		color: $primary !important;
 		border-color: $primary !important;
-		box-shadow:0px 4px 10px #9AC0FF;
+		box-shadow: 0px 4px 10px #9ac0ff;
 	}
 	.project-industry-slider-item {
 		background: linear-gradient(180deg, rgba(238, 243, 250, 0.63) 0%, #eef3fa 100%);

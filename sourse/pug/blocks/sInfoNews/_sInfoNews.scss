@@ -56,8 +56,8 @@
 		--bs-gutter-y: 3px;
 	}
 	.info-news-item {
-		@include media-breakpoint-down(sm){
-			height: 100%;
+		@include media-breakpoint-down(lg){
+			height: auto !important;
 		}
 		transition-duration: 0.4s;
 		&:hover {
@@ -755,9 +755,9 @@
 	.swiper-slide {
 		// @include col-sw;
 		@include media-breakpoint-up(lg) {
-			width: calc(25vw - 14px / 4) !important;
-			max-width: calc(25vw - 14px / 4) !important;
-			min-width: calc(25vw - 14px / 4) !important;
+			width: calc(25% - 14px / 4) !important;
+			max-width: calc(25% - 14px / 4) !important;
+			min-width: calc(25% - 14px / 4) !important;
 		}
 	}
 	.swiper-pagination {

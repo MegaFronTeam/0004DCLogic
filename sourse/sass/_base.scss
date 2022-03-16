@@ -25,6 +25,7 @@ html {
 body {
 	background-color: #f6f9ff;
 	--fancybox-bg: rgba(1, 122, 255, 0.9) !important;
+	font-feature-settings: 'pnum' on, 'lnum' on;
 	&.fixed,
 	&.fancybox-active {
 		.header {
@@ -756,4 +757,7 @@ textarea.form-wrap__input {
 	svg {
 		filter: none;
 	}
+}
+.container-without-padding{
+	padding: 0;
 }

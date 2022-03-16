@@ -3,12 +3,13 @@ mixin sInfoNews(data)
 	+b.SECTION.sInfoNews.section#sInfoNews&attributes(attributes)
 		h1 Информация
 		+links-wrap(infoNewsTabs)
-		.row
-			mixin item()
-				.col-lg-3.col-sm-6
-					+info-news-item
-			- for(x = 0; x < 16; x++)
-				+item
+		.container-xl.container-without-padding
+			.row
+				mixin item()
+					.col-lg-3.col-sm-6
+						+info-news-item
+				- for(x = 0; x < 16; x++)
+					+item
 		+e.btn-wrap
 			+e.BUTTON.btn.btn.btn-outline-primary Показать ещё новости
 	// end sInfoNews
@@ -381,16 +382,17 @@ mixin sInfoPartnersIndex(data)
 mixin sInfoNewsIndex(data)
 	// start sInfoNews
 	+b.SECTION.sInfoNews--index.section#sInfoNews&attributes(attributes)
-		h2 Новости
-		.sInfoNewsIndex-slider-wrap
-			.sInfoNewsIndex-slider.swiper
-				.swiper-wrapper
-					mixin item()
-						.col-3.swiper-slide
-							+info-news-item
-					- for(x = 0; x < 16; x++)
-						+item
-				.swiper-pagination
-		+e.btn-wrap
-			+e.BUTTON.btn.btn.btn-outline-primary Показать ещё новости
+		.container-xl
+			h2 Новости
+			.sInfoNewsIndex-slider-wrap
+				.sInfoNewsIndex-slider.swiper
+					.swiper-wrapper
+						mixin item()
+							.col-3.swiper-slide
+								+info-news-item
+						- for(x = 0; x < 16; x++)
+							+item
+					.swiper-pagination
+			+e.btn-wrap
+				+e.BUTTON.btn.btn.btn-outline-primary Показать ещё новости
 	// end sInfoNews

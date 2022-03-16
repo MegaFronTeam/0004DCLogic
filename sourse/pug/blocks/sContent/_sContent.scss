@@ -162,12 +162,19 @@
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(40);
 		}
+		counter-reset: num;
 		margin-bottom: rem(34);
 		padding-left: rem(32);
 		li {
 			padding-left: rem(11);
 			position: relative;
 			margin-bottom: rem(16);
+			list-style: none;
+			&::before {
+				content: counter(num) '.';
+				counter-increment: num;
+				font-family: 'Roboto';
+			}
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -175,10 +182,15 @@
 				padding-left: rem(16);
 				margin-top: rem(8);
 				margin-bottom: 0;
+				counter-reset: num2;
 				li {
 					margin-bottom: rem(8);
 					&:last-child {
 						margin-bottom: 0;
+					}
+					&::before {
+						content: counter(num) '.' counter(num2) '.';
+						counter-increment: num2;
 					}
 				}
 			}
@@ -193,7 +205,7 @@
 		picture {
 			margin-bottom: 0 !important;
 		}
-		.description{
+		.description {
 			margin-bottom: 0 !important;
 		}
 		@include media-breakpoint-up(xl) {
@@ -275,7 +287,7 @@
 		margin-bottom: rem(24);
 		color: #838990;
 	}
-	&__soc-title{
+	&__soc-title {
 		margin-bottom: 4px !important;
 	}
 	&__mob-menu {
@@ -344,12 +356,12 @@
 		margin-bottom: rem(16);
 		background-color: $primary;
 		color: $white;
-		p.quote{
-			&:last-child{
+		p.quote {
+			&:last-child {
 				margin-bottom: 0;
 			}
-			&::after{
-				background-image: url('../img/svg/quote-2.svg');
+			&::after {
+				background-image: url("../img/svg/quote-2.svg");
 			}
 		}
 	}
