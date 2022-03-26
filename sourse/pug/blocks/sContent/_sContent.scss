@@ -47,9 +47,10 @@
 		list-style-type: none;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(40);
+			padding-left: rem(24);
 		}
 		margin-bottom: rem(34);
-		padding-left: rem(24);
+		
 		li {
 			padding-left: rem(32);
 			position: relative;
@@ -443,6 +444,11 @@
 .sContentSlider {
 	padding-top: 0;
 	position: relative;
+	.container-xl{
+		@include media-breakpoint-down(lg){
+			padding: 0;
+		}
+	}
 	&__slider {
 		@include media-breakpoint-up(sm) {
 			overflow: unset;
