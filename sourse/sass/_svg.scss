@@ -1,0 +1,48 @@
+
+@mixin mt2($s: .36s) {
+	--speed: #{$s};
+  transition: all var(--speed) ease-in-out;
+}
+:root{
+
+	--speed: 3s;
+}
+.belaz-1{
+	// display: none;
+	transform: translate(200px,-200px);
+	opacity: 0;
+	
+}
+
+.tr-center{
+
+	transform-origin: center center;
+}
+.circle-2{
+	transform-origin: center center;
+	opacity: 0;
+	// position: absolute;
+	&:nth-child(4),
+	&:nth-child(2) {
+	 
+
+		// transform: rotate(2deg);
+		// transform:  skewX(-35deg);
+	}
+							// &:nth-child(2),
+							// &:nth-child(3) {
+							// 	display: none;
+							// }
+}
+
+.line-with-circle{
+	position: relative;
+}
+
+.line-3{
+	opacity: 0;
+}
+
+.monitor-4{
+
+}

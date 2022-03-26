@@ -62,6 +62,7 @@
 	}
 	&__bg {
 		width: 100vw;
+		position: relative;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;
 			margin-top: -30px;
@@ -70,9 +71,11 @@
 			@include block(361, 264);
 		}
 		margin-bottom: 8px;
+		svg,
 		img {
 			@include media-breakpoint-up(lg){
-				width: 100vw;
+				width: 100% !important;
+				height: auto;
 			}
 			@include media-breakpoint-down(lg){
 				position: absolute;

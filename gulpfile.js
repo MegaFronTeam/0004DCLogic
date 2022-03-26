@@ -55,7 +55,7 @@ function cleanFolders() {
 }
 
 function pugFiles() {
-    return  src([sourse + '/pug/pages/**/*.pug'])
+    return  src([sourse + '/pug/pages/*.pug'])
     .pipe(data(function(file) {
         return JSON.parse(fs.readFileSync(sourse + '/pug/content.json'))
     }))
@@ -247,7 +247,7 @@ function startwatch() {
     // watch([sourse + '/js/libs.js'], { usePolling: true }, scripts);
     watch(sourse + '/sass/*.svg', { usePolling: true }, svgCopy);
 
-    watch([sourse + '/js/common.js'], { usePolling: true }, common);
+    watch([sourse + '/js/common.js', publicPath + '/js/svg.js'], { usePolling: true }, common);
     watch(sourse + '/img', { usePolling: true }, img);
 }
 

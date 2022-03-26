@@ -1,13 +1,15 @@
+include svg.pug
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container.order-lg-0.order-1
-			+b.section-title
-				h1 DCLogic<br>системный интегратор
-			p Мы разрабатываем и реализуем комплексные проекты в области информационных технологий и промышленной автоматизации крупнейших предприятий
-			+e.btn-wrap
-				+e.btn.btn.btn-outline-primary(href="#") Посмотреть решения
-				+e.btn.btn.btn-primary(href="#") Оставить заявку
+		//- .container.order-lg-0.order-1
+		//- 	+b.section-title
+		//- 		h1 DCLogic<br>системный интегратор
+		//- 	p Мы разрабатываем и реализуем комплексные проекты в области информационных технологий и промышленной автоматизации крупнейших предприятий
+		//- 	+e.btn-wrap
+		//- 		+e.btn.btn.btn-outline-primary(href="#") Посмотреть решения
+		//- 		+e.btn.btn.btn-primary(href="#") Оставить заявку
 		+e.bg
-			img(src="img/svg/header-bg.svg", alt="")
+			+head-svg()
+			
 	// end headerBlock

@@ -99,6 +99,7 @@ $output-bourbon-deprecation-warnings: false;
 // }
 @import "root";
 @import "base";
+@import "svg";
 
 @import '../pug/blocks/mixin-wrap/mixin-wrap.scss';
 @import '../pug/blocks/form-wrap/form-wrap.scss';
