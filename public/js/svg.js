@@ -325,6 +325,7 @@ function headSVG() {
 			translateX: 384,
 			translateY: -4,
 	} 
+
 	
 	tl6
 		.add(handDown)
@@ -342,8 +343,42 @@ function headSVG() {
 			translateY: 14,
 			opacity: 0
 		})
+	
+	
+		let hand12Down = 
+		{
+			targets: ".hand-12",
+			duration: 0,
+			rotate:0,
+			translateX: 0,
+			translateY: 0,
+	} 
+	
+	let hand12Up = 
+		{
+			targets: ".hand-12",
+			duration: 0,
+			rotate:-41,
+			translateX: -187,
+			translateY: 186,
+	} 
 		
 	tl7
+	.add(hand12Up)
+	.add({
+		targets: '.screen-12--1, .screen-12--2',
+		// translateX: 54,
+		// translateY: 14,
+		opacity: 0
+	}, `+=${speed} `)
+	.add({
+		targets: '.screen-12--3',
+		// translateX: 54,
+		translateY: 14,
+		opacity: 0
+	})
+	
+	
 	.add({
 		targets: '.circle-11--1',
 		translateX: 54,
@@ -351,10 +386,23 @@ function headSVG() {
 		opacity: 0
 	})
 	.add({
+		targets: '.circle-12',
+		translateX: -30,
+		translateY: 18,
+		opacity: [1, 0]
+	})
+	.add(hand12Down)
+	.add({
 		targets: '.circle-11--2',
 		translateX: 54,
 		translateY: 34,
-		opacity: 0
+		opacity: [1, 0]
+	})
+	.add({
+		targets: '.hand-13',
+		// translateX: -30,
+		translateY: -1,
+		// opacity: [1, 0]
 	})
 	.add({
 		targets: '.circle-11--3',
@@ -363,11 +411,21 @@ function headSVG() {
 		opacity: 0
 	})
 	.add({
+		targets: '.hand-14',
+		translateX: 1,
+		translateY: 2,
+		// opacity: [1, 0]
+	})
+	
+	.add({
 		targets: '.circle-11--4',
 		translateX: 54,
 		translateY: 34,
-		opacity: 0
+		opacity: [1, 0]
 	})
+	
+
+
 	
 	
 		// .add(handDown)
