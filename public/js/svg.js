@@ -23,6 +23,28 @@ function headSVG() {
 			...set,
 			direction: 'normal',
 		});
+		let tl4 = anime.timeline({
+			...set ,
+			direction: 'normal',
+		});
+	
+		let tl5 = anime.timeline({
+			duration: speed  * 4,
+			loop: true,
+			easing: 'easeInOutExpo',
+			// delay: function(el, i, l) {
+			// 	return i * 2;
+			// },
+			// endDelay: function(el, i, l) {
+			// 	return (l - i) * 2;
+			// }
+		});
+		let tl6 = anime.timeline({
+			...set,
+			duration: speed * 2 ,
+			// direction: 'normal',
+		});
+	
 		// Add children
 	tl
 		.add({
@@ -32,12 +54,39 @@ function headSVG() {
 			// direction: 'alternate',
 			opacity: 1
 		})
+		
+		.add({
+			targets: '.camera-9', 
+			opacity: 1
+		}, `+=${speed} `)
+		.add({
+			targets: '.camera-9', 
+			opacity: 0.2
+		})
+		.add({
+			targets: '.camera-9', 
+			opacity: 1
+		})
+			.add({
+				targets: '.camera-9', 
+				opacity: 0.2
+			})
+			.add({
+				targets: '.camera-9', 
+				opacity: 1
+			})
+			.add({
+				targets: '.camera-9', 
+				opacity: .2
+			})
+
 		.add({
 			targets: '.circle-2--1',
 			translateX: [0, -20],
 			translateY: [0, 13],
 			opacity: [0, 1],
 		}, `-=${speed / 2} `)
+
 		.add({
 			targets: '.circle-2--2',
 			opacity: [0, 1],
@@ -67,6 +116,8 @@ function headSVG() {
 			skewX: -35,
 		});
 	
+	
+	
 	anime({
 		...set,
 		duration: speed * 3,
@@ -76,110 +127,226 @@ function headSVG() {
 			translateY: [0, 6]
 	});
 	
-tl2
+	tl2
+			.add({
+				targets: '.hand-4--left',
+				translateY: [0, -3],
+			})
+			.add({
+				targets: '.hand-4--right',
+				translateY: [0, -2],
+			});
+		
+		let circle51 = {
+			targets: '.circle-5--1',
+			opacity: [0, 1],
+			translateX: [0,39],
+			translateY: [0, 26],
+			// delay: -200
+		};
+			
+		let circle52 = {
+			targets: '.circle-5--2',
+			opacity: [0, 1],
+			translateX: [35,0],
+			translateY: [21, 0],
+		};
+		let circle53 = {
+			targets: '.circle-5--3',
+			opacity: [0, 1],
+			translateX: [0,35],
+			translateY: [0, 21],
+			// delay: -200
+		};
+		
+		let circle54 = {
+			targets: '.circle-5--4',
+			opacity: [0, 1],
+			translateX: [-27, 0],
+			translateY: [18, 0],
+			// delay: -200
+		};
+		let box6 = {
+			opacity: [0,1],
+			translateX: [-34,0],
+			translateY: [-21,0], 
+		}
+	
+		let box6hide = {
+			opacity: 0,
+			translateX: -34,
+			translateY: -21, 
+		}
+	
+
+
+	tl3
+		.add(circle51) 
+		.add(circle52)
+		.add(circle53)
+		.add(circle54)
 		.add({
-			targets: '.hand-4--left',
-			translateY: [0, -3],
+			targets: '.box-6--1', 
+			...box6 
+			// delay: -200
 		})
 		.add({
-			targets: '.hand-4--right',
-			translateY: [0, -2],
+			targets: '.box-6--2', 
+			...box6 
+			// delay: -200
+		})
+		
+		.add({
+			targets: '.box-6--3', 
+			...box6 
+			// delay: -200
+		})
+		.add({
+			targets: '.box-6--4', 
+			...box6 
+		})
+		.add({
+			targets: '.screen-7--left', 
+			opacity: 1,
+			translateY: [20,0], 
+		})
+		.add({
+			targets: '.screen-7--right', 
+			opacity: 1,
+			// translateX: -34,
+			translateY: [20,0], 
+		}, `-=${speed * .8} `)
+		.add({
+			targets: '.circle-5',
+			opacity: 0
+		}) 
+		.add(circle51) 
+		.add(circle52)
+		.add(circle53)
+		.add(circle54)
+
+		.add({
+			targets: '.box-6--1', 
+			...box6hide
+		})
+		.add({
+			targets: '.box-6--2', 
+			...box6hide
+		})
+		
+		.add({
+			targets: '.box-6--3', 
+			...box6hide
+		})
+		
+		.add({
+			targets: '.box-6--4', 
+			...box6hide
+		})
+	let circleDown =function (el) {
+		return {
+			targets: `.circle-7--${el}`, 
+			opacity: [1, 0],
+			translateX: -70,
+			translateY: 39, 
+		}
+	}
+	
+	let circleUp = function(el) {
+		return {
+			targets: `.circle-7--${el}`,
+			opacity: [0,1],
+			translateX: [-70,0],
+			translateY: [39, 0], 
+		}
+	}
+
+	tl4
+
+		// .add({
+		// 	targets: `.excavator-8`, 
+		// 	translateX: 10,
+		// 	translateY: 10, 
+		// })
+		
+		.add({
+			targets: `.excavator-8`,
+			translateX: [16, -3],
+			translateY: [-3, -12],
+		})
+		
+		.add({
+			targets: `.circle-7--1, .circle-7--3`,
+			opacity: 1,
+		})
+		
+		.add({ ...circleDown(1) })
+		.add({ ...circleUp(4) })
+		.add({ ...circleDown(3) })
+		.add({ ...circleUp(2) })
+		.add({
+			targets: `.excavator-8`,
+			translateX: 16,
+			translateY: -3,
+		})
+		.add({
+			targets: `.circle-7--1, .circle-7--3`,
+			opacity: 0,
 		});
 	
-	let circle51 = {
-		targets: '.circle-5--1',
-		opacity: [0, 1],
-		translateX: [0,39],
-		translateY: [0, 26],
-		// delay: -200
-	};
-		
-	let circle52 = {
-		targets: '.circle-5--2',
-		opacity: [0, 1],
-	};
-	let circle53 = {
-		targets: '.circle-5--3',
-		opacity: [0, 1],
-		translateX: [0,35],
-		translateY: [0, 21],
-		// delay: -200
-	};
+	tl5
+		.add({
+			targets: '.truba-9 path:not(:first-child)',
+			opacity: 1,
+		})
+			
+		.add({
+			targets: '.truba-9 path:not(:first-child)',
+			opacity: 0,
+			translateY: [0, -40],
+		});
+	let handDown = 
+		{
+			targets: ".hand-11",
+			duration: 0,
+			rotate:0,
+			translateX: 0,
+			translateY: 0,
+	} 
 	
-
-
-tl3
-	.add(circle51) 
-	.add(circle52)
-	.add(circle53)
-	.add({
-		targets: '.box-6--1', 
-		opacity: [0,1],
-		translateX: [-34,0],
-		translateY: [-21,0], 
-		// delay: -200
-	})
-	.add({
-		targets: '.box-6--2', 
-		opacity: [0,1],
-		translateX: [-34,0],
-		translateY: [-21,0], 
-		// delay: -200
-	})
+	let handUp = 
+		{
+			targets: ".hand-11",
+			duration: 0,
+			rotate:-84,
+			translateX: 384,
+			translateY: -4,
+	} 
 	
-	.add({
-		targets: '.box-6--3', 
-		opacity: [0,1],
-		translateX: [-34,0],
-		translateY: [-21,0], 
-		// delay: -200
-	})
-	.add({
-		targets: '.box-6--4', 
-		opacity: [0,1],
-		translateX: [-34,0],
-		translateY: [-21,0], 
-		// delay: -200
-	})
-	.add({
-		targets: '.circle-5',
-		opacity: 0
-	}) 
-	.add(circle51) 
-	.add(circle52)
-	.add(circle53)
-
-	.add({
-		targets: '.box-6--1', 
-		opacity: 0,
-		translateX: -34,
-		translateY: -21, 
-		// delay: -200
-	})
-	.add({
-		targets: '.box-6--2', 
-		opacity: 0,
-		translateX: -34,
-		translateY: -21, 
-		// delay: -200
-	})
+	tl6
+		.add(handDown)
+		.add(handUp)
+		.add({
+			targets: '.circle-10--1',
+			translateX: -10,
+			translateY: 8,
+			opacity: 0
+		})
 	
-	.add({
-		targets: '.box-6--3', 
-		opacity: 0,
-		translateX: -34,
-		translateY: -21, 
-	})
+		.add({
+			targets: '.circle-10--2',
+			translateX: 24,
+			translateY: 14,
+			opacity: 0
+		})
 	
-	.add({
-		targets: '.box-6--4', 
-		opacity: 0,
-		translateX: -34,
-		translateY: -21, 
-	})
-
-
-
+	
+		// .add(handDown)
+		// .add(handUp)
+	
+		// .add(handDown)
+		// .add(handUp)
+	
 	
 	
 	

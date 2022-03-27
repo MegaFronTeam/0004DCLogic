@@ -46,8 +46,21 @@
 .monitor-4{
 
 }
-
+.circle-7,
+.screen-7,
 .box-6,
 .circle-5 {
 	opacity: 0;
+}
+
+.excavator-8{
+	// transform: translate(16px, -3px);
+}
+.circle-7--1, .circle-7--3{
+	opacity: 0;
+}
+
+.hand-11{
+	transform-origin: center center;
+	// transform: rotate(-84deg) translateX(384px) translateY(-4px);
 }
