@@ -19,6 +19,10 @@ function headSVG() {
 			easing: 'easeInOutQuad',
 		});
 		
+		let tl3 = anime.timeline({
+			...set,
+			direction: 'normal',
+		});
 		// Add children
 	tl
 		.add({
@@ -70,26 +74,113 @@ function headSVG() {
 			targets: '.monitor-4',
 			opacity: [1, 0],
 			translateY: [0, 6]
-		})
-		tl2
+	});
+	
+tl2
 		.add({
-			targets: '.hand-4--left', 
+			targets: '.hand-4--left',
 			translateY: [0, -3],
 		})
-	
-		// .add({
-		// 	targets: '.hand-4--left', 
-		// 	translateY: [-2, 0],
-		// })
-	
 		.add({
-			targets: '.hand-4--right', 
+			targets: '.hand-4--right',
 			translateY: [0, -2],
-		})
-		// .add({
-		// 	targets: '.hand-4--right', 
-		// 	translateY: [3, 0],
-		// })
+		});
+	
+	let circle51 = {
+		targets: '.circle-5--1',
+		opacity: [0, 1],
+		translateX: [0,39],
+		translateY: [0, 26],
+		// delay: -200
+	};
+		
+	let circle52 = {
+		targets: '.circle-5--2',
+		opacity: [0, 1],
+	};
+	let circle53 = {
+		targets: '.circle-5--3',
+		opacity: [0, 1],
+		translateX: [0,35],
+		translateY: [0, 21],
+		// delay: -200
+	};
+	
+
+
+tl3
+	.add(circle51) 
+	.add(circle52)
+	.add(circle53)
+	.add({
+		targets: '.box-6--1', 
+		opacity: [0,1],
+		translateX: [-34,0],
+		translateY: [-21,0], 
+		// delay: -200
+	})
+	.add({
+		targets: '.box-6--2', 
+		opacity: [0,1],
+		translateX: [-34,0],
+		translateY: [-21,0], 
+		// delay: -200
+	})
+	
+	.add({
+		targets: '.box-6--3', 
+		opacity: [0,1],
+		translateX: [-34,0],
+		translateY: [-21,0], 
+		// delay: -200
+	})
+	.add({
+		targets: '.box-6--4', 
+		opacity: [0,1],
+		translateX: [-34,0],
+		translateY: [-21,0], 
+		// delay: -200
+	})
+	.add({
+		targets: '.circle-5',
+		opacity: 0
+	}) 
+	.add(circle51) 
+	.add(circle52)
+	.add(circle53)
+
+	.add({
+		targets: '.box-6--1', 
+		opacity: 0,
+		translateX: -34,
+		translateY: -21, 
+		// delay: -200
+	})
+	.add({
+		targets: '.box-6--2', 
+		opacity: 0,
+		translateX: -34,
+		translateY: -21, 
+		// delay: -200
+	})
+	
+	.add({
+		targets: '.box-6--3', 
+		opacity: 0,
+		translateX: -34,
+		translateY: -21, 
+	})
+	
+	.add({
+		targets: '.box-6--4', 
+		opacity: 0,
+		translateX: -34,
+		translateY: -21, 
+	})
+
+
+
+	
 	
 	
  }
