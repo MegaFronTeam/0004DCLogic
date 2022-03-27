@@ -44,6 +44,9 @@ function headSVG() {
 			duration: speed * 2 ,
 			// direction: 'normal',
 		});
+		let tl7 = anime.timeline({
+			...set
+		});
 	
 		// Add children
 	tl
@@ -339,6 +342,32 @@ function headSVG() {
 			translateY: 14,
 			opacity: 0
 		})
+		
+	tl7
+	.add({
+		targets: '.circle-11--1',
+		translateX: 54,
+		translateY: 34,
+		opacity: 0
+	})
+	.add({
+		targets: '.circle-11--2',
+		translateX: 54,
+		translateY: 34,
+		opacity: 0
+	})
+	.add({
+		targets: '.circle-11--3',
+		translateX: 54,
+		translateY: 34,
+		opacity: 0
+	})
+	.add({
+		targets: '.circle-11--4',
+		translateX: 54,
+		translateY: 34,
+		opacity: 0
+	})
 	
 	
 		// .add(handDown)
