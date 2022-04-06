@@ -3,25 +3,25 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
-	&__caption-text-block{
+	&__caption-text-block {
 		margin-top: rem(32);
 		background-color: $white;
-		border: 1px solid #DEE5ED;
+		border: 1px solid #dee5ed;
 		text-align: center;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			padding: rem(56);
 		}
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			padding-top: rem(32);
 			padding-bottom: rem(32);
 			padding-left: rem(8);
 			padding-right: rem(8);
 		}
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			font-size: rem(24);
 		}
 		font-size: rem(19);
-		a{
+		a {
 			font-weight: 700;
 		}
 	}
@@ -56,7 +56,7 @@
 		--bs-gutter-y: 3px;
 	}
 	.info-news-item {
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			height: auto !important;
 		}
 		transition-duration: 0.4s;
@@ -235,6 +235,10 @@
 		}
 	}
 	.project-industry-slider-item {
+		background: #f6f9ff;
+		&:nth-child(odd) {
+			background: $primary;
+		}
 		@include media-breakpoint-up(lg) {
 			&__bg {
 				max-width: 50%;

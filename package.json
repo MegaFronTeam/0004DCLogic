@@ -49,6 +49,8 @@
     "animejs": "^3.2.1",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
-    "swiper": "^8.0.6"
+    "swiper": "^8.0.6",
+    "filepond": "^4.29.0",
+    "filepond-plugin-image-preview": "^4.6.11"
   }
 }

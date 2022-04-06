@@ -25,7 +25,7 @@ html {
 body {
 	background-color: #f6f9ff;
 	--fancybox-bg: rgba(1, 122, 255, 0.9) !important;
-	font-feature-settings: 'pnum' on, 'lnum' on;
+	font-feature-settings: "pnum" on, "lnum" on;
 	&.fixed,
 	&.fancybox-active {
 		.header {
@@ -758,6 +758,26 @@ textarea.form-wrap__input {
 		filter: none;
 	}
 }
-.container-without-padding{
+.container-without-padding {
 	padding: 0;
+}
+
+.filepond--root,
+.filepond--drop-label {
+	min-height: rem(104) !important;
+}
+.filepond--drop-label {
+	cursor: pointer;
+	background-color: #eef3fa;
+	border: 1px dashed #b4beca;
+	color: #ababab;
+	// height: rem(104) !important;
+	border-radius: 4px;
+	label {
+		font-size: 12px !important;
+		max-width: 275px;
+	}
+}
+.filepond--credits {
+	display: none;
 }

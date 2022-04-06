@@ -34,9 +34,9 @@
 	.solution-content__body{
 		@include media-breakpoint-down(lg){
 			padding-top: rem(24);
-			text-align: center;
+			// text-align: center;
 			h2{
-				text-align: center;
+				// text-align: center;
 			}
 			ul{
 				text-align: left;
