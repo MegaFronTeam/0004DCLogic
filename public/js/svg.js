@@ -7,8 +7,8 @@ function headSVG() {
 	let set = {
 		easing: 'easeInOutSine',
 		duration: speed,
-		// loop: true,
-		// direction: 'alternate',
+		loop: true,
+		direction: 'alternate',
 	}
 		let tl = anime.timeline({
 			...set
