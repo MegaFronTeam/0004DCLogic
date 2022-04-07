@@ -13,6 +13,8 @@
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css?v=0.0.1" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<div class="main-wrapper">
@@ -85,6 +87,7 @@
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
+								<input class="filepond" type="file" name="filepond" multiple="" data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3"/>
 								<div class="sForm__btn-wrap">
 									<div class="sForm__btn btn btn-primary">Отправить</div>
 								</div>
@@ -201,6 +204,11 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"> </script>
+		<script src="https://unpkg.com/filepond/dist/filepond.min.js"> </script>
 		<script src="libs/animejs/lib/anime.min.js"> </script>
 		<script src="js/svg.js?v=0.0.1"></script>
 		<script src="js/common.js?v=0.0.1"></script>

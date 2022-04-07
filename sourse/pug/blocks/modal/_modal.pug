@@ -24,6 +24,7 @@ mixin modal()
 						+input(`Введите номер`,`tel`,`Контактный телефон`)
 						+input(`Введите email`,`text`,`E-mail`)
 						+input(``,`textarea`,`Cопроводительное письмо`)
+						input.filepond(type='file' name='filepond' multiple='' data-allow-reorder='true' data-max-file-size='3MB' data-max-files='3')
 						.sForm__btn-wrap
 							.sForm__btn.btn.btn-primary Отправить
 						.sForm__agree Нажимая кнопку «Отправить», я даю свое согласие<br>на обработку своих <a href="#">персональных данных</a>

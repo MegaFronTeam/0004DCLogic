@@ -165,27 +165,31 @@
 		}
 		counter-reset: num;
 		margin-bottom: rem(34);
-		padding-left: rem(32);
+		padding-left: rem(24);
 		li {
-			padding-left: rem(11);
+			padding-left: rem(24);
 			position: relative;
 			margin-bottom: rem(16);
 			list-style: none;
 			&::before {
 				content: counter(num) '.';
 				counter-increment: num;
-				font-family: 'Roboto';
+				font-family: 'Raleway';
+				position: absolute;
+				left: 0;
+				top: 0;
 			}
 			&:last-child {
 				margin-bottom: 0;
 			}
 			ol {
-				padding-left: rem(16);
+				padding-left: rem(0);
 				margin-top: rem(8);
 				margin-bottom: 0;
 				counter-reset: num2;
 				li {
 					margin-bottom: rem(8);
+					padding-left: rem(32);
 					&:last-child {
 						margin-bottom: 0;
 					}

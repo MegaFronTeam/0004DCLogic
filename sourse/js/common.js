@@ -564,7 +564,29 @@ function eventHandler() {
 	// 	}
 	// });
 	// modal window
+	FilePond.registerPlugin(
+		// encodes the file as base64 data
+		FilePondPluginFileEncode,
 
+		// validates the size of the file
+		FilePondPluginFileValidateSize,
+
+		// corrects mobile image orientation
+		FilePondPluginImageExifOrientation,
+
+		// previews dropped images
+		FilePondPluginImagePreview
+	);
+
+	// Select the file input and use 
+	// create() to turn it into a pond
+	FilePond.create(
+		document.querySelector('.filepond'),
+		{
+			// labelIdle: `Drag & Drop your picture or <span class="filepond--label-action">Browse</span>`,
+			labelIdle: `Нажмите или перетащите  файлы в эту область. .rar .zip .doc .docx .pdf .jpg не более 10 мб`,
+		}
+	);
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
