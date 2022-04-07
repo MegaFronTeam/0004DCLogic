@@ -7,38 +7,37 @@
 
 	--speed: 3s;
 }
-.belaz-1{
+#belaz-1{
 	// display: none;
 	transform: translate(200px,-200px);
 	opacity: 0;
 	
+}
+// .st928{
+// 	opacity: 0.2;
+// }
+.st929{
+	opacity: 0;
 }
 
 .tr-center{
 
 	transform-origin: center center;
 }
-.circle-2{
+#circle-2_3_{
 	transform-origin: center center;
 	opacity: 0;
-	// position: absolute;
-	&:nth-child(4),
-	&:nth-child(2) {
-	 
+	
+}
+#circle-2_3_1{
+	opacity: 0;	
 
-		// transform: rotate(2deg);
-		// transform:  skewX(-35deg);
-	}
-							// &:nth-child(2),
-							// &:nth-child(3) {
-							// 	display: none;
-							// }
 }
 
 .line-with-circle{
 	position: relative;
 }
-
+.st0-3,
 .line-3{
 	opacity: 0;
 }
@@ -56,8 +55,22 @@
 .excavator-8{
 	// transform: translate(16px, -3px);
 }
-.circle-7--1, .circle-7--3{
+// [id^="circle-15"],
+[id^="circle-11"],
+[id^="circle-12"],
+#screen-7--right,
+#screen-7--left,
+#box-6--1,
+#box-6--2,
+#box-6--3,
+#box-6--4,
+#circle-5--1,
+#circle-5--2,
+#circle-5--3,
+#circle-7--1, #circle-7--3,
+#circle-7--2, #circle-7--4{
 	opacity: 0;
+	will-change: transform; 
 }
 
 .hand-11{
@@ -66,4 +79,40 @@
 }
 .hand-12{ 
 	transform: rotate(-41deg) translate(-187px, 186px);
+}
+
+#granuly, #granuly_1_, #granuly_2_,  #granuly_3_{
+	opacity: 0;
+}
+
+#circle-15--7,
+#circle-15--8{
+	// display: none;
+	transform: translate(-61px,-50px);
+}
+
+#circle-15--2{
+	transform-origin: center center;
+	opacity: 0;
+}
+#circle-15--5,
+#circle-15--1{
+	opacity: 0;
+}
+[id^="circle-15"]{
+	transform-origin: center center;
+	opacity: 0;
+}
+#shield-18,
+#dots-19,
+#el-17--1,
+#el-17--2,
+#circle-16--1{
+	opacity: 0;
+}
+[id^="circle-16"]{
+	transform-origin: center center;
+
+
+	// skewX(31deg) translate(-85px, 65px)
 }
