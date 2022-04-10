@@ -1,8 +1,8 @@
 // start .headerBlock
 .headerBlock {
 	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
+	// min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
 	// background-color: #000000;
 	--sTPB: #{rem(8)};
@@ -66,11 +66,19 @@
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;
 			margin-top: -30px;
+			@include block(1280,586);
 		}
 		@include media-breakpoint-down(lg) {
 			@include block(361, 264);
 		}
 		margin-bottom: 8px;
+		iframe{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100% !important;
+			height: 100% !important;
+		}
 		svg,
 		img {
 			@include media-breakpoint-up(lg){

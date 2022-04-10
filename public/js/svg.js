@@ -1,6 +1,6 @@
 'use strict';
 function headSVG() { 
-	let speed = 500;
+	let speed = 1000;
 
 	let pathLine = anime.path("#head-svg .line-3")
 		// Create a timeline with default parameters
@@ -31,13 +31,7 @@ function headSVG() {
 		let tl5 = anime.timeline({
 			duration: speed  * 2,
 			loop: true,
-			easing: 'easeInOutExpo',
-			// delay: function(el, i, l) {
-			// 	return i * 2;
-			// },
-			// endDelay: function(el, i, l) {
-			// 	return (l - i) * 2;
-			// }
+			easing: 'easeInOutExpo', 
 		});
 		let tl6 = anime.timeline({
 			...set,
@@ -53,6 +47,13 @@ function headSVG() {
 		let tl9 = anime.timeline({
 			...set
 		});
+		let tl20 = anime.timeline({
+			...set
+		});
+		let tl21 = anime.timeline({
+			...set,
+			direction: 'normal',
+		});
 		let tl10 = anime.timeline({
 			...set,
 			loop: true,
@@ -67,20 +68,11 @@ function headSVG() {
 			translateY: [-50, 0],
 			// direction: 'alternate',
 			opacity: 1
-		})
-		
-		// .add({
-		// 	targets: '.st928', 
-		// 	opacity: [.2, .8]
-		// })
+		}) 
 		.add({
 			targets: '.st929', 
 			opacity: [0,.8]
-		})
-		// .add({
-		// 	targets: '.st928', 
-		// 	opacity: [.8, 0]
-		// }, `+=${speed} `)
+		}) 
 		.add({
 			targets: '.st929', 
 			opacity: [.8, 0]
@@ -128,13 +120,7 @@ function headSVG() {
 			translateX: [58, -16],
 			translateY: [34, -10],
 		});
-	
-		// .add({
-		// 	targets: '#circle-2_3_1',
-		// 	opacity: [, 0], 
-		// });
-	
-	
+	 
 	
 	
 	anime({
@@ -151,7 +137,7 @@ function headSVG() {
 		easing: 'easeInOutQuad',
 			targets: '#helicopter', 
 			translateY: [0, 50],
-			// translateX: [1150, 1150],
+			translateX: [1150, 1150],
 	});
 	
 	tl2
@@ -288,13 +274,7 @@ function headSVG() {
 		}
 	}
 
-	tl4
-
-		// .add({
-		// 	targets: `.excavator-8`, 
-		// 	translateX: 10,
-		// 	translateY: 10, 
-		// })
+	tl4 
 		
 		.add({
 			targets: `#excavator-8`,
@@ -412,18 +392,97 @@ function headSVG() {
 		opacity: 0
 	})
 	.add({
-		targets: '[id^="circle-12"]',
-		translateX: -30,
-		translateY: 18,
-		opacity: [1, 0]
+		targets: '#circle-12',
+		translateX: [0, -56],
+		translateY: [0, 40],
+		opacity: [0, 1],
 	})
+		
+	// .add({
+	// 	targets: '[id^="circle-12"]',
+	// })
+	.add({
+		targets: '#circle-12', 
+		skewX: -31,
+		translateX: [ -56, -3],
+		translateY: [40, -13]
+	})
+	
+	.add({
+		targets: '#circle-12-1', 
+		translateX: [ -98, -140],
+		translateY: [15, 41],
+		opacity: [0, 1]
+	}, `-=${speed / 2} `)
+	.add({
+		targets: '#circle-12, #circle-12-1', 
+		opacity: 0
+	}, `-=${speed / 2} `)
+	.add({
+		targets: '#monitor-20',  
+		opacity: [1,0], 
+	})
+	.add({
+		targets: '[d="M161.1,250.5l35.3,20.4l59.8-35.8 M161.1,250.5l-57,35.2 M161.1,250.5l-60.6-36.4"]', 
+		stroke: '#0CD1FF',
+	}, `-=${speed / 2} `)
+	.add({
+		targets: '#circle-12 .st130, #circle-12-1 .st130',
+		fill: '#0CD1FF', 
+	}, `-=${speed / 2} `)
+	.add({
+		targets: '#circle-12, #circle-12-1', 
+		opacity: 1
+	}, `-=${speed / 2} `)
+	.add({
+		targets: '#circle-12-1', 
+		translateX: [-140, -98],
+		translateY: [41, 15],
+		opacity: [0,1]
+	}, `-=${speed / 2} `)
+		
+	.add({
+		targets: '#circle-12-1', 
+		opacity: [0]
+	}, `-=${speed / 2} `)
+		
+	.add({
+		targets: '#circle-12', 
+		skewX: 0,
+		translateX: [  -3, -56],
+		translateY: [ -13, 40]
+	})
+			.add({
+		targets: '#circle-12',
+		translateX: 0,
+		translateY: 0,
+		opacity: [1, 0],
+		})
+		.add({
+			targets: '[d="M161.1,250.5l35.3,20.4l59.8-35.8 M161.1,250.5l-57,35.2 M161.1,250.5l-60.6-36.4"]', 
+			stroke: '#3998FF',
+		}, `-=${speed / 2} `)
+		.add({
+			targets: '#circle-12 .st130, #circle-12-1 .st130',
+			fill: '#3998FF', 
+		}, `-=${speed / 2} `)
+	
+	// .add({
+	// 	targets: '[id^="circle-12"]',
+	// 	translateX: [ -56,-140],
+	// 	translateY: [ 40, -13 ],
+	// 	// skewX: -31
+	// })
+		
 	.add(hand12Down)
 	.add({
 		targets: '#circle-11--2',
-		translateX: 54,
-		translateY: 34,
-		opacity: [1, 0]
+		translateX: [0,54],
+		translateY: [0,40],
+		// opacity: [1, 0]
 	})
+		
+		
 	.add({
 		targets: '#hand-13',
 		// translateX: -30,
@@ -610,6 +669,13 @@ function headSVG() {
 			translateY: 22,
 		})
 		.add({
+			targets: `#circle-16--4`,  
+			opacity: [1, 0],
+			opacity: [0,1],
+			translateX:  [-27,16],
+			translateY: [12,-12],
+		})
+		.add({
 			targets: `#shield-18`,  
 			opacity: [0,1],
 		})
@@ -650,46 +716,86 @@ function headSVG() {
 			opacity: [1,0],
 		})
 	
+		function randomValues() {
+		anime({
+			targets: '.st863, .st863',
+			// endDelay: 1000,
+			duration: speed * 16,
+			// easing: 'easeInOutQuad',
+			direction: 'alternate',
+			fill: '#A1ADFF',
+			loop: true,
+			easing: function(el, i, total) {
+				return function(t) {
+					return Math.pow(Math.sin(t * (i + 4)),  total);
+				}
+			},
+			complete: randomValues,
+			delay: anime.stagger(500, {direction: 'reverse'})
+		});
+	}
+
+	randomValues();
 
 
+	tl20 
+	.add({
+		targets: '#text-18',
+		opacity: [1, 0],
+		endDelay: speed,
+	})
+		.add({
+		targets: '#line-19',
+			opacity: [0, 1],
+			// delay: speed,
+			// endDelay: speed,
+		}, `-=${speed * 2} `)
+		.add({
+		targets: '#line-19',
+		// opacity: [0,1],
+		strokeDashoffset: [anime.setDashoffset, 0], 
+			delay: function (el, i) { return i * 250 }, 
+			// delay: speed,
+			endDelay: speed,
+	})
 
-	
-	// .add({
-		// 	targets: `#circle-15--2`,
-		// 	opacity: 1,
-		// 	// skewX: -31,
-		// 	translateX: [9, 9],
-		// 	translateY: [34,34],
-		// })
-		// .add(circleUp15(2), `-=${speed * .8} `)
-		// .add({ targets: '#circle-15--2', opacity: [1, 0]})
-
-		
-		// .add(circleDown15(5))
-		// .add(circleDown15(6))
-
-		// .add({
-		// 	targets: `#circle-15--7, #circle-15--8`,
-		// 	translateX: -61,
-		// 	translateY: -50, 
-		// }, `-=${speed} `)
-		
-		// .add(circleUp15(3))
-		// .add(circleUp15(4), `-=${speed * .8} `)
-		
-		// .add(circleDown15(7))
-		// .add(circleDown15(8))
-	
-	
-	
-		// .add(handDown)
-		// .add(handUp)
-	
-		// .add(handDown)
-		// .add(handUp)
-	
-	
-	
+	tl21
+	 .add({
+		targets: '#mouse-21',
+		translateX:  -13,
+			translateY:  -19, 
+	 }) 
+	 .add({
+		 targets: '#screen-20',
+		 opacity: [0, 1], 
+		})
+		.add({
+		 targets: '#mouse-21',
+		 translateX:  -5,
+			 translateY: 10, 
+		})  
+		.add({
+			targets: '#screen-20',
+			opacity: [1, 0], 
+		})
+		.add({
+			targets: '#mouse-21',
+			translateX:  [-5,16],
+				translateY: [10, -7],	 
+		}) 
+		.add({
+			targets: '#screen-20',
+			opacity: [0, 1], 
+		 })
+		 .add({
+			targets: '#mouse-21',
+			translateX:  -5,
+				translateY: 10, 
+		 })  
+		 .add({
+			 targets: '#screen-20',
+			 opacity: [1, 0], 
+		 }) 
 	
  }
 
@@ -697,4 +803,4 @@ function headSVG() {
  setTimeout(() => {
 	 
 	 headSVG();
-	}, 1500);
+	}, 500);

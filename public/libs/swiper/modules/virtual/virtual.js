@@ -4,8 +4,7 @@ export default function Virtual(_ref) {
   let {
     swiper,
     extendParams,
-    on,
-    emit
+    on
   } = _ref;
   extendParams({
     virtual: {
@@ -96,8 +95,6 @@ export default function Virtual(_ref) {
       if (swiper.lazy && swiper.params.lazy.enabled) {
         swiper.lazy.load();
       }
-
-      emit('virtualUpdate');
     }
 
     if (previousFrom === from && previousTo === to && !force) {
@@ -106,7 +103,6 @@ export default function Virtual(_ref) {
       }
 
       swiper.updateProgress();
-      emit('virtualUpdate');
       return;
     }
 
@@ -128,8 +124,6 @@ export default function Virtual(_ref) {
 
       if (swiper.params.virtual.renderExternalUpdate) {
         onRendered();
-      } else {
-        emit('virtualUpdate');
       }
 
       return;
