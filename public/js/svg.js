@@ -3,7 +3,7 @@ function headSVG() {
 	let speed = 1000;
 	let speed2 = .5;
 
-	gsap.registerPlugin( InertiaPlugin, DrawSVGPlugin);
+	gsap.registerPlugin( InertiaPlugin);
 		// Create a timeline with default parameters
 	let set = {
 		easing: 'easeInOutSine',
@@ -230,7 +230,7 @@ function headSVG() {
 		// .fromTo('#text-18', {opacity:0}, {opacity: 1})
 		.fromTo('#text-18', {opacity:1}, {opacity: 0}) 
 		.fromTo('#line-19',{opacity:0 }, {opacity: 1 },">-0.5")  
-		.from('#line-19',{ drawSVG:0, duration: speed2 * 2,repeatDelay: speed2 * 2})  
+		.from('#line-19',{ attr:{strokeDashoffset:0}, duration: speed2 * 2,repeatDelay: speed2 * 2})  
 		// .from( '#line-19', speed2 * 10, {attr:{"stroke-dashoffset":0}})
 
 	tl21
