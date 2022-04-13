@@ -1,8 +1,9 @@
 'use strict';
 function headSVG() { 
 	let speed = 1000;
+	let speed2 = .5;
 
-	let pathLine = anime.path("#head-svg .line-3")
+	gsap.registerPlugin( InertiaPlugin, DrawSVGPlugin);
 		// Create a timeline with default parameters
 	let set = {
 		easing: 'easeInOutSine',
@@ -10,180 +11,59 @@ function headSVG() {
 		loop: true,
 		direction: 'alternate',
 	}
-		let tl = anime.timeline({
-			...set
-		});
-		let tl2 = anime.timeline({
-			...set,
-			duration: speed * 1.5,
-			easing: 'easeInOutQuad',
-		});
+	let setg = {
+		ease: 'easeInOutSine',
+		transformOrigin:"center  center",
 		
-		let tl3 = anime.timeline({
-			...set,
-			direction: 'normal',
-		});
-		let tl4 = anime.timeline({
-			...set ,
-			direction: 'normal',
-		});
-	
-		let tl5 = anime.timeline({
-			duration: speed  * 2,
-			loop: true,
-			easing: 'easeInOutExpo', 
-		});
-		let tl6 = anime.timeline({
-			...set,
-			duration: speed * 2 ,
-			// direction: 'normal',
-		});
-		let tl7 = anime.timeline({
-			...set
-		});
-		let tl8 = anime.timeline({
-			...set
-		});
-		let tl9 = anime.timeline({
-			...set
-		});
-		let tl20 = anime.timeline({
-			...set
-		});
-		let tl21 = anime.timeline({
-			...set,
-			direction: 'normal',
-		});
-		let tl10 = anime.timeline({
-			...set,
-			loop: true,
-		direction: 'normal',
-		});
-	
-		// Add children
-	tl
-		.add({
-			targets: '#belaz-1',
-			translateX: [50, 0],
-			translateY: [-50, 0],
-			// direction: 'alternate',
-			opacity: 1
-		}) 
-		.add({
-			targets: '.st929', 
-			opacity: [0,.8]
-		}) 
-		.add({
-			targets: '.st929', 
-			opacity: [.8, 0]
-		}) 
-		.add({
-			targets: '#circle-2_3_', 
-			opacity: [0, 1],
-			translateX: [0, -20],
-			translateY: [0, 13],
-		}, `-=${speed / 2} `)
+		// repeat: -1,
+		duration: speed2, 
+		
+    // // bounds: window,
+		// stagger: 1.5
+		// direction: 'alternate',
+	}
 
-		.add({
-			targets: '.st0-3',
-			opacity: [0, 1],
-		}, `-=${speed * .8} `)
-		
-		.add({
-			targets: '#circle-2_3_',
-			// opacity: [0, 1],
-			translateX: [-20, 75],
-			translateY: [15, 54],
-			skewX: -35,
-			// delay: -200
-		})
-		
-		.add({
-			targets: '#circle-2_3_',
-			// opacity: [0, 1],
-			skewX: 0,
-			translateX: [75, -10],
-			translateY: [54, 88],
-			// delay: -200
-		})
-		.add({
-			targets: '#circle-2_3_',
-			// opacity: [0, 1],
-			translateX: [-10, 47],
-			translateY: [88, 100],
-			skewX: -35,
-		})
+	let tl = gsap.timeline({repeat: -1,
+		yoyo: true,  defaults: setg});
 	
-		.add({
-			targets: '#circle-2_3_1',
-			opacity: [1, 0],
-			translateX: [58, -16],
-			translateY: [34, -10],
-		});
-	 
+	let tl2 = gsap.timeline({ repeat: -1, yoyo: true, defaults: { ...setg, duration: speed2 * .5 } });
 	
+	let tl3 = gsap.timeline({ repeat: -1, repeatDelay:1, yoyo: true,defaults: { ...setg} });
+	let tl4 = gsap.timeline({ repeat: -1, repeatDelay:1,  yoyo: true, defaults: { ...setg} });
+	let tl5 = gsap.timeline({ repeat: -1, repeatDelay:1,    defaults: { ...setg, duration: speed2 * 4 } });
+	let tl6 = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true,  defaults: { ...setg, duration: speed2 * 2 } });
+	let tl7 = gsap.timeline({repeat: -1, repeatDelay:1,   defaults: setg});
+	let tl8 = gsap.timeline({repeat: -1, repeatDelay:1,   defaults: setg});
+	let tl9 = gsap.timeline({repeat: -1, yoyo: true,    defaults: setg});
+	let tl10 = gsap.timeline({repeat: -1,  repeatDelay:1,   defaults: setg});
+	let tl20 = gsap.timeline({repeat: -1,  yoyo: true,  defaults: setg}); 
+	let tl21 = gsap.timeline({repeat: -1,   defaults: setg});  
 	
-	anime({
-		...set,
-		duration: speed * 3,
-		easing: 'easeInOutQuad',
-			targets: '#monitor-4, #monitor-4-1, #monitor-4-2',
-			opacity: [1, 0],
-			translateY: [0, 6]
-	});
-	anime({
-		...set,
-		duration: speed * 3,
-		easing: 'easeInOutQuad',
-			targets: '#helicopter', 
-			translateY: [0, 50],
-			translateX: [1150, 1150],
-	});
+		tl
+			.fromTo('#belaz-1',
+				{ x: 150, y: -150, opacity: 0 },
+				{ x: 0, y: 0, opacity: 1 })
+			.fromTo('.st929', { opacity: 0 }, { opacity: .8 })
+			.fromTo('#circle-2_3_', { opacity: 0, x: 0, y: 0 }, { opacity: 1, x: -20, y: 13 })
+			.fromTo('.st0-3', { opacity: 0 }, { opacity: 1 	}, `-=${.2} `)
+			.to('#circle-2_3_', { x: 35, y: 52, skewX: -35, transformOrigin: "center  center" })
+			.to('#circle-2_3_', { skewX: 0, x: -10, y: 88, transformOrigin: "center  center" })
+			.to('#circle-2_3_', { x: 7, y: 100, skewX: -35, transformOrigin: "center  center" })
+			.fromTo('#circle-2_3_1', { opacity: 1, x: 58, y: 34, transformOrigin: "center  center" }, { opacity: 0, x: -16, y: -10, transformOrigin: "center  center" })
+			gsap.fromTo('#monitor-4, #monitor-4-1, #monitor-4-2', { opacity:1, y:0}, {opacity:0, y:6, ...setg, duration: speed2 * 4,repeat: -1,yoyo: true});
+			gsap.fromTo('#helicopter', {  y:0,x:1150}, { y:50,x:1150, ...setg, duration: speed2 * 4,repeat: -1,yoyo: true}); 
+			// gsap.to('[clip-path="url(#clip0_2794_72656)"]', { rotateY: 360, ...setg, duration: speed2 * 4,repeat: -1, transformOrigin: "center  center" }); 
 	
 	tl2
-			.add({
-				targets: '#hand-4--left',
-				translateY: [0, -3],
-			})
-			.add({
-				targets: '#hand-4--right',
-				translateY: [0, -2],
-			});
-		
-		let circle51 = {
-			targets: '#circle-5--1',
-			opacity: [0, 1],
-			translateX: [0,39],
-			translateY: [0, 26],
-			// delay: -200
-		};
-			
-		let circle52 = {
-			targets: '#circle-5--2',
-			opacity: [0, 1],
-			translateX: [35,0],
-			translateY: [21, 0],
-		};
-		let circle53 = {
-			targets: '#circle-5--3',
-			opacity: [0, 1],
-			translateX: [0,35],
-			translateY: [0, 21],
-			// delay: -200
-		};
-		
-		let circle54 = {
-			targets: '#circle-5--4',
-			opacity: [0, 1],
-			translateX: [-27, 0],
-			translateY: [18, 0],
-			// delay: -200
-		};
-		let box6 = {
-			opacity: [0,1],
-			translateX: [-34,0],
-			translateY: [-21,0], 
-		}
+		.fromTo('#hand-4--left', { y: 0 }, { y: -2 })
+		.fromTo('#hand-4--right', { y: 0 }, { y: -3 })
+	
+		let circle51 = tl3.fromTo( '#circle-5--1', {opacity:0, x:0,y:0},{opacity:1, x:39,y:26});
+		let circle52 = tl3.fromTo( '#circle-5--2', {opacity:0, x:35,y:32},{opacity:1, x:0,y:0});
+		let circle53 = tl3.fromTo( '#circle-5--3', {opacity:0, x:0,y:0},{opacity:1, x:35,y:21});
+		let circle54 = tl3.fromTo('#circle-5--4', { opacity: 0, x: -27, y: 18 }, { opacity: 1, x: 0, y: 0 });
+	
+	let box6 = [{opacity:0, x:-34, y: -21}, {opacity:1, x:0, y: 0}]
 	
 		let box6hide = {
 			opacity: 0,
@@ -192,529 +72,137 @@ function headSVG() {
 		}
 	
 
-
 	tl3
-		.add(circle51) 
+		.add(circle51)
 		.add(circle52)
 		.add(circle53)
 		.add(circle54)
-		.add({
-			targets: '#box-6--1', 
-			...box6 
-			// delay: -200
-		})
-		.add({
-			targets: '#box-6--2', 
-			...box6 
-			// delay: -200
-		})
-		
-		.add({
-			targets: '#box-6--3', 
-			...box6 
-			// delay: -200
-		})
-		.add({
-			targets: '#box-6--4', 
-			...box6 
-		})
-		.add({
-			targets: '#screen-7--left', 
-			opacity: 1,
-			translateY: [20,0], 
-		})
-		.add({
-			targets: '#screen-7--right', 
-			opacity: 1,
-			// translateX: -34,
-			translateY: [20,0], 
-		}, `-=${speed * .8} `)
-		.add({
-			targets: '#circle-5--1, #circle-5--2, #circle-5--3, #circle-5--4',
-			opacity: 0
-		}) 
-		.add(circle51) 
-		.add(circle52)
-		.add(circle53)
-		.add(circle54)
+		.fromTo('#box-6--1', ...box6 )
+		.fromTo('#box-6--2', ...box6 )
+		.fromTo('#box-6--3', ...box6 )
+		.fromTo('#box-6--4', ...box6)
+		.fromTo('#screen-7--left', {opacity: 0,y: 20}, {opacity: 1,y: 0})
+		.fromTo('#screen-7--right', {opacity: 0,y: 20}, {opacity: 1,y: 0}, `-=${.2} `)
 
-		.add({
-			targets: '#box-6--1', 
-			...box6hide
-		})
-		.add({
-			targets: '#box-6--2', 
-			...box6hide
-		})
-		
-		.add({
-			targets: '#box-6--3', 
-			...box6hide
-		})
-		
-		.add({
-			targets: '#box-6--4', 
-			...box6hide
-		})
-	let circleDown =function (el) {
-		return {
-			targets: `#circle-7--${el}`, 
-			opacity: [1, 0],
-			translateX: -70,
-			translateY: 39, 
-		}
-	}
-	
-	let circleUp = function(el) {
-		return {
-			targets: `#circle-7--${el}`,
-			opacity: [0,1],
-			translateX: [-70,0],
-			translateY: [39, 0], 
-		}
-	}
+	let circleDown = el => tl4.to(`#circle-7--${el}`, { opacity: 0, x: -70, y: 39 });
+	let circleUp = el => tl4.fromTo(`#circle-7--${el}`, { opacity: 0, x: -70, y: 39 }, { opacity: 1, x: 0, y: 0 });
+
 
 	tl4 
 		
-		.add({
-			targets: `#excavator-8`,
-			translateX: -		12,
-			translateY: -6,
-		})
-		
-		.add({
-			targets: `#circle-7--1, #circle-7--3`,
-			opacity: 1,
-		})
-		
-		.add({ ...circleDown(1) })
-		.add({ ...circleUp(4) })
-		.add({ ...circleDown(3) })
-		.add({ ...circleUp(2) })
-		.add({
-			targets: `#excavator-8`,
-			translateX: 0,
-			translateY: 0,
-		})
-		.add({
-			targets: `#circle-7--1, #circle-7--3`,
-			opacity: 0,
-		});
+		.to( `#excavator-8`,{ x: -12,y: -6})
+		.fromTo( `#circle-7--1, #circle-7--3`,{ opacity: 0},{ opacity: 1})
+		.add(circleDown(1))
+		.add(circleUp(4))
+		.add(circleDown(3))
+		.add(circleUp(2))
+		.to( `#excavator-8`,{ x: 0,y: 0})
+		.to( `#circle-7--1, #circle-7--3`,{  opacity: 0})
 	
 	tl5
-		.add({
-			targets: '#granuly, #granuly_1_, #granuly_2_,  #granuly_3_',
-			opacity: [0, 1],
-			// translateY: [10, 0],
-			// translateY: [0, -20],
-		})
-			
-		.add({
-			targets: '#granuly, #granuly_1_, #granuly_2_,  #granuly_3_',
-			opacity: 0,
-			translateY: [0, -40],
-		}, `-=${speed * .8} `);
-	let handDown = 
-		{
-			targets: "#hand-11",
-			duration: 0,
-			rotate:0,
-			translateX: 0,
-			translateY: 0,
-	} 
+		.fromTo('#granuly, #granuly_1_, #granuly_2_,  #granuly_3_', {opacity:0}, {opacity:1})
+		.to('#granuly, #granuly_1_, #granuly_2_,  #granuly_3_', { opacity: 0, y: -40 }, `-=${.4} `);
 	
-	let handUp = 
-		{
-			targets: "#hand-11",
-			duration: 0,
-			rotate:-84,
-			translateX: 384,
-			translateY: -4,
-	} 
-
+	
+	let handDown = tl6.to( "#hand-11", {rotate:0,  x: 0, y: 0,   transformOrigin: "right bottom"});
+	let handUp = tl6.to("#hand-11", { rotate: -84, x: 5, y: -4,   transformOrigin: "right bottom" }); 
 	
 	tl6
 		.add(handDown)
 		.add(handUp)
-		.add({
-			targets: '#circle-10--2',
-			translateX: -10,
-			translateY: 8,
-			opacity: 0
-		})
-	
-		.add({
-			targets: '#circle-10--1',
-			translateX: 24,
-			translateY: 14,
-			opacity: 0
-		})
-	
-	
-		let hand12Down = 
-		{
-			targets: "#hand-12",
-			duration: 0,
-			rotate:0,
-			translateX: 0,
-			translateY: 0,
-	} 
-	
-	let hand12Up = 
-		{
-			targets: "#hand-12",
-			duration: 0,
-			rotate:-41,
-			translateX: -187,
-			translateY: 186,
-	} 
+		.to('#circle-10--2',{ opacity: 0, x: -10, y: 8 })
+		.to('#circle-10--1', { opacity: 0, x: 24, y: 14 })
 		
-	tl7
-	.add(hand12Up)
-	.add({
-		targets: '#screen-12--1, #screen-12--2',
-		// translateX: 54,
-		// translateY: 14,
-		opacity: 0
-	}, `+=${speed} `)
-	.add({
-		targets: '#screen-12--3',
-		// translateX: 54,
-		translateY: 14,
-		opacity: 0
-	})
-	
-	
-	.add({
-		targets: '#circle-11--1',
-		translateX: 54,
-		translateY: 34,
-		opacity: 0
-	})
-	.add({
-		targets: '#circle-12',
-		translateX: [0, -56],
-		translateY: [0, 40],
-		opacity: [0, 1],
-	})
+		let hand12Down = tl7.to( "#hand-12", {rotate:0,  transformOrigin: "right bottom"   }); 
+		let hand12Up = tl7.to( "#hand-12", {rotate:-36,x: -5, y: -4,  transformOrigin: "center bottom"  });  
 		
-	// .add({
-	// 	targets: '[id^="circle-12"]',
-	// })
-	.add({
-		targets: '#circle-12', 
-		skewX: -31,
-		translateX: [ -56, -3],
-		translateY: [40, -13]
-	})
-	
-	.add({
-		targets: '#circle-12-1', 
-		translateX: [ -98, -140],
-		translateY: [15, 41],
-		opacity: [0, 1]
-	}, `-=${speed / 2} `)
-	.add({
-		targets: '#circle-12, #circle-12-1', 
-		opacity: 0
-	}, `-=${speed / 2} `)
-	.add({
-		targets: '#monitor-20',  
-		opacity: [1,0], 
-	})
-	.add({
-		targets: '[d="M161.1,250.5l35.3,20.4l59.8-35.8 M161.1,250.5l-57,35.2 M161.1,250.5l-60.6-36.4"]', 
-		stroke: '#0CD1FF',
-	}, `-=${speed / 2} `)
-	.add({
-		targets: '#circle-12 .st130, #circle-12-1 .st130',
-		fill: '#0CD1FF', 
-	}, `-=${speed / 2} `)
-	.add({
-		targets: '#circle-12, #circle-12-1', 
-		opacity: 1
-	}, `-=${speed / 2} `)
-	.add({
-		targets: '#circle-12-1', 
-		translateX: [-140, -98],
-		translateY: [41, 15],
-		opacity: [0,1]
-	}, `-=${speed / 2} `)
-		
-	.add({
-		targets: '#circle-12-1', 
-		opacity: [0]
-	}, `-=${speed / 2} `)
-		
-	.add({
-		targets: '#circle-12', 
-		skewX: 0,
-		translateX: [  -3, -56],
-		translateY: [ -13, 40]
-	})
-			.add({
-		targets: '#circle-12',
-		translateX: 0,
-		translateY: 0,
-		opacity: [1, 0],
-		})
-		.add({
-			targets: '[d="M161.1,250.5l35.3,20.4l59.8-35.8 M161.1,250.5l-57,35.2 M161.1,250.5l-60.6-36.4"]', 
-			stroke: '#3998FF',
-		}, `-=${speed / 2} `)
-		.add({
-			targets: '#circle-12 .st130, #circle-12-1 .st130',
-			fill: '#3998FF', 
-		}, `-=${speed / 2} `)
-	
-	// .add({
-	// 	targets: '[id^="circle-12"]',
-	// 	translateX: [ -56,-140],
-	// 	translateY: [ 40, -13 ],
-	// 	// skewX: -31
-	// })
-		
-	.add(hand12Down)
-	.add({
-		targets: '#circle-11--2',
-		translateX: [0,54],
-		translateY: [0,40],
-		// opacity: [1, 0]
-	})
-		
-		
-	.add({
-		targets: '#hand-13',
-		// translateX: -30,
-		translateY: -1,
-		// opacity: [1, 0]
-	})
-	.add({
-		targets: '#circle-11--3',
-		translateX: 54,
-		translateY: 34,
-		opacity: 0
-	})
-	.add({
-		targets: '#hand-14',
-		translateX: 1,
-		translateY: 2,
-		// opacity: [1, 0]
-	})
-	
-	.add({
-		targets: '#circle-11--4',
-		translateX: 54,
-		translateY: 34,
-		opacity: [1, 0]
-	})
-	
+		tl7
+			.add(hand12Up)
+			.fromTo( '#screen-12--1, #screen-12--2', {opacity: 1}, {opacity: 0}, `+=${1} `)
+			.fromTo( '#screen-12--3', {opacity: 1}, {opacity: 0, y: 14})
+			.fromTo('#circle-11--1', {opacity:1}, { opacity: 0, x: 54, y: 34 }) 
+			.fromTo('#circle-12', { opacity: 0, x: 0, y: 0 }, { opacity: 1, x: -56, y: 40 }) 
+			.fromTo('#circle-12', {  x: -56, y: 40 }, { skewX: -31, x: -140, y: -13 })
+			.fromTo('#circle-12-1', { opacity:0, x: -98, y: 15 }, {  opacity:1, x: -140, y: 41} ) 
+			.to('#circle-12, #circle-12-1', { opacity: 0} )
+			.fromTo('#monitor-20', { opacity: 1}, { opacity: 0})
+			.to('[d="M161.1,250.5l35.3,20.4l59.8-35.8 M161.1,250.5l-57,35.2 M161.1,250.5l-60.6-36.4"]', { stroke: '#0CD1FF'})
+			.to('#circle-12 .st130, #circle-12-1 .st130', { fill: '#0CD1FF'}) 
+			.to('#circle-12, #circle-12-1', { opacity: 1} )
+			.to('#circle-12-1', { opacity: 1, x:-98, y: 15} )  
+			.to('#circle-12-1', { opacity: 0} , `-=${.5} `)  
+			.to('#circle-12', { skewX: 0, x: -56, y: 40} , `-=${.5} `)  
+			.to('#circle-12', { opacity: 0, x: 0, y: 0} )  
+			.to('[d="M161.1,250.5l35.3,20.4l59.8-35.8 M161.1,250.5l-57,35.2 M161.1,250.5l-60.6-36.4"]', { stroke: '#3998FF'})
+			.to('#circle-12 .st130, #circle-12-1 .st130', { fill: '#3998FF'}) 
+
+			.add(hand12Down)
+			.to('#circle-11--2',   { x: 54, y: 40, opacity:1}) 
+			.to( '#hand-13', { y: -1}) 
+			.fromTo('#circle-11--3',   { x: 54, y: 40, opacity:0}, {opacity:1}) 
+			.to( '#hand-14', {x:1, y: 2}) 
+			.fromTo('#circle-11--4',   { x: 54, y: 40, opacity:0}, {opacity:1}) 
+ 
 
 
-	let circleDown15 =function (el) {
-		return {
-			targets: `#circle-15--${el}`, 
-			opacity: [1, 0],
-			translateX: [20, -29],
-			translateY: [-16, 17], 
-		}
-	}
+			let circleDown15 = el => tl4.fromTo(`#circle-15--${el}`, { opacity: 1, x: 20, y: -16}, { opacity: 0, x: -29, y: 17 });
+			// let circleDown15 =function (el) {
+			// 	return {
+			// 		targets: `#circle-15--${el}`, 
+			// 		opacity: [1, 0],
+			// 		translateX: [20, -29],
+			// 		translateY: [-16, 17], 
+			// 	}
+			// }
+			let circleUp15 = el => tl4.fromTo(`#circle-15--${el}`, { opacity: 0}, { opacity: 1, x: 12, y: -8 });
 	
-	let circleUp15 = function(el) {
-		return {
-			targets: `#circle-15--${el}`,
-			opacity: [0,1],
-			translateX: 12,
-			translateY: -8, 
-		}
-	}
+	// let circleUp15 = function(el) {
+	// 	return {
+	// 		targets: `#circle-15--${el}`,
+	// 		opacity: [0,1],
+	// 		translateX: 12,
+	// 		translateY: -8, 
+	// 	}
+	// }
 
 	
 	tl8
-		.add({
-			targets: `#circle-15--2`, skewX: -31,
-		})
-		.add({
-			targets: `#circle-15--2`,
-			opacity: 1,
-			// skewX: -31,
-			translateX: [35, 9],
-			translateY: [45, 34],
-		})
-		// .add({ targets: '#circle-15--1', opacity: [1, 0]})
-		.add({
-			targets: `#circle-15--2`,
-			skewX: 0,
-			translateX: [9, 7],
-			translateY: [34, -5],
-		})
-		.add({
-			targets: `#circle-15--1`,
-			opacity: [0, 1],
-			translateX: [-34, 5],
-			translateY: [22, -4],
-		}, `-=${speed} `)
-		.add({
-			targets: `#circle-15--1`,
-			opacity: [0, 1],
-			translateX: [-34, 5],
-			translateY: [22, -4],
-		}, `-=${speed} `)
-		.add({
-			targets: `#circle-15--4`,
-			opacity: [0, 1],
-			translateX: [34, -18],
-			translateY: [-21, 10],
-		})
-	
-		.add({
-			targets: `#circle-15--3`,
-			opacity: [0, 1],
-			translateX: [9, -26],
-			translateY: [-5, 16],
-		}, `-=${speed} `)
-		.add({
-			targets: `#circle-15--1, #circle-15--2`, opacity: 0
-		}, `-=${speed * .4} `)
-		// tl9
-		.add({
-			targets: `#circle-15--5`,
-			opacity: [0, 1],
-			translateX: [30, -24],
-			translateY: [-18, 14],
-		}, `-=${speed} `)
-		.add({
-			targets: `#circle-15--6`,
-			opacity: [0, 1],
-			translateX: [44, -57],
-			translateY: [-26, 32],
-		}, `-=${speed} `)
-		.add({
-			targets: `#circle-15--6`,
-			// opacity: [1, 0],
-			translateX: [-57, 35],
-			translateY: [32, 64],
-			skewX: -31,
-		})
-		.add({
-			targets: `#circle-15--5`,
-			opacity: [1, 0],
-			skewX: 0,
-			translateX: 19,
-			translateY: 49,
-		}, `-=${speed} `)
-		
-		.add({
-			targets: `#circle-15--7, #circle-15--8`,
-			opacity: [0, 1],
-			skewX: 0,
-			translateX: [-90, -45],
-			translateY: [-35, -62],
-		}, `-=${speed} `)
-		
-		.add({
-			targets: `#circle-15--7, #circle-15--8`,
-			opacity: 0
-		}, `-=${speed * .5} `);
+		.to( `#circle-15--2`, {skewX: -31, x: -35, y: 50})
+		.fromTo( `#circle-15--2`, {opacity: 0}, {opacity: 1,  x: -55, y: 37})
+		.to( `#circle-15--2`,  {skewX: 0, x: 15, y: -10 })
+		.fromTo( `#circle-15--1`, {opacity: 0, x: -34, y: 22, }, {opacity: 1,x: 5, y: -4},">-0.5") 
+		.fromTo( `#circle-15--4`, {opacity: 0, x: 34, y: -21, }, {opacity: 1,x: -18, y: 10})
+		.fromTo( `#circle-15--3`, {opacity: 0, x: 9, y: -5, }, {opacity: 1,x: -26, y: 16},">-0.5")
+		.to( `#circle-15--1, #circle-15--2`, {opacity: 0},">-0.5")
+		.fromTo( `#circle-15--5`, {opacity: 0, x: 30, y: -18, }, {opacity: 1,x: -24, y: 14},">-0.5")
+		.fromTo( `#circle-15--6`, {opacity: 0, x: 44, y: -26, }, {opacity: 1,x: -57, y: 32},">-0.5")
+		.to( `#circle-15--6`,  {x: -5, y: 70, skewX: -31 })
+		.to( `#circle-15--5`, {skewX: 0, opacity: 1,x: 19, y: 49},">-0.5")
+		.fromTo( `#circle-15--7, #circle-15--8`,{opacity: 0, x: -90, y: -35,}, { opacity: 1,x: -45, y: -62, transformOrigin: "center  center"},">-0.5")
+		.to( `#circle-15--7, #circle-15--8`,{opacity: 0},">-0.5");
 	
 		tl9
-		.add({
-			targets: `#hand-16-2`,
-			translateY: -3,
-		})
-		.add({
-			targets: `#hand-16-1`,
-			translateX: 3,
-		})
-		.add({
-			targets: `#hand-16-2`,
-			translateY: 3,
-		})
-		.add({
-			targets: `#hand-16-1`,
-			translateX: -3,
-		})
+		.to( `#hand-16-2`,{y: -3, })
+		.to( `#hand-16-1`,{x: 3})
+		.to( `#hand-16-2`,{y: 3, })
+		.add( `#hand-16-1`,{ x: -3, })
 	tl10
-		.add({
-			targets: `#circle-16--1`,
-		skewX: 31,
-		})
+		.fromTo( `#circle-16--1`, {skewX: 31,  x: 63, y: 65 }, {x:93,y:50})
 		
-		.add({
-			targets: `#circle-16--1`,
-			opacity: 1,
-			// skewX: 31, 
-			translateX: [-85, -59],
-			translateY: [65, 48],
-		})
-		// .add({
-		// 	targets: `#circle-16--1`,
-		// }) 
-		.add({
-			targets: `#circle-16--1`, 
-			skewX: 0,
-			opacity: 0,
-			
-			translateX:  [-59,0],
-			translateY: [48, 0],
-		})
-		.add({
-			targets: `#imprint`,  
-			opacity: [1, .5]
-		})
-		.add({
-			targets: `#circle-16--2, #circle-16--3`,  
-			opacity: 0,
-			translateX:  32,
-			translateY: 22,
-		})
-		.add({
-			targets: `#circle-16--4`,  
-			opacity: [1, 0],
-			opacity: [0,1],
-			translateX:  [-27,16],
-			translateY: [12,-12],
-		})
-		.add({
-			targets: `#shield-18`,  
-			opacity: [0,1],
-		})
-		
-		.add({
-			targets: `#dots-19`,  
-			opacity: [0,1],
-			translateX:  [-46,0],
-			translateY: [23, 0],
-		}, `-=${speed * .5} `)
-		.add({
-			targets: `#dots-19`,  
-			opacity: [1,0],
-			translateX:  [0,-10],
-			translateY: [0, 5],
-		})
-		.add({
-			targets: `#shield-18`,  
-			opacity: 0,
-		})
-		
-		.add({
-			targets: `#el-17--1`,  
-			opacity: [0,1],
-		}, `-=${speed * 2} `)
-		
-		.add({
-			targets: `#el-17--1`,  
-			opacity: [1,0],
-		})
-		
-		.add({
-			targets: `#el-17--2`,  
-			opacity: [0,1],
-		})
-		.add({
-			targets: `#el-17--2`,  
-			opacity: [1,0],
-		})
+		.to(`#circle-16--1`, { skewX: 0, opacity: 0 , x:0,y:0}) 
+		.to(`#el-17--1, #el-17--2`, { opacity: 0 },">-0.5") 
+		.to(`#imprint`, {  opacity: .5 })  
+		.to( `#circle-16--2, #circle-16--3`,   {opacity: 0,x:  32,y: 22})
+		.fromTo( `#circle-16--4`, { opacity: 0 ,x:  -27 , y: 12} , { opacity:1,x: 16,y: -12})
+		.fromTo( `#shield-18`, { opacity: 0 } , { opacity:1 }) 
+		.fromTo( `#dots-19`, { opacity: 0 ,x:  -46 , y: 23} , { opacity:1,x: 16,y: -12},">-0.5") 
+		.fromTo( `#dots-19`, { opacity: 1 ,x:  0 , y: 0} , { opacity:0,x: -10,y: 5})
+		.to( `#shield-18`, { opacity:0})
+		.fromTo(`#el-17--1`, { opacity: 0 }, {opacity: 1 },">-0.5") 
+		.fromTo(`#el-17--1`, { opacity: 1 }, {opacity: 0 }) 
+		// .to(`#el-17--1`,  {opacity: 0 })
+		.fromTo(`#el-17--2`, { opacity: 0 }, { opacity: 1 })
+		.fromTo(`#el-17--2`, { opacity: 1 }, { opacity: 0 })
 	
 		function randomValues() {
 		anime({
@@ -739,64 +227,21 @@ function headSVG() {
 
 
 	tl20 
-	.add({
-		targets: '#text-18',
-		opacity: [1, 0],
-		endDelay: speed,
-	})
-		.add({
-		targets: '#line-19',
-			opacity: [0, 1],
-			// delay: speed,
-			// endDelay: speed,
-		}, `-=${speed * 2} `)
-		.add({
-		targets: '#line-19',
-		// opacity: [0,1],
-		strokeDashoffset: [anime.setDashoffset, 0], 
-			delay: function (el, i) { return i * 250 }, 
-			// delay: speed,
-			endDelay: speed,
-	})
+		// .fromTo('#text-18', {opacity:0}, {opacity: 1})
+		.fromTo('#text-18', {opacity:1}, {opacity: 0}) 
+		.fromTo('#line-19',{opacity:0 }, {opacity: 1 },">-0.5")  
+		.from('#line-19',{ drawSVG:0, duration: speed2 * 2,repeatDelay: speed2 * 2})  
+		// .from( '#line-19', speed2 * 10, {attr:{"stroke-dashoffset":0}})
 
 	tl21
-	 .add({
-		targets: '#mouse-21',
-		translateX:  -13,
-			translateY:  -19, 
-	 }) 
-	 .add({
-		 targets: '#screen-20',
-		 opacity: [0, 1], 
-		})
-		.add({
-		 targets: '#mouse-21',
-		 translateX:  -5,
-			 translateY: 10, 
-		})  
-		.add({
-			targets: '#screen-20',
-			opacity: [1, 0], 
-		})
-		.add({
-			targets: '#mouse-21',
-			translateX:  [-5,16],
-				translateY: [10, -7],	 
-		}) 
-		.add({
-			targets: '#screen-20',
-			opacity: [0, 1], 
-		 })
-		 .add({
-			targets: '#mouse-21',
-			translateX:  -5,
-				translateY: 10, 
-		 })  
-		 .add({
-			 targets: '#screen-20',
-			 opacity: [1, 0], 
-		 }) 
-	
+	 .to( '#mouse-21',{x:  -13,y:  -19, }) 
+	 .fromTo('#screen-20',{opacity:0},{opacity:1}) 
+	 .to( '#mouse-21',{x:  -5,y:  10, })  
+	 .fromTo('#screen-20',{opacity:1},{opacity:0}) 
+	 .to( '#mouse-21',{x:  16,y:  -7 }) 
+	 .fromTo('#screen-20',{opacity:0},{opacity:1}) 
+	 .to( '#mouse-21',{x:  -5,y:  10, }) 
+	 .fromTo('#screen-20',{opacity:1},{opacity:0}) 
  }
 
 

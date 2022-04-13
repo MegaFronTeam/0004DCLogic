@@ -9,7 +9,7 @@
 }
 #belaz-1{
 	// display: none;
-	transform: translate(200px,-200px);
+	transform: translate(150px,-150px);
 	opacity: 0;
 	
 }
@@ -72,15 +72,15 @@
 #circle-7--1, #circle-7--3,
 #circle-7--2, #circle-7--4{
 	opacity: 0;
-	will-change: transform; 
+	// will-change: transform; 
 }
 
 .hand-11{
-	transform-origin: center center;
+	// transform-origin: center center;
 	// transform: rotate(-84deg) translateX(384px) translateY(-4px);
 }
 .hand-12{ 
-	transform: rotate(-41deg) translate(-187px, 186px);
+	// transform: rotate(-41deg) translate(-187px, 186px);
 }
 
 #granuly, #granuly_1_, #granuly_2_,  #granuly_3_{
@@ -94,16 +94,16 @@
 }
 
 #circle-15--2{
-	transform-origin: center center;
-	opacity: 0;
+	// transform-origin: center center !important;
+	// opacity: 0;
 }
 #circle-15--5,
 #circle-15--1{
 	opacity: 0;
 }
 [id^="circle-15"]{
-	transform-origin: center center;
-	opacity: 0;
+	// transform-origin: center center;
+	// opacity: 0;
 }
 #shield-18,
 #dots-19,
