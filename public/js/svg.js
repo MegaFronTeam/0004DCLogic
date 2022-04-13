@@ -3,7 +3,7 @@ function headSVG() {
 	let speed = 1000;
 	let speed2 = .5;
 
-	gsap.registerPlugin( InertiaPlugin);
+	// gsap.registerPlugin( InertiaPlugin);
 		// Create a timeline with default parameters
 	let set = {
 		easing: 'easeInOutSine',
