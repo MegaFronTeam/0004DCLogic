@@ -26,13 +26,17 @@
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
+	--h: 2px;
 	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--position: calc(var(--h) * 2.5);
+	margin-left: 20px;
 	&.on span {
 		--color: transparent;
-	}
-
+		&:after,
+		&:before{
+			--color: #{$primary};
+		}
+	} 
 	&.on  { 
 		--position: 0; 
 		--rotate: 45deg;
@@ -40,7 +44,7 @@
 	display: block;
 	height: calc(var(--h)* 12);
 	position: relative; 
-	font-size: 32px;
+	font-size: 18px;
 	width: 1em;
 	cursor: pointer;
 	span:after,
@@ -81,16 +85,19 @@
 
 	.menu-mobile {
 		position: fixed !important;
-		z-index: 999;
-		max-width: 85%;
-		height: calc(var(--vh, 1vh) * 100);
-		width: 280px;
-		top: 0;
+		z-index: -1;  
+		width: 100%;
+		// top: 0;
+		bottom: 0;
 		// left: 0;
-		right: 0;
-		background-color: $body-bg;
+		// right: 0;
+		left: 0;
+		background: #FFFFFF; 
+		box-shadow: 0px 2px 8px rgba(90, 148, 255, 0.21);
+		padding-bottom: 60px;
+		
 		&:not(.active){
-			transform: translate3d(120%, 0,0);
+			transform: translate3d(0, 120%,0);
 			--opacity: 0;
 			.toggle-menu-mobile{
 				opacity: 0;
@@ -114,11 +121,10 @@
 			}
 		}
 		&__inner {
-			padding: rem(20) 0;
+			padding: rem(20) 16px;
 			overflow-x: hidden;
 			overflow-y: auto;
-			-webkit-overflow-scrolling: touch;
-			height: 100%;
+			-webkit-overflow-scrolling: touch; 
 			@include mt(.3s);
 			transition-delay: .4s;
 			opacity: var(--opacity);

@@ -27,12 +27,14 @@ mixin top-nav(active)
 						+e.logo(href="#")
 							img(src="img/svg/logo.svg", alt="")
 				.col
-					+e.menu-wrap
-						+e.menu
-							a(href="#" class=(active==1 ? `active` : ``)) Решения
-							a(href="#" class=(active==2 ? `active` : ``)) Отрасли
-							a(href="#" class=(active==3 ? `active` : ``)) Информация
-							a(href="#" class=(active==4 ? `active` : ``)) Контакты
+					
+					+b.menu-mobile--js.top-nav__menu-wrap
+						+e.inner
+							.top-nav__menu
+								a(href="#" class=(active==1 ? `active` : ``)) Решения
+								a(href="#" class=(active==2 ? `active` : ``)) Отрасли
+								a(href="#" class=(active==3 ? `active` : ``)) Информация
+								a(href="#" class=(active==4 ? `active` : ``)) Контакты
 					+e.menu-btns
 						+e.menu-btn--tel(href="tel:+74959896227")
 							+icon(`phone`)
@@ -40,8 +42,10 @@ mixin top-nav(active)
 							+icon(`mail`)
 						+e.menu-btn--search(href="#")
 							+icon(`search`)
-						+e.menu-btn--menu(href="#")
-							+icon(`menu`)
+						//- +e.menu-btn--menu(href="#")
+						//- 	+icon(`menu`)
+						+b.toggle-menu-mobile--js
+							span
 				.col-auto.d-none.d-lg-block
 					+e.wrap
 						+e.search
