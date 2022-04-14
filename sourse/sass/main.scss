@@ -123,6 +123,7 @@ $output-bourbon-deprecation-warnings: false;
 
 @import '../pug/blocks/header/_header.scss';
 @import '../pug/blocks/footer/_footer.scss';
+@import '../pug/blocks/sBars/_sBars.scss';
 
 @import "media"; // Всегда в конце
 

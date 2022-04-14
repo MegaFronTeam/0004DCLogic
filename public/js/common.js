@@ -1,4 +1,26 @@
 "use strict";
+
+
+
+const convertImages = (query, callback) => {
+	const images = document.querySelectorAll(query);
+
+	images.forEach(image => {
+		fetch(image.src)
+			.then(res => res.text())
+			.then(data => {
+				const parser = new DOMParser();
+				const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+
+				if (image.id) svg.id = image.id;
+				if (image.className) svg.classList = image.classList;
+
+				image.parentNode.replaceChild(svg, image);
+			})
+			.then(callback)
+			.catch(error => console.error(error))
+	});
+}
 const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -507,10 +529,7 @@ function eventHandler() {
 		navigation: {
 			prevEl: ".swiper-button-hand-prev",
 			nextEl: ".swiper-button-hand-next",
-		},
-		grid: {
-			rows: 1,
-		},
+		}, 
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
@@ -587,6 +606,92 @@ function eventHandler() {
 			labelIdle: `Нажмите или перетащите  файлы в эту область. .rar .zip .doc .docx .pdf .jpg не более 10 мб`,
 		}
 	);
+
+
+
+	var wow = new WOW(
+		{
+			animateClass: 'animate__animated', // animation css class (default is animated)
+			mobile: false       // trigger animations on mobile devices (default is true)
+		}
+	);
+	wow.init();
+
+	
+
+	let triggerSet = {
+		start: '-10% bottom',
+		end: '80% ',
+		// scrub: true, 
+		
+	}
+	let setEl = {
+		duration: speed2 * 3,
+		repeat: -1,
+		yoyo: true,
+
+		ease:  Linear
+	}
+
+	let scroller = document.body;
+
+	ScrollTrigger.defaults({
+		toggleActions: "restart pause resume pause"
+	});
+	function animateRating() {
+		
+		var t2 = gsap.timeline({ 
+			scrollTrigger: { 
+				trigger: ".sRating__ratings-caption",  
+				...triggerSet
+			}, 
+		})
+		t2
+			.to("#r-1", { y: 10,...setEl })
+			.to("#r-2", { y: -10,...setEl },'>-1') 
+			.to("#r-3", { y: -10,...setEl },'>- 1')
+			;
+	}
+	function industryanimate() {
+		
+		gsap.utils.toArray(".project-industry-slider-item").forEach((trigger, index) => {
+		var t2 = gsap.timeline({ 
+			scrollTrigger: { 
+				trigger, 
+				endTrigger: trigger[index + 1],
+				// markers: true,
+				...triggerSet,
+				start: '10% bottom',
+				end: '60% ',
+			}, 
+		})
+		t2
+			.to(trigger.querySelectorAll(".down"), { y: 30,...setEl })
+			.to(trigger.querySelectorAll(".up"), { y: -30,...setEl },'-=1') 
+			// .to("#r-3", { y: -10,...setEl },'>- 1')
+				;
+			})
+		}
+		var t3 = gsap.timeline({ 
+			scrollTrigger: { 
+				trigger: '.sCooperation',  
+				// markers: true,
+				...triggerSet,
+				start: 'top bottom',
+				end: '100% ',
+			}, 
+		})
+		t3
+			.fromTo(".to-left", { x: 30,...setEl } , {x: -30,...setEl })
+			.fromTo(".to-right", { x: -30,...setEl }, { x: 30,...setEl },'-=1') 
+			// .to("#r-3", { y: -10,...setEl },'>- 1')
+				; 
+
+	convertImages('.sRating__bg img', animateRating);
+	convertImages('.project-industry-slider-item__bg img', industryanimate);
+	convertImages('.index-slider-item__img img');
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

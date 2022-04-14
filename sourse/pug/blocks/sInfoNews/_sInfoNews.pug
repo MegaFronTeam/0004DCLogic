@@ -285,7 +285,7 @@ mixin sInfoProjectsIndex(data)
 		.container-xl
 			h2 Проекты
 			+e.cases-wrap
-				+b.project-industry-slider-item.swiper-slide
+				+b.project-industry-slider-item.swiper-slide(class="wow animate__fadeInUp")
 					+e.bg
 						img(src="img/svg/project-industry-slider-item-1.svg", alt="")
 					+e.body
@@ -299,7 +299,7 @@ mixin sInfoProjectsIndex(data)
 							li Минимизация потребления электроэнергии
 							li Увеличение эффективности для обеспечения уровня необходимой производительности
 						+e.btn(href="#") Читать отзыв заказчика
-				+b.project-industry-slider-item.swiper-slide
+				+b.project-industry-slider-item.swiper-slide(class="wow animate__fadeInUp")
 					+e.bg
 						img(src="img/svg/project-industry-slider-item-2.svg", alt="")
 					+e.body
@@ -312,7 +312,7 @@ mixin sInfoProjectsIndex(data)
 							li Увеличение эффективности для обеспечения уровня необходимой производительности
 							li Минимизация потребления электроэнергии
 						+e.btn(href="#") Читать отзыв заказчика
-				+b.project-industry-slider-item.swiper-slide
+				+b.project-industry-slider-item.swiper-slide(class="wow animate__fadeInUp")
 					+e.bg
 						img(src="img/svg/project-industry-slider-item-3.svg", alt="")
 					+e.body
@@ -325,7 +325,7 @@ mixin sInfoProjectsIndex(data)
 							li Увеличение эффективности для обеспечения уровня необходимой производительности
 							li Минимизация потребления электроэнергии
 						+e.btn(href="#") Читать отзыв заказчика
-				+b.project-industry-slider-item.swiper-slide
+				+b.project-industry-slider-item.swiper-slide(class="wow animate__fadeInUp")
 					+e.bg
 						img(src="img/svg/project-industry-slider-item-4.svg", alt="")
 					+e.body
@@ -338,7 +338,7 @@ mixin sInfoProjectsIndex(data)
 							li Быстрый заказ лицензий на продление, этим мы избежали увеличения стоимости лицензий для Заказчика
 							li Беспрерывное оказание услуг сервисной поддержки компанией Oracle
 						+e.btn(href="#") Читать отзыв заказчика
-				+b.project-industry-slider-item.swiper-slide
+				+b.project-industry-slider-item.swiper-slide(class="wow animate__fadeInUp")
 					+e.bg
 						img(src="img/svg/project-industry-slider-item-5.svg", alt="")
 					+e.body
@@ -358,10 +358,11 @@ mixin sInfoPartnersIndex(data)
 	+b.SECTION.sInfoNews--index.section#sInfoPartners&attributes(attributes)
 		.container-xl
 			+e.partners-wrap-slider.swiper
-				h2 Партнеры
+				div(class="wow animate__fadeInUp")
+					h2 Партнеры
 				.swiper-wrapper
 					mixin item()
-						+b.partners-item.swiper-slide
+						+b.partners-item.swiper-slide(class="wow animate__fadeInUp")
 							+e.logo
 								img(src="img/svg/partner-logo.svg", alt="")
 							+e.text
@@ -383,12 +384,13 @@ mixin sInfoNewsIndex(data)
 	// start sInfoNews
 	+b.SECTION.sInfoNews--index.section#sInfoNews&attributes(attributes)
 		.container-xl
-			h2 Новости
+			div(class="wow animate__fadeInUp")
+				h2 Новости
 			.sInfoNewsIndex-slider-wrap
 				.sInfoNewsIndex-slider.swiper
 					.swiper-wrapper
 						mixin item()
-							.col-3.swiper-slide
+							.col-3.swiper-slide(class="wow animate__fadeInUp")
 								+info-news-item
 						- for(x = 0; x < 16; x++)
 							+item

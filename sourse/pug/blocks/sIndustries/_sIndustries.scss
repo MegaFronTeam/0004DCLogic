@@ -80,6 +80,7 @@
 			left: 0;
 			max-width: none;
 			height: 100%;
+			svg,
 			img{
 				position: absolute;
 				bottom: 0;
@@ -250,6 +251,7 @@
 				max-width: none;
 				height: 100%;
 				left: auto;
+				svg,
 				img{
 					right: 0;
 					left: auto;

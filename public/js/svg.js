@@ -1,7 +1,11 @@
 'use strict';
+
+
+let speed = 1000;
+let speed2 = .5;
 function headSVG() { 
-	let speed = 1000;
-	let speed2 = .5;
+
+
 
 	// gsap.registerPlugin( InertiaPlugin);
 		// Create a timeline with default parameters
@@ -187,10 +191,10 @@ function headSVG() {
 		.to( `#hand-16-2`,{y: 3, })
 		.add( `#hand-16-1`,{ x: -3, })
 	tl10
+	.set(`#el-17--1, #el-17--2`, { opacity: 0 },">-0.5") 
 		.fromTo( `#circle-16--1`, {skewX: 31,  x: 63, y: 65 }, {x:93,y:50})
 		
-		.to(`#circle-16--1`, { skewX: 0, opacity: 0 , x:0,y:0}) 
-		.to(`#el-17--1, #el-17--2`, { opacity: 0 },">-0.5") 
+		.to(`#circle-16--1`, { skewX: 0, opacity: 0 , x:0,y:0})  
 		.to(`#imprint`, {  opacity: .5 })  
 		.to( `#circle-16--2, #circle-16--3`,   {opacity: 0,x:  32,y: 22})
 		.fromTo( `#circle-16--4`, { opacity: 0 ,x:  -27 , y: 12} , { opacity:1,x: 16,y: -12})
@@ -245,7 +249,12 @@ function headSVG() {
  }
 
 
- setTimeout(() => {
+//  setTimeout(() => {
 	 
-	 headSVG();
-	}, 500);
+// 	 headSVG();
+// 	}, 500);
+
+
+
+
+// convertImages('.head-svg', headSVG);
