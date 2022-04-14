@@ -1,0 +1,39 @@
+// start .sBars
+.sBars {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		// width: ;
+
+
+		.grad{
+			transform-origin: center;
+			stroke-dashoffset: 40px;
+			stroke-dasharray: 100 100 ;
+		}
+		
+		svg{
+			width: 389px;
+			filL: none !important
+		}
+		
+		@include media-breakpoint-up(xl) {}
+		@include media-breakpoint-up(lg) {}
+		@include media-breakpoint-up(md) {}
+		@include media-breakpoint-up(sm) {}
+		@include media-breakpoint-between(md, xl) {}
+		@include media-breakpoint-only(xl) {}
+		@include media-breakpoint-down(xl) {}
+	} // end.sBars
+	
+	
+	.progress-bar{
+		circle{
+			fill: none;
+		}
+		&__progress{
+			
+			stroke-dashoffset: 40px;
+			stroke-dasharray: 100 100 ;
+		}
+}
