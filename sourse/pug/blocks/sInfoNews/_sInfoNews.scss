@@ -347,7 +347,11 @@
 .info-event-item {
 	display: flex;
 	background-color: $white;
-	margin-bottom: 8px;
+	// margin-bottom: 8px;
+	transition-duration: 0.4s;
+	&:hover {
+		box-shadow: 0px -1px 20px 6px rgba(34, 60, 80, 0.2);
+	}
 	@include media-breakpoint-up(lg) {
 		flex-direction: row;
 		&:nth-child(even) {
@@ -431,6 +435,10 @@
 	flex-direction: column;
 	margin-bottom: 8px;
 	background-color: $white;
+	transition-duration: 0.4s;
+	&:hover {
+		box-shadow: 0px -1px 20px 6px rgba(34, 60, 80, 0.2);
+	}
 	picture {
 		@include media-breakpoint-up(lg) {
 			width: 50%;

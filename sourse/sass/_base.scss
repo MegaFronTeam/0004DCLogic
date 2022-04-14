@@ -781,3 +781,9 @@ textarea.form-wrap__input {
 .filepond--credits {
 	display: none;
 }
+.container-breadcrumb{
+	@include media-breakpoint-up(lg){
+		padding-left: rem(24);
+		padding-right: rem(24);
+	}
+}

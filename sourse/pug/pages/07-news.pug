@@ -12,16 +12,17 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= `Мероприятие`
+	- let  title= `Новость`
 	title= title
 block pagecontent
 	//- +mob-mnu()
 
 	+top-nav()
-	.container-xl
-		+b.breadcrumb-wrap
-			+breadcrumb(`Главная`,`Информация`,`Мероприятия`,`DCLogic выступил спонсором ежегодного конгресса «Подмосковные вечера»`)
-	+sContent
+	.container-breadcrumb
+		.container-xl
+			+b.breadcrumb-wrap
+				+breadcrumb(`Главная`,`Информация`,`Новости`,`DCLogic выступил спонсором ежегодного конгресса «Подмосковные вечера»`)
+	+sContent(`news`)
 	+sContentSlider
 	+footer()
       

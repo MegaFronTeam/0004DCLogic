@@ -4,7 +4,6 @@ include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/sContent/_sContent.pug 
-include ../blocks/sForm/_sForm.pug 
 
 include ../blocks/footer/_footer.pug
 
@@ -13,18 +12,18 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= `Кейс`
+	- let  title= `Мероприятие`
 	title= title
 block pagecontent
 	//- +mob-mnu()
 
 	+top-nav()
-	.container-xl
-		+b.breadcrumb-wrap
-			+breadcrumb(`Главная`,`Информация`,`Кейсы`,`Поставки компьютерного оборудования`)
-	+sContentCase
-	+sContentCaseSlider
-	+sForm(`Пригласить в тендер`)
+	.container-breadcrumb
+		.container-xl
+			+b.breadcrumb-wrap
+				+breadcrumb(`Главная`,`Информация`,`Мероприятия`,`DCLogic выступил спонсором ежегодного конгресса «Подмосковные вечера»`)
+	+sContent
+	+sContentSlider
 	+footer()
       
 
