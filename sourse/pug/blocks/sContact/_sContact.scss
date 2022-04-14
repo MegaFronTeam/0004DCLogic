@@ -54,6 +54,14 @@
 		font-size: rem(32);
 		margin-bottom: rem(16);
 	}
+	&__address, &__time{
+		@include media-breakpoint-up(lg){
+			font-size: rem(24);
+			max-width: rem(472);
+		}
+		font-size: rem(19);
+		max-width: rem(314);
+	}
 	&__tel {
 		color: $body-color !important;
 		@include media-breakpoint-up(lg) {

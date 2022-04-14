@@ -240,7 +240,7 @@
 		padding: rem(32);
 		padding-top: rem(16);
 		@include media-breakpoint-down(lg) {
-			padding: rem(16);
+			padding-bottom: rem(26);
 		}
 		flex-grow: 1;
 		display: flex;
@@ -256,11 +256,17 @@
 		overflow: hidden;
 		color: var(--title-color);
 		transition-duration: 0.3s;
+		// @include media-breakpoint-down(lg){
+		// 	max-width: 260px;
+		// }
 	}
 	&__caption {
 		font-size: rem(12);
 		line-height: calc(16 / 12);
 		margin-bottom: rem(8);
+		@include media-breakpoint-down(lg){
+			margin-bottom: rem(22);
+		}
 		display: -webkit-box;
 		-webkit-line-clamp: 6;
 		-webkit-box-orient: vertical;
