@@ -51,7 +51,7 @@
 			padding-left: rem(24);
 		}
 		margin-bottom: rem(34);
-		
+
 		li {
 			padding-left: rem(24);
 			position: relative;
@@ -173,9 +173,9 @@
 			margin-bottom: rem(16);
 			list-style: none;
 			&::before {
-				content: counter(num) '.';
+				content: counter(num) ".";
 				counter-increment: num;
-				font-family: 'Raleway';
+				font-family: "Raleway";
 				position: absolute;
 				left: 0;
 				top: 0;
@@ -195,7 +195,7 @@
 						margin-bottom: 0;
 					}
 					&::before {
-						content: counter(num) '.' counter(num2) '.';
+						content: counter(num) "." counter(num2) ".";
 						counter-increment: num2;
 					}
 				}
@@ -206,8 +206,8 @@
 		font-size: rem(18);
 		margin-bottom: rem(18);
 	}
-	.info-news-item{
-		picture{
+	.info-news-item {
+		picture {
 			margin-bottom: 0;
 		}
 	}
@@ -215,9 +215,9 @@
 		position: relative;
 		picture {
 			margin-bottom: 0 !important;
-			@include block(1024,622)
+			@include block(1024, 622);
 		}
-		img{
+		img {
 			width: 100%;
 			position: absolute;
 			top: 0;
@@ -425,6 +425,7 @@
 		picture {
 			margin-bottom: 0;
 		}
+
 		@include media-breakpoint-up(lg) {
 			&__bg {
 				max-width: 50%;
@@ -444,6 +445,9 @@
 			&__bg {
 				display: flex;
 				justify-content: center;
+				& > * {
+					max-height: 100%;
+				}
 				img {
 					max-height: 309px;
 				}
@@ -464,8 +468,8 @@
 .sContentSlider {
 	padding-top: 0;
 	position: relative;
-	.container-xl{
-		@include media-breakpoint-down(lg){
+	.container-xl {
+		@include media-breakpoint-down(lg) {
 			padding: 0;
 		}
 	}
