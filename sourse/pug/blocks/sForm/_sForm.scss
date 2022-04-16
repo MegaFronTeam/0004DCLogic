@@ -5,6 +5,11 @@
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(40)};
 	}
+	.container-xl{
+		@include media-breakpoint-down(lg){
+			padding: 0;
+		}
+	}
 	h2 {
 		@include media-breakpoint-up(lg) {
 			font-size: rem(40);

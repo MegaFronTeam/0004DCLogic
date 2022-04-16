@@ -769,6 +769,11 @@
 }
 
 .sContentCaseSlider {
+	.container-xl{
+		@include media-breakpoint-down(lg){
+			padding: 0;
+		}
+	}
 	h3 {
 		@include media-breakpoint-down(lg) {
 			max-width: 260px;

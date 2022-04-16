@@ -189,7 +189,7 @@ a {
 .cookies {
 	display: none;
 	position: fixed;
-	bottom: 12px;
+	bottom: 64px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 771px;
@@ -198,11 +198,13 @@ a {
 	padding: rem(16);
 	background-color: $primary;
 	border-radius: 8px;
+	z-index: 20;
 	@include media-breakpoint-up(lg) {
 		flex-direction: row;
 		padding-left: rem(32);
 		padding-right: rem(32);
 		align-items: center;
+		bottom: 12px;
 	}
 	flex-direction: column;
 	&__btn {

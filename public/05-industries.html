@@ -12,6 +12,9 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Raleway:wght@400;600&amp;display=swap" rel="stylesheet"/>
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
+		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css?v=0.0.1" rel="stylesheet"/>
 	</head>
 	<body class="tabs-page">
@@ -27,8 +30,9 @@
 							</div>
 						</div>
 						<div class="col">
-							<div class="top-nav__menu-wrap">
-								<div class="top-nav__menu"><a href="#">Решения</a><a href="#">Отрасли</a><a href="#">Информация</a><a href="#">Контакты</a>
+							<div class="menu-mobile menu-mobile--js top-nav__menu-wrap">
+								<div class="menu-mobile__inner">
+									<div class="top-nav__menu"><a href="#">Решения</a><a href="#">Отрасли</a><a href="#">Информация</a><a href="#">Контакты</a></div>
 								</div>
 							</div>
 							<div class="top-nav__menu-btns">
@@ -47,11 +51,8 @@
 										<use xlink:href="img/svg/sprite.svg#search"></use>
 									</svg>
 								</a>
-								<a class="top-nav__menu-btn top-nav__menu-btn--menu" href="#">
-									<svg class="icon icon-menu ">
-										<use xlink:href="img/svg/sprite.svg#menu"></use>
-									</svg>
-								</a>
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
 							</div>
 						</div>
 						<div class="col-auto d-none d-lg-block">
@@ -2539,6 +2540,7 @@
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
+								<input class="filepond" type="file" name="filepond" multiple="" data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3"/>
 								<div class="sForm__btn-wrap">
 									<div class="sForm__btn btn btn-primary">Отправить</div>
 								</div>
@@ -2655,7 +2657,17 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"> </script>
+		<script src="https://unpkg.com/filepond/dist/filepond.min.js"> </script>
 		<script src="libs/animejs/lib/anime.min.js"> </script>
+		<script src="libs/animejs/lib/anime.min.js"> </script>
+		<script src="libs/animejs/lib/anime.min.js"> </script>
+		<script src="libs/gsap/gsap.min.js"> </script>
+		<script src="libs/gsap/ScrollTrigger.min.js"> </script>
+		<script src="libs/wowjs/wow.min.js"> </script>
 		<script src="js/common.js?v=0.0.1"></script>
 		<script src="js/svg.js?v=0.0.1"></script>
 	</body>

@@ -32,6 +32,9 @@
 		@include media-breakpoint-down(lg) {
 			padding: 0;
 		}
+		@include media-breakpoint-up(lg) {
+			max-width: 960px;
+		}
 	}
 	&__btn-wrap {
 		@include media-breakpoint-up(lg) {
@@ -44,7 +47,7 @@
 		@include media-breakpoint-up(sm) {
 			max-width: rem(291);
 		}
-		
+
 		width: 100%;
 		font-weight: 600;
 	}
@@ -139,7 +142,7 @@
 	}
 	&__caption {
 		font-size: rem(16);
-		color: rgba(#031d3a, 0.5);
+		color: rgba(#031d3a, 0.7);
 	}
 	picture {
 		@include media-breakpoint-up(lg) {
@@ -155,7 +158,9 @@
 	}
 	&__col {
 		margin-top: 0 !important;
-		padding-top: rem(40);
+		@include media-breakpoint-up(lg){
+			padding-top: rem(40);
+		}
 	}
 	&__info {
 		@include media-breakpoint-up(lg) {

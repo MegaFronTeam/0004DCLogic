@@ -787,3 +787,13 @@ textarea.form-wrap__input {
 		padding-right: rem(24);
 	}
 }
+.case-page{
+	@include media-breakpoint-down(lg){
+		.sForm{
+			padding-bottom: 0;
+		}
+		.footer{
+			padding-top: 0;
+		}
+	}
+}
