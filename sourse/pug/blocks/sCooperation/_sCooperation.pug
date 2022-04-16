@@ -1,43 +1,27 @@
 mixin sCooperation(data)
 	// start sCooperation
-	+b.SECTION.sCooperation.section(class="wow animate__fadeInUp")#sCooperation&attributes(attributes)
+	+b.SECTION.sCooperation.section#sCooperation&attributes(attributes)
+		-
+			let banks = [2,3,4,2,2,5,6,7,8,7,4,5,3]
 		.container-xl
 			+b.section-title.text-center
 				h2 С нами сотрудничают
-			+e.icon-wrap
-				+e.icon--icon1
-					img(src="img/svg/cooperation-1.svg", alt="")
-				+e.icon--icon2
-					img(src="img/svg/cooperation-2.svg", alt="")
-				+e.icon--icon3
-					img(src="img/svg/cooperation-3.svg", alt="")
-				+e.icon--icon4
-					img(src="img/svg/cooperation-4.svg", alt="")
-				+e.icon--icon5
-					img(src="img/svg/cooperation-2.svg", alt="")
-				+e.icon--icon6
-					img(src="img/svg/cooperation-2.svg", alt="")
-				+e.icon--icon7
-					img(src="img/svg/cooperation-5.svg", alt="")
-				+e.icon--icon8
-					img(src="img/svg/cooperation-6.svg", alt="")
-				+e.icon--icon9
-					img(src="img/svg/cooperation-7.svg", alt="")
-				+e.icon--icon10
-					img(src="img/svg/cooperation-6.svg", alt="")
-				+e.icon--icon11
-					img(src="img/svg/cooperation-7.svg", alt="")
-				+e.icon--icon12
-					img(src="img/svg/cooperation-4.svg", alt="")
-				+e.icon--icon13
-					img(src="img/svg/cooperation-5.svg", alt="")
-				+e.icon--icon14
-					img(src="img/svg/cooperation-3.svg", alt="")
+			+e.icon-wrap.tabs
+				.tabs__caption
+					+e.icon--icon1.tabs__btn(data-title="Название банка 1" data-text="Описание банка 1" data-link="#link").active
+							img(src=`img/svg/cooperation-1.svg`, alt="")
+					each bank, index in banks
+						+e.icon.tabs__btn.wow.animate__slideInUp(class=`sCooperation__icon--icon${index + 2}` data-title=`Название банка ${bank}` data-text=`Описание банка ${bank}` data-link="#link")
+							img(src=`img/svg/cooperation-${bank}.svg`, alt="")
 				+e.center-block
 					+e.center-img
-						img(src="img/svg/cooperation-8.svg", alt="")
-					+e.center-title Совкомбанк
-					+e.center-caption Частный универсальный коммерческий банк
+						.tabs__content.active 
+							img(src="img/svg/cooperation-1.svg", alt="")
+						each bank, index in banks
+							.tabs__content 
+								img(src=`img/svg/cooperation-${bank}.svg`, alt="")
+					+e.center-title  
+					+e.center-caption
 					+e.center-link(href="#")
 						span Подробнее о сотрудничестве
 						+icon(`chevron-right`)

@@ -249,6 +249,8 @@
 	}
 	&__center-img {
 		position: absolute;
+		border-radius: 50%;
+		background-color: #fff;
 		@include media-breakpoint-up(lg) {
 			width: 101px;
 			height: 101px;
@@ -269,42 +271,44 @@
 			max-width: 100%;
 			max-height: 100%;
 		}
-		&::before {
+		&::before,
+		&::after{
 			content: "";
 			position: absolute;
+			// top: 50%;
+			// left: 50%;
+			// transform: translate(-50%, -50%);
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%, -50%);
+			margin-left: calc(var(--size) / -2);
+			margin-top: calc(var(--size) / -2);
+			width: var(--size);
+			height: var(--size);
+			// bottom: 0;
+			// right: 0;
+			opacity: 0;
 			z-index: 0;
 			border-radius: 50%;
 			background-color: transparent;
 			border: 1px solid $primary;
+
+			animation: heartbeat 1.5s infinite;
+		}
+		&::before {
 			@include media-breakpoint-up(lg) {
-				width: 139px;
-				height: 139px;
+				--size: 139px; 
 			}
 			@include media-breakpoint-down(lg) {
-				width: 91px;
-				height: 91px;
+				--size: 91px; 
 			}
 		}
 		&::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			z-index: 0;
-			border-radius: 50%;
-			background-color: transparent;
 			border: 1px solid rgba(#017aff, 0.4);
 			@include media-breakpoint-up(lg) {
-				width: 187px;
-				height: 187px;
+				--size: 187px; 
 			}
 			@include media-breakpoint-down(lg) {
-				width: 109px;
-				height: 109px;
+				--size: 109px; 
 			}
 		}
 	}
@@ -373,3 +377,35 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sCooperation
+
+
+
+
+@keyframes heartbeat
+{
+  0%
+  {
+		opacity: 1;
+		transform: scale( 1 );
+  } 
+  40%
+  {
+		opacity: 0;
+		transform: scale( .55 );
+  } 
+  60%
+  {
+		opacity: 1;
+    transform: scale(1 );
+  }
+  80%
+  {
+		opacity: 0;
+    transform: scale( .75 );
+  }
+  100%
+  {
+		opacity: 1;
+    transform: scale(1);
+  }
+}
