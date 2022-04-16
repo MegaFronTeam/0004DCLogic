@@ -211,8 +211,10 @@
 .info-news-item {
 	display: block;
 	--title-color: #{$body-color};
+	position: relative;
 	&:hover {
 		--title-color: #{$primary};
+		z-index: 2;
 	}
 	@include media-breakpoint-up(sm) {
 		// width: rem(318);
@@ -223,6 +225,7 @@
 	background-color: $white;
 	display: flex;
 	flex-direction: column;
+	height: auto;
 	picture {
 		width: 100%;
 		@include block(318, 175);

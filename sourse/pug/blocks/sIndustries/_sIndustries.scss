@@ -26,19 +26,19 @@
 		}
 		margin-bottom: rem(16);
 	}
-	.solution-content__body-icon{
-		@include media-breakpoint-down(lg){
+	.solution-content__body-icon {
+		@include media-breakpoint-down(lg) {
 			display: none;
 		}
 	}
-	.solution-content__body{
-		@include media-breakpoint-down(lg){
+	.solution-content__body {
+		@include media-breakpoint-down(lg) {
 			padding-top: rem(24);
 			// text-align: center;
-			h2{
+			h2 {
 				// text-align: center;
 			}
-			ul{
+			ul {
 				text-align: left;
 			}
 		}
@@ -81,7 +81,7 @@
 			max-width: none;
 			height: 100%;
 			svg,
-			img{
+			img {
 				position: absolute;
 				bottom: 0;
 				left: 0;
@@ -91,9 +91,10 @@
 		position: relative;
 		@include media-breakpoint-up(lg) {
 			width: 594px;
-			max-width: 50%;
+			max-width: calc(100% - 670px) !important;
 			padding-bottom: 10px;
-			img {
+			img,
+			svg {
 				max-width: 100%;
 			}
 		}
@@ -102,7 +103,7 @@
 		@include media-breakpoint-up(lg) {
 			padding: rem(30);
 		}
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xl) {
 			max-width: 60%;
 		}
 	}
@@ -116,6 +117,8 @@
 			border-radius: 50%;
 			overflow: hidden;
 			margin-right: 8px;
+			background-color: $white;
+			border-radius: 50%;
 		}
 	}
 	&__title {
@@ -243,7 +246,7 @@
 		.project-industry-slider-item__caption {
 			color: rgba($white, 0.56);
 		}
-		.project-industry-slider-item__bg{
+		.project-industry-slider-item__bg {
 			@include media-breakpoint-up(xl) {
 				position: absolute;
 				bottom: 0;
@@ -252,7 +255,7 @@
 				height: 100%;
 				left: auto;
 				svg,
-				img{
+				img {
 					right: 0;
 					left: auto;
 				}
@@ -286,8 +289,8 @@
 		border-color: $primary !important;
 		box-shadow: 0px 4px 10px #9ac0ff !important;
 	}
-	.project-industry-slider-item__bg{
-		@include media-breakpoint-up(xl){
+	.project-industry-slider-item__bg {
+		@include media-breakpoint-up(xl) {
 			left: 0 !important;
 			right: auto !important;
 		}
@@ -295,25 +298,25 @@
 	.project-industry-slider-item {
 		background: linear-gradient(180deg, rgba(238, 243, 250, 0.63) 0%, #eef3fa 100%);
 		color: $body-color;
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xl) {
 			flex-direction: row-reverse !important;
 		}
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			flex-direction: row !important;
 		}
 		&:nth-child(even) {
 			background: $primary;
 			color: $white;
-			.project-industry-slider-item__bg{
-				@include media-breakpoint-up(xl){
+			.project-industry-slider-item__bg {
+				@include media-breakpoint-up(xl) {
 					right: 0 !important;
 					left: auto !important;
 				}
 			}
-			@include media-breakpoint-up(xl){
+			@include media-breakpoint-up(xl) {
 				flex-direction: row !important;
 			}
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(lg) {
 				flex-direction: row-reverse !important;
 			}
 			.project-industry-slider-item__caption {
