@@ -3,6 +3,12 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	&__caption-text-block-wrap {
+		@include media-breakpoint-down(lg) {
+			padding-left: rem(16);
+			padding-right: rem(16);
+		}
+	}
 	&__caption-text-block {
 		margin-top: rem(32);
 		background-color: $white;
@@ -14,8 +20,8 @@
 		@include media-breakpoint-down(lg) {
 			padding-top: rem(32);
 			padding-bottom: rem(32);
-			padding-left: rem(8);
-			padding-right: rem(8);
+			padding-left: rem(10);
+			padding-right: rem(10);
 		}
 		@include media-breakpoint-up(lg) {
 			font-size: rem(24);
@@ -278,6 +284,7 @@
 
 .certificates-item {
 	@include block(266, 187);
+	border: 1px solid #dee5ed;
 	img {
 		position: absolute;
 		top: 0;
@@ -303,6 +310,9 @@
 }
 .partners-item {
 	border: 1px solid #dee5ed;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	@include media-breakpoint-up(lg) {
 		padding: rem(16);
 	}
@@ -312,8 +322,13 @@
 			height: rem(56);
 			margin-bottom: rem(40);
 		}
+		transition-duration: 0.3s;
+		filter: saturate(0%) brightness(1.5);
 		height: 40px;
 		margin-bottom: 12.5px;
+		&:hover {
+			filter: saturate(100%) brightness(1);
+		}
 		img {
 			height: 100%;
 			max-width: 100%;
@@ -331,6 +346,7 @@
 		}
 	}
 	&__more {
+		margin-top: auto;
 		display: inline-flex;
 		align-items: center;
 		span {
@@ -464,6 +480,8 @@
 		}
 		@include media-breakpoint-down(lg) {
 			padding: rem(16);
+			padding-top: rem(24);
+			padding-bottom: rem(32);
 		}
 		display: flex;
 		flex-direction: column;
