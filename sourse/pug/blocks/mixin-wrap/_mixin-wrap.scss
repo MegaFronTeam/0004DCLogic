@@ -147,6 +147,7 @@
 		font-weight: 600;
 		font-size: rem(13);
 		line-height: calc(16 / 13);
+		svg,
 		img {
 			transition-duration: 0.4s;
 			filter: grayscale(1);
@@ -171,6 +172,7 @@
 		&:hover {
 			background-color: rgba(1, 122, 255, 0.09);
 			color: $primary;
+			svg,
 			img {
 				filter: grayscale(0);
 			}
@@ -185,6 +187,7 @@
 	&__btn.active {
 		background-color: rgba(1, 122, 255, 0.09);
 		color: $primary;
+		svg,
 		img {
 			filter: grayscale(0);
 		}

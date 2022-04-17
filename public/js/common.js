@@ -118,14 +118,17 @@ const JSCCommon = {
 	// tabs  .
 	tabscostume(tab) { 
 		function setData(el) {
-			let title = el.dataset.title;
-			let text = el.dataset.text;
-			let link = el.dataset.link;
-			if (title && text && link) {
+			if (el) {
 				
-				document.querySelector(".sCooperation__center-title").innerText = title;
-				document.querySelector(".sCooperation__center-caption").innerText = text;
-				document.querySelector(".sCooperation__center-caption").setAttribute("href",link);
+				let title = el.dataset.title;
+				let text = el.dataset.text;
+				let link = el.dataset.link;
+				if (title && text && link) {
+					
+					document.querySelector(".sCooperation__center-title").innerText = title;
+					document.querySelector(".sCooperation__center-caption").innerText = text;
+					document.querySelector(".sCooperation__center-caption").setAttribute("href",link);
+				}
 			}
 		}
 		setData(document.querySelector('.' + tab + '__btn.sCooperation__icon.active'))
@@ -583,14 +586,15 @@ function eventHandler() {
 	
 
 
-
-	var bart2 = gsap.timeline({ 
-		scrollTrigger: { 
-			trigger: ".sBars",  
-			...triggerSet2
-		}, 
-	})
-	bart2
+	if (document.querySelector(".sBars")) {
+	
+		var bart2 = gsap.timeline({ 
+			scrollTrigger: { 
+				trigger: ".sBars",  
+				...triggerSet2
+			}, 
+		})
+		bart2
 		// .from(".bar-item__svg-wrap", {rotate: -270, opacity:0, ...setEl2 }) 
 		.from(".progress-bar__progress", { strokeDashoffset: 100, opacity:0,...setEl2, duration: speed2 * 5,  } )  
 		.from(".bar-item__title--border", { scaleX: 0,...setEl2 },'-=.5') 
@@ -598,7 +602,8 @@ function eventHandler() {
 		.from(":is(.sBars__col:nth-child(3), .sBars__col:nth-child(5)) :is(.bar-item__title--border span, .bar-item__text--sm)", { x: '100%',...setEl2 },'-=1') 
 		.from(".bar-item__title--border span, .bar-item__text--sm", {opacity:0,...setEl2 },'-=1') 
 		;
-	function animateRating() {
+	}
+		function animateRating() {
 		
 		var t2 = gsap.timeline({ 
 			scrollTrigger: { 
@@ -649,7 +654,7 @@ function eventHandler() {
 
 	convertImages('.sRating__bg img', animateRating);
 	convertImages('.project-industry-slider-item__bg img', industryanimate);
-	convertImages('.index-slider-item__img img');
+	// convertImages(':is(.index-slider-item__img, .tabs-wrap__btn) img');
 
 
 };
