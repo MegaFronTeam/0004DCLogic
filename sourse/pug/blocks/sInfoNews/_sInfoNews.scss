@@ -3,6 +3,12 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	&__caption-text-block-wrap {
+		@include media-breakpoint-down(lg) {
+			padding-left: rem(16);
+			padding-right: rem(16);
+		}
+	}
 	&__caption-text-block {
 		margin-top: rem(32);
 		background-color: $white;
@@ -14,8 +20,8 @@
 		@include media-breakpoint-down(lg) {
 			padding-top: rem(32);
 			padding-bottom: rem(32);
-			padding-left: rem(8);
-			padding-right: rem(8);
+			padding-left: rem(10);
+			padding-right: rem(10);
 		}
 		@include media-breakpoint-up(lg) {
 			font-size: rem(24);
@@ -246,7 +252,7 @@
 			}
 			&__body {
 				width: 50%;
-				min-width: 708px;
+				min-width: 670px;
 			}
 		}
 		@include media-breakpoint-down(lg) {
@@ -278,6 +284,7 @@
 
 .certificates-item {
 	@include block(266, 187);
+	border: 1px solid #dee5ed;
 	img {
 		position: absolute;
 		top: 0;
@@ -303,15 +310,21 @@
 }
 .partners-item {
 	border: 1px solid #dee5ed;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	@include media-breakpoint-up(lg) {
 		padding: rem(16);
 	}
 	padding: 10px;
+
 	&__logo {
 		@include media-breakpoint-up(lg) {
 			height: rem(56);
 			margin-bottom: rem(40);
 		}
+		transition-duration: 0.3s;
+		filter: saturate(0%) brightness(1.5);
 		height: 40px;
 		margin-bottom: 12.5px;
 		img {
@@ -319,6 +332,9 @@
 			max-width: 100%;
 			max-height: 100%;
 		}
+	}
+	&:hover &__logo {
+		filter: saturate(100%) brightness(1);
 	}
 	&__text {
 		margin-bottom: rem(8);
@@ -331,6 +347,7 @@
 		}
 	}
 	&__more {
+		margin-top: auto;
 		display: inline-flex;
 		align-items: center;
 		span {
@@ -349,8 +366,10 @@
 	background-color: $white;
 	// margin-bottom: 8px;
 	transition-duration: 0.4s;
+	position: relative;
 	&:hover {
 		box-shadow: 0px -1px 20px 6px rgba(34, 60, 80, 0.2);
+		z-index: 2;
 	}
 	@include media-breakpoint-up(lg) {
 		flex-direction: row;
@@ -464,6 +483,8 @@
 		}
 		@include media-breakpoint-down(lg) {
 			padding: rem(16);
+			padding-top: rem(24);
+			padding-bottom: rem(32);
 		}
 		display: flex;
 		flex-direction: column;

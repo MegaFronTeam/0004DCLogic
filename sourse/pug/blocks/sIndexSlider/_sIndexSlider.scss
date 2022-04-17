@@ -112,7 +112,17 @@
 		border-top: 1px solid #dee5ed;
 	}
 }
+.index-slider-item__img svg > g{
+	transform-origin: bottom;
+}
 .index-slider-item {
+	&:hover{
+		.index-slider-item__img svg > g:not([clip-path]),
+		.index-slider-item__img svg > [clip-path] > g,
+		{
+			animation: bounce 2s infinite;
+		}	
+	}
 	@include media-breakpoint-down(lg) {
 		width: rem(314);
 	}
@@ -195,4 +205,14 @@
 			text-decoration: underline;
 		}
 	}
+}
+
+
+
+
+@keyframes bounce
+{
+  0%   { transform: translateY(0); }
+        50%  { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
 }

@@ -549,6 +549,10 @@ function eventHandler() {
 	wow.init();
 
 	
+	ScrollTrigger.defaults({
+		toggleActions: "restart pause resume pause"
+	});
+
 
 	let triggerSet = {
 		start: '-10% bottom',
@@ -556,19 +560,44 @@ function eventHandler() {
 		// scrub: true, 
 		
 	}
+	let triggerSet2 = {
+		start: '10% bottom',
+		end: '120% top',
+		// scrub: true, 
+		toggleActions: "play none none none"
+		
+	}
 	let setEl = {
 		duration: speed2 * 3,
 		repeat: -1,
 		yoyo: true,
-
-		ease:  Linear
+		ease: 'none'
+	}
+	let setEl2 = {
+		duration: speed2 * 2, 
+		// scrub: true, 
+		ease: "circ.out"
 	}
 
 	let scroller = document.body;
+	
 
-	ScrollTrigger.defaults({
-		toggleActions: "restart pause resume pause"
-	});
+
+
+	var bart2 = gsap.timeline({ 
+		scrollTrigger: { 
+			trigger: ".sBars",  
+			...triggerSet2
+		}, 
+	})
+	bart2
+		// .from(".bar-item__svg-wrap", {rotate: -270, opacity:0, ...setEl2 }) 
+		.from(".progress-bar__progress", { strokeDashoffset: 100, opacity:0,...setEl2, duration: speed2 * 5,  } )  
+		.from(".bar-item__title--border", { scaleX: 0,...setEl2 },'-=.5') 
+		.from(":is(.sBars__col:nth-child(2), .sBars__col:nth-child(4)) :is(.bar-item__title--border span, .bar-item__text--sm)", { x: '-100%',...setEl2 }) 
+		.from(":is(.sBars__col:nth-child(3), .sBars__col:nth-child(5)) :is(.bar-item__title--border span, .bar-item__text--sm)", { x: '100%',...setEl2 },'-=1') 
+		.from(".bar-item__title--border span, .bar-item__text--sm", {opacity:0,...setEl2 },'-=1') 
+		;
 	function animateRating() {
 		
 		var t2 = gsap.timeline({ 
@@ -597,8 +626,8 @@ function eventHandler() {
 			}, 
 		})
 		t2
-			.to(trigger.querySelectorAll(".down"), { y: 30,...setEl })
-			.to(trigger.querySelectorAll(".up"), { y: -30,...setEl },'-=1') 
+			.to(trigger.querySelectorAll(".down"), { y: 20,...setEl })
+			.to(trigger.querySelectorAll(".up"), { y: -20,...setEl },'-=1') 
 			// .to("#r-3", { y: -10,...setEl },'>- 1')
 				;
 			})

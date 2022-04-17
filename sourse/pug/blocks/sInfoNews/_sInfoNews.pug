@@ -57,7 +57,8 @@ mixin sInfoPartners(data)
 									img(src="img/svg/icon-popup.svg", alt="")
 					- for(x = 0; x<20;x++)
 						+item()
-			+e.caption-text-block Предложение о партнёрстве отправляйте на <a href="mailto:partners@dclogic.ru">partners@dclogic.ru</a>
+			+e.caption-text-block-wrap
+				+e.caption-text-block Предложение о партнёрстве отправляйте на <a href="mailto:partners@dclogic.ru">partners@dclogic.ru</a>
 
 mixin sInfoEvents(data)
 	+b.SECTION.sInfoNews.section#sInfoEvents&attributes(attributes)

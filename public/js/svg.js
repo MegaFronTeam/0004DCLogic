@@ -16,7 +16,7 @@ function headSVG() {
 		direction: 'alternate',
 	}
 	let setg = {
-		ease: 'easeInOutSine',
+		ease: "circ.out",
 		transformOrigin:"center  center",
 		
 		// repeat: -1,
@@ -191,22 +191,23 @@ function headSVG() {
 		.to( `#hand-16-2`,{y: 3, })
 		.add( `#hand-16-1`,{ x: -3, })
 	tl10
-	.set(`#el-17--1, #el-17--2`, { opacity: 0 },">-0.5") 
-		.fromTo( `#circle-16--1`, {skewX: 31,  x: 63, y: 65 }, {x:93,y:50})
+	.set(`#el-17--1, #el-17--2`, { opacity: 0 }) 
+	.set( `#shield-18`, { opacity:0})
+		.fromTo( `#circle-16--1`, {skewX: 31,  x: 63, y: 65 }, { opacity: 1 , x:93,y:50})
 		
 		.to(`#circle-16--1`, { skewX: 0, opacity: 0 , x:0,y:0})  
-		.to(`#imprint`, {  opacity: .5 })  
-		.to( `#circle-16--2, #circle-16--3`,   {opacity: 0,x:  32,y: 22})
-		.fromTo( `#circle-16--4`, { opacity: 0 ,x:  -27 , y: 12} , { opacity:1,x: 16,y: -12})
-		.fromTo( `#shield-18`, { opacity: 0 } , { opacity:1 }) 
-		.fromTo( `#dots-19`, { opacity: 0 ,x:  -46 , y: 23} , { opacity:1,x: 16,y: -12},">-0.5") 
-		.fromTo( `#dots-19`, { opacity: 1 ,x:  0 , y: 0} , { opacity:0,x: -10,y: 5})
-		.to( `#shield-18`, { opacity:0})
-		.fromTo(`#el-17--1`, { opacity: 0 }, {opacity: 1 },">-0.5") 
+		.fromTo(`#el-17--1`, { opacity: 0 }, {opacity: 1 }) 
 		.fromTo(`#el-17--1`, { opacity: 1 }, {opacity: 0 }) 
-		// .to(`#el-17--1`,  {opacity: 0 })
+		.to(`#imprint`, {  opacity: .5 },">-0.5")   
+		.to( `#circle-16--2, #circle-16--3`,   {opacity: 0,x:  32,y: 22},">-0.5") 
 		.fromTo(`#el-17--2`, { opacity: 0 }, { opacity: 1 })
 		.fromTo(`#el-17--2`, { opacity: 1 }, { opacity: 0 })
+		.fromTo( `#circle-16--4`, { opacity: 0 ,x:  -27 , y: 12} , { opacity:1,x: 16,y: -12})
+		.fromTo( `#shield-18`, { opacity: 0 } , { opacity:1 },">-1") 
+		.fromTo( `#dots-19`, { opacity: 0 ,x:  -46 , y: 23} , { opacity:1,x: 0,y: 0},">-0.5") 
+		.to( `#dots-19`, { opacity: 0 ,x:  -46 , y: 23} ) 
+		// .fromTo( `#dots-19`, { opacity: 1 ,x:  0 , y: 0} , { opacity:0,x: -10,y: 5})
+		// .to(`#el-17--1`,  {opacity: 0 })
 	
 		function randomValues() {
 		anime({
@@ -257,4 +258,4 @@ function headSVG() {
 
 
 
-// convertImages('.head-svg', headSVG);
+convertImages('.head-svg', headSVG);

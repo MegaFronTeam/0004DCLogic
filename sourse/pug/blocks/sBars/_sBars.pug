@@ -1,19 +1,58 @@
 mixin sBars(data)
 	// start sBars
-	+b.sBars.section#sBars&attributes(attributes)
+	+b.sBars.section(class="wow animate__fadeInUp")#sBars&attributes(attributes)
 		.container
 
+			mixin bar()
+				+e.svg-wrap
+					<svg xmlns="http://www.w3.org/2000/svg"  viewBox="-10 -10 52 52"> 
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background" stroke-width="12"  stroke="#DBE1E8" />
+						
+						<circle cx="16" cy="16" r="15.9155" stroke-width="20" class="progress-bar__progress  js-progress-bar" stroke="url(#paint0_linear_30_301)" />
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background"  fill="#fff" />
+						
+					</svg>
+			mixin bar2()
+				+e.svg-wrap
+					<svg xmlns="http://www.w3.org/2000/svg"  viewBox="-8 -8 48 48"> 
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background" stroke-width="12"  stroke="#DBE1E8" />
+						
+						<circle cx="16" cy="16" r="15.9155" stroke-width="16" class="progress-bar__progress  js-progress-bar" stroke="url(#paint0_linear_30_301)" />
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background"  fill="#fff" />
+						
+					</svg>
+			mixin item(c,s, t,p)
+				+b.bar-item
+					+e.bar
+						+bar()
+						+e.sub-text= c
+						+e.counter= s
+					+e.caption
+						+e.title--border
+							span= t
+						+e.text--sm!= p
+			+e.row.row
+				+e.col-center.col-auto
+					+b.bar-item--lg
+						+e.bar--lg
+							+bar2()
+							+e.sub-text на
+							+e.counter 2 769 780 286
+							+e.title Снижение ошибок
+							+e.text Уменьшается влияние человеческого фактора
+				+e.col.col-6
+					+item(`до`,`27%`,`Усиление безопасности`,`Повышается безопасность на объектах предприятия`)
+				+e.col.col-6
+					+item(`до`,`18%`,`Рост производства`,`Увеличивается производительность предприятия`)
+				+e.col.col-6
+					+item(`до`,`32%`,`Сокращение издержек`,`Снижаются расходы <br> организации`)
+				+e.col.col-6
+					+item(`до`,`15%`,`Усиление безопасности`,`Повышается безопасность на объектах предприятия`)
 
-			<svg xmlns="http://www.w3.org/2000/svg"  viewBox="-7 -7 46 46"> 
-				<circle cx="16" cy="16" r="15.9155" class="progress-bar__background" stroke-width="8"  stroke="#DBE1E8" />
-				
-				<circle cx="16" cy="16" r="15.9155" stroke-width="14" class="progress-bar__progress  js-progress-bar" stroke="url(#paint0_linear_30_301)" />
-				<circle cx="16" cy="16" r="15.9155" class="progress-bar__background"  fill="#fff" />
-				
-			</svg>
 
 
-			svg
+
+			svg.mask
 				<linearGradient id="paint0_linear_30_301"  >
 				<stop stop-color="#72B5FF"/>
 				<stop offset="0.251943" stop-color="#6EB3FF"/>
