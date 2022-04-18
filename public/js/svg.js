@@ -16,7 +16,7 @@ function headSVG() {
 		direction: 'alternate',
 	}
 	let setg = {
-		ease: "circ.out",
+		ease: "none",
 		transformOrigin:"center  center",
 		
 		// repeat: -1,
@@ -42,6 +42,7 @@ function headSVG() {
 	let tl10 = gsap.timeline({repeat: -1,  repeatDelay:1,   defaults: setg});
 	let tl20 = gsap.timeline({repeat: -1,  yoyo: true,  defaults: setg}); 
 	let tl21 = gsap.timeline({repeat: -1,   defaults: setg});  
+	let tl22 = gsap.timeline({repeat: -1,     defaults: {...setg, duration: speed2 * .2 ,ease:Linear.easeNone}});  
 	
 		tl
 			.fromTo('#belaz-1',
@@ -55,8 +56,26 @@ function headSVG() {
 			.to('#circle-2_3_', { x: 7, y: 100, skewX: -35, transformOrigin: "center  center" })
 			.fromTo('#circle-2_3_1', { opacity: 1, x: 58, y: 34, transformOrigin: "center  center" }, { opacity: 0, x: -16, y: -10, transformOrigin: "center  center" })
 			gsap.fromTo('#monitor-4, #monitor-4-1, #monitor-4-2', { opacity:1, y:0}, {opacity:0, y:6, ...setg, duration: speed2 * 4,repeat: -1,yoyo: true});
-			gsap.fromTo('#helicopter', {  y:0,x:1150}, { y:50,x:1150, ...setg, duration: speed2 * 4,repeat: -1,yoyo: true}); 
+	gsap.fromTo('#helicopter', { y: 0, x: 1150 }, { y: 50, x: 1150, ...setg, duration: speed2 * 4, repeat: -1, yoyo: true }); 
+	
 			// gsap.to('[clip-path="url(#clip0_2794_72656)"]', { rotateY: 360, ...setg, duration: speed2 * 4,repeat: -1, transformOrigin: "center  center" }); 
+	
+	tl22
+		.set('#helicopter :is(.step-2, .step-3, .step-4)', { opacity: 0 })
+		
+		.to('#helicopter .step-1', {opacity:1} )
+		.to('#helicopter .step-1', { opacity: 0 }) 
+	
+		
+		.to('#helicopter .step-2', {opacity:1} )
+		.to('#helicopter .step-2', { opacity: 0 }) 
+	
+		
+		.to('#helicopter .step-3', {opacity:1} )
+		.to('#helicopter .step-3', { opacity: 0 }) 
+
+		.to('#helicopter .step-4', {opacity:1} )
+		.to('#helicopter .step-4', { opacity: 0 }) 
 	
 	tl2
 		.fromTo('#hand-4--left', { y: 0 }, { y: -2 })
