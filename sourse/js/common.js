@@ -654,7 +654,7 @@ function eventHandler() {
 
 	convertImages('.sRating__bg img', animateRating);
 	convertImages('.project-industry-slider-item__bg img', industryanimate);
-	// convertImages(':is(.index-slider-item__img, .tabs-wrap__btn) img');
+	convertImages(':is(.index-slider-item__img, .tabs-wrap__btn) img');
 
 
 };
