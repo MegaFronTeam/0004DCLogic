@@ -54,7 +54,20 @@
 		margin-bottom: rem(40);
 	}
 	margin-bottom: rem(32);
-	&__body {
+	&__list-wrap{
+		& > ul{
+			columns: 4;
+			// column-fill: auto;
+			> li{
+				// column-fill: auto;
+				display: inline-block;
+				width: 100%;
+				// column-span: all;
+			}
+			}
+
+	}
+	&__body { 
 		@include media-breakpoint-up(lg) {
 			padding: rem(48);
 		}
