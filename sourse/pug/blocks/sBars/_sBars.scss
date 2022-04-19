@@ -74,7 +74,11 @@
 
 			}
 		}
+
 		&__col{
+			margin-bottom: 30px;
+			@include media-breakpoint-up(sm) {
+				margin-bottom: 0;
 			&:nth-child(3),
 			&:nth-child(5){
 				svg{
@@ -102,6 +106,7 @@
 				
 				grid-row: 3 / 4;
 			}
+		}
 		}
 		&__col-сenter{
 			.progress-bar__progress{
@@ -174,9 +179,9 @@
 	}
 	@include media-breakpoint-up(sm){
 
-		--size: 113px;
 	}
-	--size: 93px;
+	// --size: 93px;
+	--size: 113px;
 	&__svg-wrap{
 		position: absolute;
 		width: 100%; 
@@ -234,6 +239,9 @@
 		flex-direction: column;
 		justify-content: center;
 		padding-top: rem(12);
+		@include media-breakpoint-down(sm) {
+			flex-grow: 1;
+		}
 	}
 	&__text{
 		font-size: 12px;
@@ -253,6 +261,9 @@
 		font-weight: 500;
 		transform-origin: left;
 		&--border{
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+			}
 			flex-grow: 1;
 			padding-left: var(--sp);
 			display: flex;
