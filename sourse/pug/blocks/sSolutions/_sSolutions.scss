@@ -55,13 +55,28 @@
 	}
 	margin-bottom: rem(32);
 	&__list-wrap{
-		& > ul{
-			columns: 4;
-			// column-fill: auto;
-			> li{
-				// column-fill: auto;
+		&.variant-2{
+			& > ul > li{
 				display: inline-block;
-				width: 100%;
+			}
+		
+		}
+		& > ul{
+			@include media-breakpoint-up(lg) {
+			columns: 4;
+			}
+			
+			@include media-breakpoint-up(md) {
+			columns: 2;
+			}
+
+			// column-fill: auto;
+
+			& > li{
+				// column-fill: auto;
+				// display: inline-block;
+				// column-span: none;
+				// width: 100%;
 				// column-span: all;
 			}
 			}
