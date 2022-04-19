@@ -351,9 +351,12 @@ function eventHandler() {
 
 	const linksSlider = new Swiper('.links-wrap-slider', {
 		slidesPerView: 'auto',
+		watchOverflow: true,
 	});
 	const tabsSlider = new Swiper('.tabs-wrap-slider', {
 		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 4,
 	});
 	const solutionSlider = new Swiper('.sOneSolution__projects-slider', {
 		slidesPerView: 'auto',

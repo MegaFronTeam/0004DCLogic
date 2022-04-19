@@ -116,12 +116,12 @@
 	transform-origin: bottom;
 }
 .index-slider-item {
-	&:hover{
-		.index-slider-item__img svg > [class^="icon_animate_"]
-		{
-			animation: bounce 2s infinite;
-		}	
-	}
+	// &:hover{
+	// 	.index-slider-item__img svg > [class^="icon_animate_"]
+	// 	{
+	// 		animation: bounce 2s infinite;
+	// 	}	
+	// }
 	@include media-breakpoint-down(lg) {
 		width: rem(314);
 	}

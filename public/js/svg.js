@@ -277,4 +277,4 @@ function headSVG() {
 
 
 
-convertImages('.head-svg', headSVG);
+// convertImages('.head-svg', headSVG);

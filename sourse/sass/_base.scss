@@ -798,15 +798,25 @@ textarea.form-wrap__input {
 	}
 }
 
-.tabs-wrap__btn{
-	&:hover{
-		svg > g:not([clip-path]),
-		svg > [clip-path] > g{
+// .tabs-wrap__btn{
+// 	&:hover{
+// 		svg > g:not([clip-path]),
+// 		svg > [clip-path] > g{
+// 			animation: bounce 2s infinite;
+// 		}	
+// 	}
+
+// }
+ [class^="icon_animate_"] {
+	animation-fill-mode: forwards;
+}
+.tabs-wrap__btn,
+.index-slider-item {
+	&:hover{ [class^="icon_animate_"] {
 			animation: bounce 2s infinite;
 		}	
 	}
-
-}
+	}
 
 
 @keyframes bounce

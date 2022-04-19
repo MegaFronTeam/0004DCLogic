@@ -274,37 +274,37 @@
 		"solutionTabs":[
 			{
 				"caption": "Вычислительная инфраструктура",
-				"img": "solutionTabs-1",
+				"img": "index-slider-icon-1",
 				"id" : "computing-inf"
 			},
 			{
 				"caption": "Цифровизация предприятий",
-				"img": "solutionTabs-2",
+				"img": "index-slider-icon-2",
 				"id" : "digital"
 			},
 			{
 				"caption": "Информационная безопасность",
-				"img": "solutionTabs-3",
+				"img": "index-slider-icon-3",
 				"id" : "info-security"
 			},
 			{
 				"caption": "Импортозамещение",
-				"img": "solutionTabs-4",
+				"img": "index-slider-icon-4",
 				"id" : "import-sub"
 			},
 			{
 				"caption": "Передовые направления",
-				"img": "solutionTabs-5",
+				"img": "index-slider-icon-5",
 				"id" : "advanced-dir"
 			},
 			{
 				"caption": "Услуги",
-				"img": "solutionTabs-6",
+				"img": "index-slider-icon-6",
 				"id" : "services"
 			},
 			{
 				"caption": "Промышленная автоматизация",
-				"img": "solutionTabs-7",
+				"img": "index-slider-icon-7",
 				"id" : "industrial"
 			}
 		],

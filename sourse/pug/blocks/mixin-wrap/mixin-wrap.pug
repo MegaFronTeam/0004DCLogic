@@ -45,11 +45,13 @@ mixin tabs-wrap(items)
 			.swiper-wrapper
 				each item,index in items
 					if (index==0)
-						+e.btn.swiper-slide.scroll-link.active(href=`#${item.id}`)=item.caption
-							img(src=`img/svg/${item.img}.svg`, alt="")
+						.swiper-slide
+							+e.btn.scroll-link.active(href=`#${item.id}`)=item.caption
+								img(src=`img/svg/${item.img}.svg`, alt="")
 					else
-						+e.btn.swiper-slide.scroll-link(href=`#${item.id}`)=item.caption
-							img(src=`img/svg/${item.img}.svg`, alt="")
+						.swiper-slide
+							+e.btn.scroll-link(href=`#${item.id}`)=item.caption
+								img(src=`img/svg/${item.img}.svg`, alt="")
 
 mixin badge(title,color)
 	+b.badge(class=(color ? `--${color}` : ``))!=title
