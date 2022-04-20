@@ -2,7 +2,7 @@
 
 
 let speed = 1000;
-let speed2 = .5;
+let speed2 = .5 * 3;
 function headSVG() { 
 
 
@@ -42,16 +42,16 @@ function headSVG() {
 	let tl10 = gsap.timeline({repeat: -1,  repeatDelay:1,   defaults: setg});
 	let tl20 = gsap.timeline({repeat: -1,  yoyo: true,  defaults: setg}); 
 	let tl21 = gsap.timeline({repeat: -1,   defaults: setg});  
-	let tl22 = gsap.timeline({repeat: -1,     defaults: {...setg, duration: speed2 * .2 ,ease:Linear.easeNone}});  
+	let tl22 = gsap.timeline({repeat: -1,     defaults: {...setg, duration: speed2 * .02 ,ease:Linear.easeNone}});  
 	
 		tl
 			.fromTo('#belaz-1',
 				{ x: 150, y: -150, opacity: 0 },
 				{ x: 0, y: 0, opacity: 1 })
-			.fromTo('.st929', { opacity: 0 }, { opacity: .8 })
-			.fromTo('#circle-2_3_', { opacity: 0, x: 0, y: 0 }, { opacity: 1, x: -20, y: 13 })
-			.fromTo('.st0-3', { opacity: 0 }, { opacity: 1 	}, `-=${.2} `)
-			.to('#circle-2_3_', { x: 35, y: 52, skewX: -35, transformOrigin: "center  center" })
+			.fromTo('.st929', { opacity: 0 }, { opacity: .8 }, `>-${.5} `)
+			.fromTo('#circle-2_3_', { opacity: 0, x: 0, y: 0 }, { opacity: 1, x: -20, y: 13 }, `>-${1} `)
+			.fromTo('.st0-3', { opacity: 0 }, { opacity: 1 	}, `>-${.2} `)
+			.to('#circle-2_3_', { x: 35, y: 52, skewX: -35, transformOrigin: "center  center" }, `>-${1} `)
 			.to('#circle-2_3_', { skewX: 0, x: -10, y: 88, transformOrigin: "center  center" })
 			.to('#circle-2_3_', { x: 7, y: 100, skewX: -35, transformOrigin: "center  center" })
 			.fromTo('#circle-2_3_1', { opacity: 1, x: 58, y: 34, transformOrigin: "center  center" }, { opacity: 0, x: -16, y: -10, transformOrigin: "center  center" })

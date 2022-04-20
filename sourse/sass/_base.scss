@@ -486,9 +486,9 @@ iframe {
 	@include media-breakpoint-up(sm) {
 		font-size: rem(16);
 	}
-	padding-top: 4px;
 	font-size: rem(12);
-	padding-bottom: 4px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	padding-left: 16px;
 	padding-right: 16px;
 	@include mt;

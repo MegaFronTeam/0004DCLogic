@@ -3,6 +3,28 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	&__slider-mob{
+		overflow: visible;
+		.swiper-wrapper{
+		// 		@include row-sw;
+		@include media-breakpoint-up(lg){
+			
+			display: block !important;
+			transform: none!important;
+		}
+	}
+	@include media-breakpoint-down(lg){
+
+		.swiper-slide{
+			max-width: calc(100% - 30px);
+			}
+			svg{
+				// margin-left: -10%;
+				// margin-right: -10%;
+			}
+		}
+	
+	}
 	&__caption-text-block-wrap {
 		@include media-breakpoint-down(lg) {
 			padding-left: rem(16);

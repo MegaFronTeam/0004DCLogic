@@ -488,7 +488,7 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
-	const industriesSlider = new Swiper('.industries-slider', {
+	const industriesSlider = new Swiper('.industries-slider, .sInfoNews__slider-mob--js', {
 		slidesPerView: 'auto',
 		pagination: {
 			el: ".swiper-pagination",
@@ -559,6 +559,8 @@ function eventHandler() {
 		toggleActions: "restart pause resume pause"
 	});
 
+	let speed3 = .5
+
 
 	let triggerSet = {
 		start: '-10% bottom',
@@ -574,13 +576,13 @@ function eventHandler() {
 		
 	}
 	let setEl = {
-		duration: speed2 * 3,
+		duration: speed3 * 3,
 		repeat: -1,
 		yoyo: true,
 		ease: 'none'
 	}
 	let setEl2 = {
-		duration: speed2 * 2, 
+		duration: speed3 * 2, 
 		// scrub: true, 
 		ease: "circ.out"
 	}
@@ -599,7 +601,7 @@ function eventHandler() {
 		})
 		bart2
 		// .from(".bar-item__svg-wrap", {rotate: -270, opacity:0, ...setEl2 }) 
-		.from(".progress-bar__progress", { strokeDashoffset: 100, opacity:0,...setEl2, duration: speed2 * 5,  } )  
+		.from(".progress-bar__progress", { strokeDashoffset: 100, opacity:0,...setEl2, duration: speed3 * 5,  } )  
 		.from(".bar-item__title--border", { scaleX: 0,...setEl2 },'-=.5') 
 		.from(":is(.sBars__col:nth-child(2), .sBars__col:nth-child(4)) :is(.bar-item__title--border span, .bar-item__text--sm)", { x: '-100%',...setEl2 }) 
 		.from(":is(.sBars__col:nth-child(3), .sBars__col:nth-child(5)) :is(.bar-item__title--border span, .bar-item__text--sm)", { x: '100%',...setEl2 },'-=1') 
