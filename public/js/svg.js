@@ -10,7 +10,7 @@ function headSVG() {
 	// gsap.registerPlugin( InertiaPlugin);
 		// Create a timeline with default parameters
 	let set = {
-		easing: 'easeInOutSine',
+		ease:Linear.easeNone,
 		duration: speed,
 		loop: true,
 		direction: 'alternate',
@@ -43,12 +43,13 @@ function headSVG() {
 	let tl20 = gsap.timeline({repeat: -1,  yoyo: true,  defaults: setg}); 
 	let tl21 = gsap.timeline({repeat: -1,   defaults: setg});  
 	let tl22 = gsap.timeline({repeat: -1,     defaults: {...setg, duration: speed2 * .02 ,ease:Linear.easeNone}});  
+	let tl23 = gsap.timeline({repeat: -1,   repeatDelay: 1,   defaults: {...setg, duration: speed2 * .5,  }});  
 	
 		tl
 			.fromTo('#belaz-1',
 				{ x: 150, y: -150, opacity: 0 },
 				{ x: 0, y: 0, opacity: 1 })
-			.fromTo('.st929', { opacity: 0 }, { opacity: .8 }, `>-${.5} `)
+			.fromTo('.st929', { opacity: 0 }, { opacity: .4 }, `>-${.5} `)
 			.fromTo('#circle-2_3_', { opacity: 0, x: 0, y: 0 }, { opacity: 1, x: -20, y: 13 }, `>-${1} `)
 			.fromTo('.st0-3', { opacity: 0 }, { opacity: 1 	}, `>-${.2} `)
 			.to('#circle-2_3_', { x: 35, y: 52, skewX: -35, transformOrigin: "center  center" }, `>-${1} `)
@@ -225,6 +226,7 @@ function headSVG() {
 		.fromTo( `#shield-18`, { opacity: 0 } , { opacity:1 },">-1") 
 		.fromTo( `#dots-19`, { opacity: 0 ,x:  -46 , y: 23} , { opacity:1,x: 0,y: 0},">-0.5") 
 		.to( `#dots-19`, { opacity: 0 ,x:  -46 , y: 23} ) 
+		.to( `#shield-18`, { opacity: 0 }) 
 		// .fromTo( `#dots-19`, { opacity: 1 ,x:  0 , y: 0} , { opacity:0,x: -10,y: 5})
 		// .to(`#el-17--1`,  {opacity: 0 })
 	
@@ -250,11 +252,25 @@ function headSVG() {
 	randomValues();
 
 
+	tl23 
+		.fromTo('#mess', {opacity:0} , {opacity:1})
+		.fromTo('#mess .st38', {duration: speed2, opacity:0} , {opacity:1})
+		.to('#monitor-25',  {opacity:0})
+		.fromTo('#monitor-25-2', { opacity:0} , {opacity:1})
+		.to('#monitor-25-2',  {opacity:0})
+		.fromTo('#monitor-25-3', { opacity:0} , {opacity:1})
+		.to('#monitor-25-3',  {opacity:0})
+		.fromTo('#monitor-25', { opacity:0} , {opacity:1})
+		// .to('#mess', {opacity:1})
 	tl20 
-		// .fromTo('#text-18', {opacity:0}, {opacity: 1})
-		.fromTo('#text-18', {opacity:1}, {opacity: 0}) 
-		.fromTo('#line-19',{opacity:0 }, {opacity: 1 },">-0.5")  
-		.from('#line-19',{ attr:{strokeDashoffset:0}, duration: speed2 * 2,repeatDelay: speed2 * 2})  
+		// .fromTo('#mess', {opacity:0}, {opacity: 1})
+		// .to('#line-19', {opacity: 1 },">-1")  
+		// .from('#line-19',{  strokeDashoffset:100, opacity:0, duration: speed2 * .5})    
+		.to('#line-19',{  strokeDashoffset:100, opacity:0 })    
+		.to('#text-18',   {opacity: 1 },">-.5")  
+		.to('#hand-24',{  y:-2, rotate: 1})    
+		.from('#hand-24',{  y:-2, rotate: 1})    
+		// .to('#text-18', {opacity:1}) 
 		// .from( '#line-19', speed2 * 10, {attr:{"stroke-dashoffset":0}})
 
 	tl21
