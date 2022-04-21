@@ -16,10 +16,12 @@ mixin sCooperation(data)
 				+e.center-block
 					+e.center-img
 						.tabs__content.active 
-							img(src="img/svg/cooperation-1.svg", alt="")
+							+e.center-img-wrap
+								img(src="img/svg/cooperation-1.svg", alt="")
 						each bank, index in banks
 							.tabs__content 
-								img(src=`img/svg/cooperation-${bank}.svg`, alt="")
+								+e.center-img-wrap
+									img(src=`img/svg/cooperation-${bank}.svg`, alt="")
 					+e.center-title  
 					+e.center-caption
 					+e.center-link(href="#")
