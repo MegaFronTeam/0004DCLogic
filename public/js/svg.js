@@ -62,8 +62,9 @@ function headSVG() {
 			gsap.fromTo('#helicopter', { y: 0, x: 1150 }, { y: 50, x: 1150, ...setg, duration: speed2 * 4, repeat: -1, yoyo: true }); 
 			
 			tl24
-			.to('#Group_71', {opacity:0})
-			.from('#Group_72', {opacity:0}, `>-${1} `);
+			// .to('#Group_71', { opacity:0})
+			// .to('#Group_72', { opacity:0})
+			.to('#Group_71', {skewY: -10,scaleY:0.66, y: -2, opacity:1, transformOrigin:"bottom" }, `>-${1} `);
 		
 	
 			// gsap.to('[clip-path="url(#clip0_2794_72656)"]', { rotateY: 360, ...setg, duration: speed2 * 4,repeat: -1, transformOrigin: "center  center" }); 
