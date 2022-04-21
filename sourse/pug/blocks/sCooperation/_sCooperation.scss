@@ -29,15 +29,15 @@
 		border-radius: 50%;
 		z-index: 2;
 		background-color: $white;
-		transition-duration: 0.4s;
+		transition-duration: 0.3s;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		&:hover {
-			transform: scale(1.2);
+			transform: scale(1.16);
 		}
 		&:active {
-			transform: scale(0.8);
+			transform: scale(0.96);
 		}
 		img {
 			// position: absolute;
@@ -276,12 +276,12 @@
 		border-radius: 50%;
 		background-color: #fff;
 		z-index: 5;
-		transition-duration: 0.4s;
+		transition-duration: 0.3s;
 		&:hover {
-			transform: scale(1.2);
+			transform: scale(1.16);
 		}
 		&:active {
-			transform: scale(0.8);
+			transform: scale(0.96);
 		}
 		display: flex;
 		align-items: center;
