@@ -14,6 +14,7 @@
 1. <https://megafronteam.github.io/0004DCLogic/public/13-info-team.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/14-contacts.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/15-info-projects.html>
+1. <https://megafronteam.github.io/0004DCLogic/public/16-case.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/404.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/00-modal.html>
 1. <https://megafronteam.github.io/0004DCLogic/public/inputs.html>

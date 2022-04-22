@@ -62,7 +62,7 @@
 			&::before {
 				content: "";
 				position: absolute;
-				left: rem(10);
+				left: rem(4);
 				top: rem(10);
 				width: 4px;
 				height: 4px;
@@ -213,6 +213,26 @@
 	}
 	&__slider {
 		position: relative;
+		.swiper-pagination {
+			@include media-breakpoint-up(lg) {
+				display: none;
+			}
+			position: absolute;
+			bottom: rem(12);
+			left: rem(10);
+			z-index: 4;
+			width: auto;
+		}
+		
+		.swiper-pagination-bullet {
+			background-color: rgba(#031d3a, 0.5) !important;
+			margin-left: rem(2);
+			margin-right: rem(2);
+		}
+		.swiper-pagination-bullet-active {
+			border: 1px solid rgba(#031d3a, 0.5) !important;
+			background-color: hsla(0, 0%, 100%, 0.5) !important;
+		}
 		picture {
 			margin-bottom: 0 !important;
 			@include block(1024, 622);
@@ -424,7 +444,6 @@
 	.project-industry-slider-item {
 		picture {
 			margin-bottom: 0;
-
 		}
 
 		@include media-breakpoint-up(lg) {
@@ -480,9 +499,10 @@
 		}
 	}
 	@include media-breakpoint-down(lg) {
-		padding-bottom: rem(44);
+		// padding-bottom: rem(44);
 	}
-	padding-bottom: rem(20);
+	// padding-bottom: rem(20);
+	padding-bottom: rem(10);
 	h2 {
 		@include media-breakpoint-up(lg) {
 			font-size: rem(40);

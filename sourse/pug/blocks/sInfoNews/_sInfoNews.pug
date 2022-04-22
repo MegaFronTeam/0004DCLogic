@@ -46,12 +46,13 @@ mixin sInfoPartners(data)
 							+b.partners-item
 								+e.logo
 									img(src="img/svg/partner-logo.svg", alt="")
-								+e.text
-									span.title Статус:
-									span.caption TITANIUM Partner
-								+e.text
-									span.title Партнеры:
-									span.caption с 2012 г
+								+e.info
+									+e.text
+										span.title Статус:
+										span.caption TITANIUM Partner
+									+e.text--partners
+										span.title Партнеры:
+										span.caption с 2012 г
 								+e.more(href="#")
 									span Подробнее
 									img(src="img/svg/icon-popup.svg", alt="")

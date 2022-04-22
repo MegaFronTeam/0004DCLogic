@@ -372,6 +372,10 @@ function eventHandler() {
 			prevEl: ".swiper-button-hand-prev",
 			nextEl: ".swiper-button-hand-next",
 		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
 		breakpoints: {
 			1280: {
 				spaceBetween: 40

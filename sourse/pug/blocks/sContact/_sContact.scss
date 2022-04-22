@@ -1,7 +1,7 @@
 // start .sContact
 .sContact {
 	--sPT: 0;
-	--sPT: #{rem(3)};
+	--sPB: #{rem(3)};
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
