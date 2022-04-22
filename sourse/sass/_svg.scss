@@ -128,18 +128,27 @@
 	.step-4{
 		opacity: 0;
 	} 
-
+	
 	#line-19{
 		opacity: 1;
 		stroke-dasharray: 100 100;
 	}
-	
+	#Linediagramm,
 	#Line_2,
 	#Line_1{
 		
 		stroke-dasharray: 100 100;
 	}
+	// #Circlechart_2,
 	#Chart_6,
 	#Chart_1{
 		opacity: 0 !important;
+	}
+	#Circlechart_2,
+	#dashboard{
+		opacity: 0;
+	}
+
+	#Linediagramm{
+		// stroke-dashoffset: -70;
 	}

@@ -45,6 +45,7 @@ function headSVG() {
 	let tl22 = gsap.timeline({repeat: -1,     defaults: {...setg, duration: speed2 * .02 ,ease:Linear.easeNone}});  
 	let tl23 = gsap.timeline({repeat: -1,   repeatDelay: 1,   defaults: {...setg, duration: speed2 * .5,  }});  
 	let tl24 = gsap.timeline({repeat: -1, yoyo: true,    defaults: {...setg, duration: speed2 * .5,  }});  
+	let tl25 = gsap.timeline({repeat: -1,      defaults: {...setg, duration: speed2 * .5,  }});  
 	
 		tl
 			.fromTo('#belaz-1',
@@ -63,19 +64,27 @@ function headSVG() {
 			
 	gsap.to('#Signal', { opacity:0,  ...setg, duration: speed2 * .5, repeat: -1, yoyo: true }); 
 	tl24
-		// .to('#Group_71', { opacity:0})
-		// .to('#Group_72', { opacity:0})
-
-		.to('#Chart_3', {skewX: -8, scaleX: 0.66, transformOrigin: "left bottom" }, `>-${1} `) 
-		.to('#Chart_7', {   opacity:0,   transformOrigin: "left " }, `>-${1} `)
-		.from('#Chart_8', {   opacity:0,    transformOrigin: "left " }, `>-${1} `) 
-		.to('#Group_5_ #Line_2',{  strokeDashoffset:100 , duration: speed2 * 2 })   
-		.from('#Group_5_ #Line_1',{  strokeDashoffset:100, duration: speed2 * 2  })   
-		.to('#Chart_5', { skewY: -10, scaleY: 0.66, transformOrigin: "bottom" }, `>-${1} `) 
-		.to('#Chart_2', { skewY: -10, scaleY: 0.66, y: -2,  transformOrigin: "bottom" }, `>-${1} `) 
+	// .to('#Group_71', { opacity:0})
+	// .to('#Group_72', { opacity:0})
 	
-		;
-		
+	.to('#Chart_3', {skewX: -8, scaleX: 0.66, transformOrigin: "left bottom" }, `>-${1} `) 
+	.to('#Chart_7', {   opacity:0,   transformOrigin: "left " }, `>-${1} `)
+	.from('#Chart_8', {   opacity:0,    transformOrigin: "left " }, `>-${1} `) 
+	.to('#Group_5_ #Line_2',{  strokeDashoffset:100 , duration: speed2 * 2 })   
+	.from('#Group_5_ #Line_1',{  strokeDashoffset:100, duration: speed2 * 2  })   
+	.to('#Chart_5', { skewY: -10, scaleY: 0.66, transformOrigin: "bottom" }, `>-${1} `) 
+	.to('#Chart_2', { skewY: -10, scaleY: 0.66, y: -2,  transformOrigin: "bottom" }, `>-${1} `) 
+	
+	;
+	
+	tl25
+		.from('#Linediagramm',{  strokeDashoffset:-70, duration: speed2 * 2  })   
+		.to('#Circlechart_2',{ opacity:1 })   
+		.to('#Circlechart_1',{ opacity:0 })   
+		.to('#dashboard-front',{ opacity:0 })   
+		.to('#dashboard',{ opacity:1 }, `>-${.5	} `)   
+		.to('#dashboard',{ opacity:0, delay: speed2 * 1.5 })   
+		.to('#dashboard-front',{ opacity:0 }, `>-${.5	} `) 
 	
 			// gsap.to('[clip-path="url(#clip0_2794_72656)"]', { rotateY: 360, ...setg, duration: speed2 * 4,repeat: -1, transformOrigin: "center  center" }); 
 	
