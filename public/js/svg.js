@@ -63,10 +63,10 @@ function headSVG() {
 			
 	gsap.to('#Signal', { opacity:0,  ...setg, duration: speed2 * .5, repeat: -1, yoyo: true }); 
 	tl24
-		.to('#Group_71', { opacity:0})
-		.to('#Group_72', { opacity:0})
-		.to('#Chart_3', {skewX: -8, scaleX: 0.66, transformOrigin: "left bottom" }, `>-${1} `)
-		.to('#Chart_7', {  skewX: 28,  scaleX: .2,   transformOrigin: "left " }, `>-${1} `)
+		// .to('#Group_71', { opacity:0})
+		// .to('#Group_72', { opacity:0})
+
+		.to('#Chart_3', {skewX: -8, scaleX: 0.66, transformOrigin: "left bottom" }, `>-${1} `) 
 		.to('#Chart_7', {   opacity:0,   transformOrigin: "left " }, `>-${1} `)
 		.from('#Chart_8', {   opacity:0,    transformOrigin: "left " }, `>-${1} `) 
 		.to('#Group_5_ #Line_2',{  strokeDashoffset:100 , duration: speed2 * 2 })   
