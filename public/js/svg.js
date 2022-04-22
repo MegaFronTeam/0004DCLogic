@@ -44,7 +44,7 @@ function headSVG() {
 	let tl21 = gsap.timeline({repeat: -1,   defaults: setg});  
 	let tl22 = gsap.timeline({repeat: -1,     defaults: {...setg, duration: speed2 * .02 ,ease:Linear.easeNone}});  
 	let tl23 = gsap.timeline({repeat: -1,   repeatDelay: 1,   defaults: {...setg, duration: speed2 * .5,  }});  
-	let tl24 = gsap.timeline({repeat: -1, yoyo: true,  repeatDelay: 1,   defaults: {...setg, duration: speed2 * .5,  }});  
+	let tl24 = gsap.timeline({repeat: -1, yoyo: true,    defaults: {...setg, duration: speed2 * .5,  }});  
 	
 		tl
 			.fromTo('#belaz-1',
@@ -61,10 +61,20 @@ function headSVG() {
 			gsap.fromTo('#monitor-4, #monitor-4-1, #monitor-4-2', { opacity:1, y:0}, {opacity:0, y:6, ...setg, duration: speed2 * 4,repeat: -1,yoyo: true});
 			gsap.fromTo('#helicopter', { y: 0, x: 1150 }, { y: 50, x: 1150, ...setg, duration: speed2 * 4, repeat: -1, yoyo: true }); 
 			
-			tl24
-			// .to('#Group_71', { opacity:0})
-			// .to('#Group_72', { opacity:0})
-			.to('#Group_71', {skewY: -10,scaleY:0.66, y: -2, opacity:1, transformOrigin:"bottom" }, `>-${1} `);
+	gsap.to('#Signal', { opacity:0,  ...setg, duration: speed2 * .5, repeat: -1, yoyo: true }); 
+	tl24
+		.to('#Group_71', { opacity:0})
+		.to('#Group_72', { opacity:0})
+		.to('#Chart_3', {skewX: -8, scaleX: 0.66, transformOrigin: "left bottom" }, `>-${1} `)
+		.to('#Chart_7', {  skewX: 28,  scaleX: .2,   transformOrigin: "left " }, `>-${1} `)
+		.to('#Chart_7', {   opacity:0,   transformOrigin: "left " }, `>-${1} `)
+		.from('#Chart_8', {   opacity:0,    transformOrigin: "left " }, `>-${1} `) 
+		.to('#Group_5_ #Line_2',{  strokeDashoffset:100 , duration: speed2 * 2 })   
+		.from('#Group_5_ #Line_1',{  strokeDashoffset:100, duration: speed2 * 2  })   
+		.to('#Chart_5', { skewY: -10, scaleY: 0.66, transformOrigin: "bottom" }, `>-${1} `) 
+		.to('#Chart_2', { skewY: -10, scaleY: 0.66, y: -2,  transformOrigin: "bottom" }, `>-${1} `) 
+	
+		;
 		
 	
 			// gsap.to('[clip-path="url(#clip0_2794_72656)"]', { rotateY: 360, ...setg, duration: speed2 * 4,repeat: -1, transformOrigin: "center  center" }); 
@@ -169,7 +179,7 @@ function headSVG() {
 			.to('#circle-12 .st130, #circle-12-1 .st130', { fill: '#3998FF'}) 
 
 			.add(hand12Down)
-			.to('#circle-11--2',   { x: 54, y: 40, opacity:1}) 
+			.to('#circle-11--2',   { x: 54, y: 45, opacity:1}) 
 			.to( '#hand-13', { y: -1}) 
 			.fromTo('#circle-11--3',   { x: 54, y: 40, opacity:0}, {opacity:1}) 
 			.to( '#hand-14', {x:1, y: 2}) 
