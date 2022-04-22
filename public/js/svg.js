@@ -46,6 +46,8 @@ function headSVG() {
 	let tl23 = gsap.timeline({repeat: -1,   repeatDelay: 1,   defaults: {...setg, duration: speed2 * .5,  }});  
 	let tl24 = gsap.timeline({repeat: -1, yoyo: true,    defaults: {...setg, duration: speed2 * .5,  }});  
 	let tl25 = gsap.timeline({repeat: -1,      defaults: {...setg, duration: speed2 * .5,  }});  
+	let tl26 = gsap.timeline({repeat: -1,    yoyo: true,  repeatDelay:1,    defaults: {...setg, duration: speed2 * .5,  }});  
+	let tl27 = gsap.timeline({repeat: -1,   repeatDelay:1,   defaults: {...setg, duration: speed2 * .5,  }});  
 	
 		tl
 			.fromTo('#belaz-1',
@@ -67,12 +69,12 @@ function headSVG() {
 	// .to('#Group_71', { opacity:0})
 	// .to('#Group_72', { opacity:0})
 	
-	.to('#Chart_3', {skewX: -8, scaleX: 0.66, transformOrigin: "left bottom" }, `>-${1} `) 
-	.to('#Chart_7', {   opacity:0,   transformOrigin: "left " }, `>-${1} `)
-	.from('#Chart_8', {   opacity:0,    transformOrigin: "left " }, `>-${1} `) 
-	.to('#Group_5_ #Line_2',{  strokeDashoffset:100 , duration: speed2 * 2 })   
-	.from('#Group_5_ #Line_1',{  strokeDashoffset:100, duration: speed2 * 2  })   
-	.to('#Chart_5', { skewY: -10, scaleY: 0.66, transformOrigin: "bottom" }, `>-${1} `) 
+	.to('#Chart_3', {skewX: -8, scaleX: 0.66, transformOrigin: "left bottom" } ) 
+	.to('#Chart_8', {   opacity:0 }) 
+	.from('#Chart_7', {   opacity:0 }, `>-${1} `)
+	.to('#Group_5_ #Line_2',{  strokeDashoffset:100 , duration: speed2 * 4 })   
+	.from('#Group_5_ #Line_1',{  strokeDashoffset:100, duration: speed2 * 4  })   
+	.to('#Chart_5', { skewY: -10, scaleY: 0.66, transformOrigin: "bottom" }) 
 	.to('#Chart_2', { skewY: -10, scaleY: 0.66, y: -2,  transformOrigin: "bottom" }, `>-${1} `) 
 	
 	;
@@ -81,12 +83,30 @@ function headSVG() {
 		.from('#Linediagramm',{  strokeDashoffset:-70, duration: speed2 * 2  })   
 		.to('#Circlechart_2',{ opacity:1 })   
 		.to('#Circlechart_1',{ opacity:0 })   
-		.to('#dashboard-front',{ opacity:0 })   
+		.to('#dashboard-front',{ opacity:0, delay: speed2 * 1.5 })   
 		.to('#dashboard',{ opacity:1 }, `>-${.5	} `)   
 		.to('#dashboard',{ opacity:0, delay: speed2 * 1.5 })   
-		.to('#dashboard-front',{ opacity:0 }, `>-${.5	} `) 
+		.to('#dashboard-front', { opacity: 0 }, `>-${.5} `) 
 	
-			// gsap.to('[clip-path="url(#clip0_2794_72656)"]', { rotateY: 360, ...setg, duration: speed2 * 4,repeat: -1, transformOrigin: "center  center" }); 
+	tl26
+		.to('#sheme1', { opacity: 0 })
+	let text19 = document.querySelectorAll("#text1 .st19")
+	text19.forEach((el, index) => {
+		
+		tl26
+			.to(el,{  opacity:1 ,duration: speed2 * .01  , delay: speed2 *.01 * index})   
+	})
+	
+	let dDown =  { opacity: 0, y: 5 }
+	let dUp =  { opacity: 1, y: 0 }
+	tl27 
+		.set('#diagram3',  { opacity: 1, y: 0 }) 
+		.to('#diagram3', {...dDown}) 
+		.fromTo('#diagram2', dDown, dUp , `>-${.1} `) 
+		.to('#diagram2', { ...dDown ,delay: speed2 * .5 }) 
+		.fromTo('#diagram1',dDown, dUp , `>-${.1} `) 
+		.to('#diagram1', { ...dDown ,delay: speed2 * .5 })  
+		.to('#diagram3', dUp ) 
 	
 	tl22
 		.set('#helicopter :is(.step-2, .step-3, .step-4)', { opacity: 0 })
@@ -299,16 +319,25 @@ function headSVG() {
 		.from('#hand-24',{  y:-2, rotate: 1})    
 		// .to('#text-18', {opacity:1}) 
 		// .from( '#line-19', speed2 * 10, {attr:{"stroke-dashoffset":0}})
-
+	// let click = .to('#click',{opacity:1, duration: .5}).to('#click',{opacity:0, duration: .5	}) 
 	tl21
-	 .to( '#mouse-21',{x:  -13,y:  -19, }) 
-	 .fromTo('#screen-20',{opacity:0},{opacity:1}) 
-	 .to( '#mouse-21',{x:  -5,y:  10, })  
-	 .fromTo('#screen-20',{opacity:1},{opacity:0}) 
-	 .to( '#mouse-21',{x:  16,y:  -7 }) 
-	 .fromTo('#screen-20',{opacity:0},{opacity:1}) 
-	 .to( '#mouse-21',{x:  -5,y:  10, }) 
-	 .fromTo('#screen-20',{opacity:1},{opacity:0}) 
+	 .to( '#mouse-wrap',{x:  -13,y:  -19 }) 
+	 .to('#click',{opacity:1, duration: .5}).to('#click',{opacity:0, duration: .5	}) 
+	 .to('#screen-modal-1',{opacity:1}) 
+	 .to( '#mouse-wrap',{x:  -5,y:  10, })  
+	 .to('#click',{opacity:1, duration: .5}).to('#click',{opacity:0, duration: .5	}) 
+	 .to('#screen-modal-1',{opacity:0}) 
+	 .to('#basket-1',{opacity:1},">-1") 
+	 .to( '#mouse-wrap',{x:  16,y:  -7 }) 
+	 .to('#click',{opacity:1, duration: .5}).to('#click',{opacity:0, duration: .5	}) 
+	 .to('#screen-modal-2',{opacity:1})  
+	 .to( '#mouse-wrap',{x:  -5,y:  10, }) 
+	 .to('#click',{opacity:1, duration: .5}).to('#click',{opacity:0, duration: .5	}) 
+	 .to('#screen-modal-2',{opacity:0}) 
+	 .to('#basket-1',{opacity:0, duration: 0},">-1") 
+	 .to('#basket-2',{opacity:1, duration: 0},">-1")  
+	 .to('#basket-2',{opacity:0, delay: speed2})  
+	 .to( '#mouse-wrap',{x:  0,y:  0, }) 
  }
 
 
