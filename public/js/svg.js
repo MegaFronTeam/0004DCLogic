@@ -62,7 +62,7 @@ function headSVG() {
 			gsap.fromTo('#monitor-4, #monitor-4-1, #monitor-4-2', { opacity:1, y:0}, {opacity:0, y:6, ...setg, duration: speed2 * 4,repeat: -1,yoyo: true});
 			gsap.fromTo('#helicopter', { y: 0, x: 1150 }, { y: 50, x: 1150, ...setg, duration: speed2 * 4, repeat: -1, yoyo: true }); 
 			
-	gsap.to('#Signal', { opacity:0,  ...setg, duration: speed2 * .5, repeat: -1, yoyo: true }); 
+	gsap.to('#Signal', { opacity:1,  ...setg, duration: speed2 * .5, repeat: -1,repeatDelay: 2,  yoyo: true }); 
 	tl24
 	// .to('#Group_71', { opacity:0})
 	// .to('#Group_72', { opacity:0})
