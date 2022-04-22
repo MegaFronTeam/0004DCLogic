@@ -144,12 +144,34 @@
 	#Chart_1{
 		opacity: 0 !important;
 	}
+	
 	#Signal,
 	#Circlechart_2,
 	#dashboard{
 		opacity: 0;
 	}
-
+	#strokeDashoffset,
 	#Linediagramm{
 		// stroke-dashoffset: -70;
+	}
+	#text1 .st19{
+		opacity: 0;
+	}
+
+
+	#diagram1,
+	#diagram2{
+		opacity: 0;
+	}
+	// #_x35__screen,
+	// #_x33__screen,
+	// #screen-modal,
+	#click,
+	#screen-modal-1,
+	#screen-modal-2,
+#basket-1,
+#basket-2
+	{
+		opacity: 0;
+
 	}
