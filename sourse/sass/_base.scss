@@ -520,9 +520,11 @@ iframe {
 	box-shadow: 0px 4px 10px #9ac0ff;
 	&:hover {
 		background-color: $primary-hover;
+		border-color:  $primary-hover;
 	}
 	&:active {
 		background-color: $primary-pressed;
+		border-color:  $primary-pressed;
 	}
 }
 .btn.disable {
