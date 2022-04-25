@@ -128,7 +128,7 @@
 			max-width: rem(510);
 		}
 		line-height: calc(40 / 32);
-		font-weight: 400 !important;
+		// font-weight: 400 !important;
 	}
 	&__caption {
 		color: #838990;
@@ -148,7 +148,7 @@
 				margin-right: rem(52);
 				max-width: 270px;
 				font-size: rem(12);
-				font-weight: normal;
+				// font-weight: normal;
 				&:nth-child(even) {
 					margin-right: 0;
 				}

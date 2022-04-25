@@ -628,23 +628,23 @@ function eventHandler() {
 	}
 	function industryanimate() {
 		
-		gsap.utils.toArray(".project-industry-slider-item").forEach((trigger, index) => {
-		var t2 = gsap.timeline({ 
-			scrollTrigger: { 
-				trigger, 
-				endTrigger: trigger[index + 1],
-				// markers: true,
-				...triggerSet,
-				start: '10% bottom',
-				end: '60% ',
-			}, 
-		})
-		t2
-			.to(trigger.querySelectorAll(".down"), { y: 20,...setEl })
-			.to(trigger.querySelectorAll(".up"), { y: -20,...setEl },'-=1') 
-			// .to("#r-3", { y: -10,...setEl },'>- 1')
-				;
-			})
+		// gsap.utils.toArray(".project-industry-slider-item").forEach((trigger, index) => {
+		// var t2 = gsap.timeline({ 
+		// 	scrollTrigger: { 
+		// 		trigger, 
+		// 		endTrigger: trigger[index + 1],
+		// 		// markers: true,
+		// 		...triggerSet,
+		// 		start: '10% bottom',
+		// 		end: '60% ',
+		// 	}, 
+		// })
+		// t2
+		// 	.to(trigger.querySelectorAll(".down"), { y: 20,...setEl })
+		// 	.to(trigger.querySelectorAll(".up"), { y: -20,...setEl },'-=1') 
+		// 	// .to("#r-3", { y: -10,...setEl },'>- 1')
+		// 		;
+		// 	})
 		}
 		var t3 = gsap.timeline({ 
 			scrollTrigger: { 

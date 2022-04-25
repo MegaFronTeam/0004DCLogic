@@ -813,15 +813,51 @@ textarea.form-wrap__input {
 .tabs-wrap__btn,
 .index-slider-item {
 	&:hover{ [class^="icon_animate_"] {
-			animation: bounce 2s infinite;
-		}	
+		animation: bounce 2s infinite;
+	}	
+}
+}
+.index-slider-item svg {
+	[stroke="white"] {
+		stroke: $primary !important;
 	}
+	[fill="white"] {
+		fill: #3796FF !important;
 	}
+}
 
+
+
+.project-industry-slider-item{
+	&:hover{
+		.up{
+
+			animation: bounceUp 2s infinite;
+		}
+		
+		.down{
+
+			animation: bounceDown 2s infinite;
+		}
+
+	}
+}
 
 @keyframes bounce
 {
   0%   { transform: translateY(0); }
         50%  { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+}
+@keyframes bounceUp
+{
+  0%   { transform: translateY(0); }
+        50%  { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+}
+@keyframes bounceDown
+{
+  0%   { transform: translateY(0); }
+        50%  { transform: translateY(20px); }
         100% { transform: translateY(0); }
 }
