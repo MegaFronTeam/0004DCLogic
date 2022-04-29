@@ -42,7 +42,7 @@ function headSVG() {
 	let tl10 = gsap.timeline({repeat: -1,  repeatDelay:1,   defaults: setg});
 	let tl20 = gsap.timeline({repeat: -1,  yoyo: true,  defaults: setg}); 
 	let tl21 = gsap.timeline({repeat: -1,   defaults: setg});  
-	let tl22 = gsap.timeline({repeat: -1,     defaults: {...setg, duration: speed2 * .02 ,ease:Linear.easeNone}});  
+	let tl22 = gsap.timeline({repeat: -1,     defaults: {...setg, duration: speed2 * .01 ,ease:Linear.easeNone}});  
 	let tl23 = gsap.timeline({repeat: -1,   repeatDelay: 1,   defaults: {...setg, duration: speed2 * .5,  }});  
 	let tl24 = gsap.timeline({repeat: -1, yoyo: true,    defaults: {...setg, duration: speed2 * .5,  }});  
 	let tl25 = gsap.timeline({repeat: -1,      defaults: {...setg, duration: speed2 * .5,  }});  
@@ -109,7 +109,7 @@ function headSVG() {
 		.to('#diagram3', dUp ) 
 	
 	tl22
-		.set('#helicopter :is(.step-2, .step-3, .step-4)', { opacity: 0 })
+		// .set('#helicopter :is(.step-2, .step-3, .step-4)', { opacity: 0 })
 		
 		.to('#helicopter .step-1', {opacity:1} )
 		.to('#helicopter .step-1', { opacity: 0 }) 
