@@ -32,7 +32,7 @@ function headSVG() {
 
 	let tl2 = gsap.timeline({ repeat: -1, defaults: { ...setg, duration: speed2 * .5 } });
 
-	let tl3 = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true, defaults: { ...setg, duration: speed2 * .5  } });
+	let tl3 = gsap.timeline({ repeat: -1, yoyo: true, defaults: { ...setg, duration: speed2 * .5  } });
 	let tl4 = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true, defaults: { ...setg } });
 	let tl5 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 * 4 } });
 	let tl6 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 } });
