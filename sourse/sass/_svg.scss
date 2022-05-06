@@ -184,7 +184,7 @@
 
 	// body .headerBlock__bg svg{
 	// 	width: 4000px !important;
-	// 	left: -1000px;
+	// 	left: 000px;
 	// 	position: relative;
 	// }
 
@@ -195,3 +195,11 @@
 	// #hand-25{
 	// 	transform: rotate(-1deg) translate(1px,1px);
 	// }
+
+	#helicopter #step-1,
+	#helicopter #step-2,
+	#helicopter #step-3,
+	#helicopter #step-4
+	{
+		opacity: 0;
+	}
