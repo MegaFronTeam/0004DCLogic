@@ -492,11 +492,11 @@ function headSVG() {
 
 	
 		lists
-		.to('#list-1', { rotate: -15, transformOrigin: "left bottom" },0)
-		.to('#list-4', { rotate: -15, transformOrigin: "right bottom" },0)
-		.to('#list-5', { rotate: -15, transformOrigin: "right bottom" },0)
-		.to('#list-2', { rotate: -10, transformOrigin: "right bottom" },0)
-		.to('#list-3', { rotate: -10, transformOrigin: "left bottom" },0)
+		.to('#list-1', { rotate: 15, transformOrigin: "left bottom" },0)
+		.to('#list-4', { rotate: 15, transformOrigin: "right bottom" },0)
+		.to('#list-5', { rotate: 15, transformOrigin: "right bottom" },0)
+		.to('#list-2', { rotate: 10, transformOrigin: "right bottom" },0)
+		.to('#list-3', { rotate: 10, transformOrigin: "left bottom" },0)
 		// .to('#cat-head', { rotate: 35,x:1, y:-1 });
 }
 
