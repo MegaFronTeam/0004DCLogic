@@ -54,6 +54,7 @@ function headSVG() {
 
 
 	let cat = gsap.timeline({ repeat: -1,yoyo: true, repeatDelay: 2,   defaults: { ...setg, duration: speed2 * .5 } });
+	let lists = gsap.timeline({ repeat: -1,yoyo: true, repeatDelay: 1,   defaults: { ...setg, duration: speed2 * .5 } });
 	// let cat = gsap.timeline({    defaults: { ...setg, duration: speed2 * .5 } });
 
 	tl0
@@ -486,7 +487,17 @@ function headSVG() {
 		.to('#basket-1', { opacity: 0, duration: 0 })
 		.to('#basket-2', { opacity: 1, duration: 0 }, '>-1')
 		.to('#basket-2', { opacity: 0, delay: speed2 })
-		.to('#mouse-wrap', { x: 0, y: 0, })
+		.to('#mouse-wrap', { x: 0, y: 0, });
+
+
+	
+		lists
+		.to('#list-1', { rotate: -15, transformOrigin: "left bottom" },0)
+		.to('#list-4', { rotate: -15, transformOrigin: "right bottom" },0)
+		.to('#list-5', { rotate: -15, transformOrigin: "right bottom" },0)
+		.to('#list-2', { rotate: -10, transformOrigin: "right bottom" },0)
+		.to('#list-3', { rotate: -10, transformOrigin: "left bottom" },0)
+		// .to('#cat-head', { rotate: 35,x:1, y:-1 });
 }
 
 
