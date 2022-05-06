@@ -27,7 +27,7 @@ function headSVG() {
 		// direction: 'alternate',
 	}
 
-	let tl0 = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: .5, defaults: setg });
+	let tl0 = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: .5, defaults: { ...setg, duration: speed2 * .5 } });
 	let tl = gsap.timeline({ repeat: -1, defaults: setg });
 
 	let tl2 = gsap.timeline({ repeat: -1, defaults: { ...setg, duration: speed2 * .5 } });
@@ -35,18 +35,19 @@ function headSVG() {
 	let tl3 = gsap.timeline({ repeat: -1, defaults: { ...setg, duration: speed2 * .5  } });
 	let tl4 = gsap.timeline({ repeat: -1, repeatDelay: 1,   defaults: { ...setg } });
 	let tl42 = gsap.timeline({ repeat: -1, repeatDelay: 1,   defaults: { ...setg } });
-	let tl5 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 * 4 } });
+	let tl5 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 } });
 	let tl6 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 } });
 	let tl7 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: setg });
 	let tl8 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: setg });
 	let tl9 = gsap.timeline({ repeat: -1, yoyo: true, defaults: setg });
 	let tl10 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: setg });
+	let tl101 = gsap.timeline({ repeat: -1, repeatDelay: 5, defaults: setg });
 	let tl20 = gsap.timeline({ repeat: -1, yoyo: true, defaults: setg });
 	let tl201 = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 1, defaults: setg });
 	let tl21 = gsap.timeline({ repeat: -1, defaults: setg });
-	let tl22 = gsap.timeline({ repeat: -1, defaults: { ...setg, duration: speed2 * .01, ease: Linear.easeNone } });
+	let tl22 = gsap.timeline({ repeat: -1, defaults: { ...setg, duration: speed2 * .05, ease: "none" } });
 	let tl23 = gsap.timeline({ repeat: -1,yoyo: true,   defaults: { ...setg, duration: speed2 * .5, } });
-	let tl24 = gsap.timeline({ repeat: -1, yoyo: true, defaults: { ...setg, duration: speed2 * .5, } });
+	let tl24 = gsap.timeline({ repeat: -1, yoyo: true,repeatDelay: 5, defaults: { ...setg, duration: speed2 * .5, } });
 	let tl25 = gsap.timeline({ repeat: -1, defaults: { ...setg, duration: speed2 * .5, } });
 	let tl26 = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 2, defaults: { ...setg, duration: speed2 * .5, } });
 	let tl27 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 * .5, } });
@@ -58,9 +59,9 @@ function headSVG() {
 		.fromTo('#belaz-1',
 			{ x: 150, y: -150, opacity: 0 },
 			{ x: 0, y: 0, opacity: 1 })
-		.fromTo('#circle-2_3_', { opacity: 0, x: 0, y: 0 }, { opacity: 1, x: -20, y: 13 })
+		.fromTo('#circle-2_3_', { opacity: 0, x: 0, y: 0 }, { opacity: 1, x: -20, y: 17 })
 
-		.to('#circle-2_3_', { x: 35, y: 54, skewX: -35, transformOrigin: "center  center" })
+		.to('#circle-2_3_', { x: 35, y: 54, skewX: -35 })
 		.to('#circle-2_3_', { skewX: 0, x: -10, y: 88, transformOrigin: "center  center" })
 		.to('#circle-2_3_', { x: 7, y: 100, skewX: -35, transformOrigin: "center  center" })
 		.fromTo('#circle-2_3_1', { opacity: 1, x: 58, y: 34, transformOrigin: "center  center" }, { opacity: 0, x: -16, y: -10, transformOrigin: "center  center" })
@@ -70,7 +71,7 @@ function headSVG() {
 		.to('#circle-2_3_1', { opacity: 1, x: 58, y: 34, transformOrigin: "center  center" }, ">-1")
 		.to('#circle-2_3_', { x: -10, y: 88, skewX: -35, transformOrigin: "center  center" })
 		.to('#circle-2_3_', { x: 35, y: 54, skewX: 0, transformOrigin: "center  center" })
-		.to('#circle-2_3_', { x: -20, y: 13, skewX: -35, })
+		.to('#circle-2_3_', { x: -20, y: 17, skewX: -35, })
 		.to('#circle-2_3_', { opacity: 0, x: 0, y: 0, skewX: 0 })
 		.to('#belaz-1',
 			{ x: 150, y: -150, opacity: 0 })
@@ -78,18 +79,21 @@ function headSVG() {
 	gsap.fromTo('#monitor-4, #monitor-4-1, #monitor-4-2', { opacity: 1, y: 0 }, { opacity: 0, y: 6, ...setg, duration: speed2 * 4, repeat: -1, yoyo: true });
 	gsap.fromTo('#helicopter', { y: 0, x: 1150 }, { y: 50, x: 1150, ...setg, duration: speed2 * 4, repeat: -1, yoyo: true });
 
+	gsap.to('#cat-head', { y: 3, x: -1, rotate: 2, ...setg, duration: speed2 * .5, repeat: -1, repeatDelay: 2, yoyo: true });
+	
+	gsap.to('#cat-head', { y: 3, x:-1, rotate:2, ...setg, duration: speed2 * .5, repeat: -1, repeatDelay: 2, yoyo: true });
 	gsap.to('#Signal', { opacity: 1, ...setg, duration: speed2 * .5, repeat: -1, repeatDelay: 2, yoyo: true });
 	tl24
-		// .to('#Group_71', { opacity:0})
-		// .to('#Group_72', { opacity:0})
+		.to('#Group_71', { opacity:0})
+		.to('#Group_72', { opacity:0})
 
-		.to('#Chart_3', { skewX: -8, scaleX: 0.66, transformOrigin: "left bottom" })
-		.to('#Chart_8', { opacity: 0 })
+		.to('#Chart_3', { skewX: -8, scaleX: 0.66, transformOrigin: "left bottom", delay: 5 })
+		.to('#Chart_8', { opacity: 0, delay: 5 })
 		.from('#Chart_7', { opacity: 0 }, `>-${1} `)
-		.to('#Group_5_ #Line_2', { strokeDashoffset: 100, duration: speed2 * 4 })
+		.to('#Chart_5', { skewY: -10, scaleY: 0.66, transformOrigin: "bottom"})
+		.to('#Group_5_ #Line_2', { strokeDashoffset: 100, duration: speed2 * 4 , delay: 5})
 		.from('#Group_5_ #Line_1', { strokeDashoffset: 100, duration: speed2 * 4 })
-		.to('#Chart_5', { skewY: -10, scaleY: 0.66, transformOrigin: "bottom" })
-		.to('#Chart_2', { skewY: -10, scaleY: 0.66, y: -2, transformOrigin: "bottom" }, `>-${1} `)
+		.to('#Chart_2', { skewY: -10, scaleY: 0.66, y: -2, transformOrigin: "bottom" })
 
 		;
 
@@ -125,20 +129,22 @@ function headSVG() {
 	tl22
 		// .set('#helicopter :is(.step-2, .step-3, .step-4)', { opacity: 0 })
 
+		// .to('#helicopter .step-1', { opacity: 0 })
 		.to('#helicopter .step-1', { opacity: 1 })
 		.to('#helicopter .step-1', { opacity: 0 })
-
-
+		
+		
 		.to('#helicopter .step-2', { opacity: 1 })
 		.to('#helicopter .step-2', { opacity: 0 })
-
-
+		
+		
 		.to('#helicopter .step-3', { opacity: 1 })
 		.to('#helicopter .step-3', { opacity: 0 })
-
+		
 		.to('#helicopter .step-4', { opacity: 1 })
 		.to('#helicopter .step-4', { opacity: 0 })
-
+		
+		
 	tl2
 		.fromTo('#hand-4--left', { y: 0 }, { y: -2 })
 		.fromTo('#hand-4--right', { y: 0 }, { y: -3 })
@@ -246,8 +252,8 @@ function headSVG() {
 		
 		
 		tl5
-		.fromTo('#granuly, #granuly_1_, #granuly_2_,  #granuly_3_', { opacity: 0 }, { opacity: 1 })
-		.to('#granuly, #granuly_1_, #granuly_2_,  #granuly_3_', { opacity: 0, y: -40 }, `-=${.4} `);
+		.fromTo('#granuly, #granuly_1_, #granuly_2_,  #granuly_3_', { opacity: 0, y: 10  }, { opacity: 1, y: 0  })
+		.to('#granuly, #granuly_1_, #granuly_2_,  #granuly_3_', { opacity: 0, y: -40, delay: 1});
 	// let handDown = tl6.to( "#hand-11", {rotate:0,  x: 0, y: 0,   transformOrigin: "right bottom"});
 	// let handUp = tl6.to("#hand-11", { rotate: -84, x: 5, y: -4,   transformOrigin: "right bottom" }); 
 
@@ -264,7 +270,7 @@ function headSVG() {
 	.to('#circle-10--1, #circle-10--2', { opacity: 0 })
 
 	let hand12Down = tl7.to( "#hand-12", {rotate:0,  transformOrigin: "right bottom"   }); 
-	let hand12Up = tl7.to( "#hand-12", {rotate:-36,x: -5, y: -4,  transformOrigin: "center bottom"  });  
+	let hand12Up = tl7.to( "#hand-12", {rotate:-6,x: -1, y: -1,  transformOrigin: "center bottom"  });  
 
 	tl7
 		.add(hand12Down)
@@ -359,24 +365,27 @@ function headSVG() {
 		.to(`#hand-16-1`, { x: 3 })
 		.to(`#hand-16-2`, { y: 3, })
 		.add(`#hand-16-1`, { x: -3, })
-	tl10
-		.set(`#el-17--1, #el-17--2`, { opacity: 0 })
+	tl101
 		.set(`#shield-18`, { opacity: 0 })
+		.fromTo(`#shield-18`, { opacity: 0 }, { opacity: 1 })
+		.fromTo(`#dots-19`, { opacity: 0, x: -46, y: 23 }, { opacity: 1, x: 0, y: 0 }, ">-0.5")
+		.to(`#dots-19`, { opacity: 0, x: -46, y: 23 })
+		.to(`#shield-18`, { opacity: 0 })
+	tl10
+		// .to(`#circle-16--2, #circle-16--3`, { opacity: 0 })
+		.set(`#el-17--1, #el-17--2, #circle-16--2, #circle-16--3`, { opacity: 0 })
 		.fromTo(`#circle-16--1`, { skewX: 31, x: 63, y: 65 }, { opacity: 1, x: 93, y: 50 })
 
 		.to(`#circle-16--1`, { skewX: 0, opacity: 0, x: 0, y: 0 })
 		.fromTo(`#el-17--1`, { opacity: 0 }, { opacity: 1 })
 		.fromTo(`#el-17--1`, { opacity: 1 }, { opacity: 0 })
 		.to(`#imprint`, { opacity: .5 }, ">-0.5")
-		.to(`#circle-16--2, #circle-16--3`, { opacity: 0, x: 32, y: 22 }, ">-0.5")
+		.to(`#circle-16--2, #circle-16--3`, { opacity: 1 })
+		.to(`#circle-16--2, #circle-16--3`, { opacity: 0, x: 32, y: 22 })
 		.fromTo(`#el-17--2`, { opacity: 0 }, { opacity: 1 })
 		.fromTo(`#el-17--2`, { opacity: 1 }, { opacity: 0 })
 		.fromTo(`#circle-16--4`, { opacity: 0, x: -40, y: 10 }, { opacity: 1, x: 8, y: -10 })
 		.to(`#circle-16--4`, { opacity: 0 }, ">-.5")
-		.fromTo(`#shield-18`, { opacity: 0 }, { opacity: 1 }, ">-1")
-		.fromTo(`#dots-19`, { opacity: 0, x: -46, y: 23 }, { opacity: 1, x: 0, y: 0 }, ">-0.5")
-		.to(`#dots-19`, { opacity: 0, x: -46, y: 23 })
-		.to(`#shield-18`, { opacity: 0 })
 	// .fromTo( `#dots-19`, { opacity: 1 ,x:  0 , y: 0} , { opacity:0,x: -10,y: 5})
 	// .to(`#el-17--1`,  {opacity: 0 })
 
