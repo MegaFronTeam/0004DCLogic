@@ -52,6 +52,10 @@ function headSVG() {
 	let tl26 = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 2, defaults: { ...setg, duration: speed2 * .5, } });
 	let tl27 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 * .5, } });
 
+
+	let cat = gsap.timeline({ repeat: -1,yoyo: true, repeatDelay: 2,   defaults: { ...setg, duration: speed2 * .5 } });
+	// let cat = gsap.timeline({    defaults: { ...setg, duration: speed2 * .5 } });
+
 	tl0
 		.fromTo('#dark-l', { opacity: 0 }, { opacity: 1 })
 		.fromTo('#darkl-2', { opacity: 0 }, { opacity: 1 });
@@ -79,9 +83,13 @@ function headSVG() {
 	gsap.fromTo('#monitor-4, #monitor-4-1, #monitor-4-2', { opacity: 1, y: 0 }, { opacity: 0, y: 6, ...setg, duration: speed2 * 4, repeat: -1, yoyo: true });
 	gsap.fromTo('#helicopter', { y: 0, x: 1150 }, { y: 50, x: 1150, ...setg, duration: speed2 * 4, repeat: -1, yoyo: true });
 
-	gsap.to('#cat-head', { y: 3, x: -1, rotate: 2, ...setg, duration: speed2 * .5, repeat: -1, repeatDelay: 2, yoyo: true });
+			// cat 
+	// cat.to('#cat-tail', { rotate: 23, "transformOrigin":"39.8% 91.3%" })
+	// .to('#cat-head', { rotate: 35,x:1, y:-1, "transformOrigin":"41.1% 89.1%" });
+	cat.to('#cat-tail', { rotate: 10, "transformOrigin":"0 1%" })
+	.to('#cat-head', { rotate: 35,x:1, y:-1 });
 	
-	gsap.to('#cat-head', { y: 3, x:-1, rotate:2, ...setg, duration: speed2 * .5, repeat: -1, repeatDelay: 2, yoyo: true });
+	// gsap.to('#cat-head', { y: 3, x:-1, rotate:2, ...setg, duration: speed2 * .5, repeat: -1, repeatDelay: 2, yoyo: true });
 	gsap.to('#Signal', { opacity: 1, ...setg, duration: speed2 * .5, repeat: -1, repeatDelay: 2, yoyo: true });
 	tl24
 		.to('#Group_71', { opacity:0})
