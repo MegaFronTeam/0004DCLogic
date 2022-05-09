@@ -132,6 +132,7 @@
 	#line-19{
 		opacity: 1;
 		stroke-dasharray: 100 100;
+		stroke-dashoffset: 100;
 	}
 	#Linediagramm,
 	#Line_2,
@@ -175,7 +176,7 @@
 		opacity: 0;
 
 	}
-	#monitor-25-3,
+	// #monitor-25-3,
 	#monitor-25 .st8,
 	#monitor-25-2,
 	#mess .st43{
@@ -184,7 +185,7 @@
 
 	body .headerBlock__bg svg{
 		// width: 4000px !important;
-		// left: 000px;
+		// left: -1000px;
 		// position: relative;
 	}
 
@@ -195,11 +196,18 @@
 	// #hand-25{
 	// 	transform: rotate(-1deg) translate(1px,1px);
 	// }
-
+	#monitor-25,
 	#helicopter #step-1,
 	#helicopter #step-2,
 	#helicopter #step-3,
 	#helicopter #step-4
 	{
+		opacity: 0;
+	}
+	// #circle-11--1, #circle-11--2, #circle-11--3, #circle-11--4,
+	#g-6, #g-7, #g-5, #g-4,
+	#circle-10--2, #circle-10--1,
+	#circle-5--1, #circle-5--2, #circle-5--3, #circle-5--4,
+	#circle-7--2, #circle-7--4, #circle-7--1, #circle-7--3{
 		opacity: 0;
 	}
