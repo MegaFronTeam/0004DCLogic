@@ -33,7 +33,7 @@ function headSVG() {
 	let tl0 = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: .5, defaults: { ...setg, duration: speed2 * .5 } });
 	let tl = gsap.timeline({ repeat: -1, defaults: setg });
 
-	let tl2 = gsap.timeline({ repeat: -1, defaults: { ...setg, duration: speed2 * 1.5} });
+	let tl2 = gsap.timeline({ repeat: -1, defaults: { ...setg, duration: speed2} });
 	// let tl2 = gsap.timeline({  defaults: { ...setg, duration: speed2 * .5 } });
 
 	let tl3 = gsap.timeline({ repeat: -1, defaults: { ...setg, duration: speed2 * .5  } });
@@ -42,7 +42,7 @@ function headSVG() {
 	let tl5 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 } });
 	let tl6 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 } });
 	let tl7 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: setg });
-	let tl8 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: setg });
+	let tl8 = gsap.timeline({ repeat: -1,   defaults: setg });
 	let tl9 = gsap.timeline({ repeat: -1, yoyo: true,  repeatDelay: 10,defaults: setg });
 	let tl10 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: setg });
 	let tl101 = gsap.timeline({ repeat: -1, repeatDelay: 5, defaults: setg });
@@ -243,12 +243,14 @@ function headSVG() {
 		.to('#circle-5--3', { opacity: 0},`>-.5`)
 		.fromTo('#circle-5--4', { opacity: 0, x: -27, y: 18 }, { opacity: 1, x: 0, y: 0 }, `>-.5`)
 		.to('#circle-5--4', { opacity: 0}, `>-.5`)
-		.to(':is(#circle-5--1,   #circle-5--3)  :is(.st7,  .st8) ', { fill: '#0CD1FF' })
+		.to(':is(#circle-5--1,   #circle-5--3)  :is(.st7,  .st8) ', { fill: '#0CD1FF', duration:0 })
 		.to(strokel3, { stroke: '#0CD1FF' } )
 		.fromTo('#circle-5--1',{opacity:0}, { opacity: 1, x: 0, y: 0 }) 
 		.to('#circle-5--1',{opacity:0}) 
 		.fromTo('#circle-5--3',{opacity:0}, { opacity: 1, x: 0, y: 0 }, `>-1`) 
-		.to('#circle-5--3',{opacity:0}) 
+		.to('#circle-5--3', { opacity: 0 }) 
+		.to(':is(#circle-5--1,   #circle-5--3)  :is(.st7,  .st8) ', { fill: blue, duration:0 })
+		.to(strokel3, { stroke: blue } )
 		.fromTo('#box-6--1', ...box6)
 		.fromTo('#box-6--2', ...box6)
 		.fromTo('#box-6--3', ...box6)
@@ -265,9 +267,9 @@ function headSVG() {
 		.to('#circle-5--1', { opacity: 1}, `>-1`)
 		.to('#circle-5--1', { opacity: 0, x: 0, y: 0 }, `>-1`)
 		.to('#circle-5--2', { opacity: 1}, `>-1`)
-		.to('#circle-5--2', { opacity: 0, x: 35, y: 32 })
+		.to('#circle-5--2', { opacity: 0, x: 35, y: 21 })
 		.to('#circle-5--3', { opacity: 1}, `>-1`)
-		.to('#circle-5--3', { opacity: 0, x: 0, y: 0 })
+		.to('#circle-5--3', { opacity: 0, x: 35, y: 21 })
 		.to('#circle-5--4', { opacity: 1}, `>-1`)
 		.to('#circle-5--4', { opacity: 0, x: -27, y: 18 })
 
@@ -608,13 +610,13 @@ function headSVG() {
 			.to('#g-3', { x: '+=98', y: '+=57' })
 			.to('#g-3', { y: '-=12', rotate: -90 })
 			.to('#g-3', { opacity:0 },">-.5")
-			.to('#g-3 :is(.st7, .st8)', {fill:bluel })
+			.to('#g-3 :is(.st7, .st8)', {fill:bluel,duration:0})
 			.to('#tobasket', {stroke:bluel })
 			.to('#g-3', {  opacity:1 })
 			.to('#g-3', { y: '+=12', rotate: 0},">-.5")
 			.to('#g-3', { x: '-=98', y: '-=57' })
 			.to('#g-3', { opacity:0  },">-.5")
-			.to('#g-3 :is(.st7, .st8)', {fill:blue })
+			.to('#g-3 :is(.st7, .st8)', {fill:blue,duration:0 })
 			.to('#tobasket', {stroke:blue })
 			
 			tl29
