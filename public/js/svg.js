@@ -60,7 +60,7 @@ function headSVG() {
 
 
 	let cat = gsap.timeline({ repeat: -1,yoyo: true, repeatDelay: 5,   defaults: { ...setg, duration: speed2 * .5 } });
-	let lists = gsap.timeline({ repeat: -1,yoyo: true, repeatDelay: 5,   defaults: { ...setg, duration: speed2 * .5 } });
+	let lists = gsap.timeline({ repeat: -1,yoyo: true, repeatDelay: 0,   defaults: { ...setg, duration: speed2 * 1 } });
 	// let cat = gsap.timeline({    defaults: { ...setg, duration: speed2 * .5 } });
 
 	// .fromTo('#dark-l', { opacity: 0 }, { opacity: 1 })
@@ -107,7 +107,7 @@ function headSVG() {
 	// cat.to('#cat-tail', { rotate: 23, "transformOrigin":"39.8% 91.3%" })
 	// .to('#cat-head', { rotate: 35,x:1, y:-1, "transformOrigin":"41.1% 89.1%" });
 	cat.to('#cat-tail', { rotate: 10, "transformOrigin":"0 1%"})
-	.to('#cat-head', { rotate: 35,x:1, y:-1 });
+	.to('#cat-head', { rotate: 35,x:0, y:-1, "transformOrigin":"left center" });
 	
 	// gsap.to('#cat-head', { y: 3, x:-1, rotate:2, ...setg, duration: speed2 * .5, repeat: -1, repeatDelay: 2, yoyo: true });
 	gsap.to('#Signal', { opacity: 1, ...setg, duration: speed2 * .5, repeat: -1, repeatDelay: 2, yoyo: true });
@@ -256,7 +256,7 @@ function headSVG() {
 		.fromTo('#screen-7--right', { opacity: 0, y: 20 }, { opacity: 1, y: 0 }, `>-.2`)
 		.fromTo('#box-6--4', ...box6, '>-1')
 
-		.to('#screen-7--right', { opacity: 0, y: 20 , delay:1})
+		.to('#screen-7--right', { opacity: 0, y: 20 , delay:8})
 		.to('#screen-7--left', { opacity: 0, y: 20 }, `>-.2`)
 		.to('#box-6--4', box6Hide)
 		.to('#box-6--3', box6Hide)
