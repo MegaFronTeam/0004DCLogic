@@ -37,12 +37,12 @@ function headSVG() {
 	// let tl2 = gsap.timeline({  defaults: { ...setg, duration: speed2 * .5 } });
 
 	let tl3 = gsap.timeline({ repeat: -1, defaults: { ...setg, duration: speed2 * .5  } });
-	let tl4 = gsap.timeline({ repeat: -1, repeatDelay: 1,   defaults: { ...setg } });
+	let tl4 = gsap.timeline({ repeat: -1,    defaults: { ...setg } });
 	let tl42 = gsap.timeline({ repeat: -1, repeatDelay: 1,   defaults: { ...setg } });
 	let tl5 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 } });
 	let tl6 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 } });
 	let tl7 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: setg });
-	let tl8 = gsap.timeline({ repeat: -1,   defaults: setg });
+	let tl8 = gsap.timeline({ repeat: -1,    defaults: { ...setg, duration: speed2 * .5 } });
 	let tl9 = gsap.timeline({ repeat: -1, yoyo: true,  repeatDelay: 10,defaults: setg });
 	let tl10 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: setg });
 	let tl101 = gsap.timeline({ repeat: -1, repeatDelay: 5, defaults: setg });
@@ -277,56 +277,39 @@ function headSVG() {
 	let circleUp = el => tl4.fromTo(`#circle-7--${el}`, { opacity: 0, x: -70, y: 39 }, { opacity: 1, x: 0, y: 0 },`>-1`);
 
 
-	let strokel4 = `#line4-1, #line-4-2`;
+	let strokel4 = `#line4-1, #line-4-2, #line-42`;
+	let stroketl42 = `#line-42`;
 	tl4
 
-		// .to(`#circle-7--2, #circle-7--4, #circle-7--1, #circle-7--3`, {opacity:0})
-		.to(`#excavator-8`, { x: -12, y: -6 })
+		// .to(`#circle-7--2, #circle-7--4, #circle-7--1, #circle-7--3`, {opacity:0, duration:0 })
 		
 		// .add(circleUp(1))
 		// .add(circleUp(3))
-		.to(':is(#circle-7--1, #circle-7--3) :is(.st7, .st8)', { fill: '#0CD1FF' }, ">-1")
-		.to(strokel4, { stroke: '#0CD1FF' }, ">-1")
-		.fromTo(`#circle-7--1, #circle-7--3`,   { opacity: 0}, { opacity: 1}, ">-1")
-		// .fromTo(`#circle-7--1, #circle-7--3`, { opacity: 0 }, { opacity: 1 },`>-1`)
-		.fromTo(`#circle-7--1, #circle-7--3`, { opacity: 1, x: 0, y: 0 }, { opacity: 0, x: -70, y: 39 }, ">-1")
-		.to(':is(#circle-7--1, #circle-7--3) :is(.st7, .st8)', { fill: '#017AFF'} , ">-1")
-		.to(strokel4, { stroke: '#3998FF' }, ">-1")
-		.to(`#circle-7--1, #circle-7--3`,   { opacity: 1}, ">-1")
-		.to(`#circle-7--1, #circle-7--3`,   { opacity: 0, x: 0, y: 0  }, ">-.5")
-		.to(`#circle-7--2, #circle-7--4`, {opacity:1}, ">-2")
-		.to(`#circle-7--2, #circle-7--4`, { opacity: 0, x: -70, y: 39 }, ">-.5")
-		.to(`#excavator-8`, { x: 0, y: 0 })
-		.set(`#circle-7--2, #circle-7--4`, {x: 0, y: 0 },">-1")
-		// .to(`#circle-7--2, #circle-7--4`, { opacity: 0 }, ">-1") 
-		
-		
-		// .to(`#excavator-8`, { x: -12, y: -6 },">-1")
-		
-		// .add(circleUp(1))
-		// .add(circleUp(3))
-		// .to(`#circle-7--2, #circle-7--4, #circle-7--1, #circle-7--3`,   { opacity: 1}, ">-1")
-		// .to(':is(#circle-7--1, #circle-7--3) :is(.st7, .st8)', { fill: '#0CD1FF' }, ">-1")
-		// .to(strokel4, { stroke: '#0CD1FF' }, ">-1")
-		// // .fromTo(`#circle-7--1, #circle-7--3`, { opacity: 0 }, { opacity: 1 },`>-1`)
-		// .fromTo(`#circle-7--1, #circle-7--3`, { opacity: 1, x: 0, y: 0 }, { opacity: 0, x: -70, y: 39 }, ">-1")
-		// .to(':is(#circle-7--1, #circle-7--3) :is(.st7, .st8)', { fill: '#017AFF'} , ">-1")
-		// .to(strokel4, { stroke: '#3998FF' }, ">-1")
-		// .to(`#circle-7--1, #circle-7--3`,   { opacity: 1, x: 0, y: 0  }, ">-1")
-		// .fromTo(`#circle-7--2, #circle-7--4`, {opacity:1},  { opacity: 0, x: -70, y: 39 }, ">-1")
-		// .to(`#excavator-8`, { x: 0, y: 0 })
-		// .to(`#circle-7--2, #circle-7--4`, { opacity: 0 }, ">-1") 
-	
-	let stroketl42 = `#line-42`;
-	tl42
 		.to(`#g-1`,  { opacity: 1, x: 180, y: -110 })
 		.to(`#g-1`, { skewX: -31, x: 220, y: -90, opacity: 0 })
-		.to(':is(#g-1) :is(.st7, .st8)', { fill: bluel }, ">-1")
-		.to(stroketl42, { stroke: bluel }, ">-1")
-		.to(`#g-1`,  { opacity: 1, x: 180, y: -110,skewX: 0 })
-		.to(`#g-1`,  { opacity: 0, x: 0, y: 0})
-		.to(':is(#g-1) :is(.st7, .st8)', { fill: '#017AFF' }, ">-1")
-		.to(stroketl42, { stroke: '#3998FF' }, ">-1") 
+		.to(`#excavator-8`, { x: -12, y: -6 }, ">-1")
+		
+		.to(':is(#g-1) :is(.st7, .st8), :is(#circle-7--1, #circle-7--3) :is(.st7, .st8)', { fill: bluel, duration:0 })
+		.to(strokel4, { stroke: bluel } ) 
+		.to(`#g-1`,  { opacity: 1, x: 180, y: -110,skewX: 0 }, ">-1")
+		.to(`#g-1`, { opacity: 0, x: 0, y: 0 })
+		 
+		.to(`#circle-7--1, #circle-7--3`, { opacity: 1}, ">-1")
+		.to(`#circle-7--1, #circle-7--3`,{ opacity: 0, x: -70, y: 39 } )
+		
+		.to(':is(#g-1) :is(.st7, .st8), :is(#circle-7--1, #circle-7--3) :is(.st7, .st8)', { fill: blue, duration:0 })
+		.to(strokel4, { stroke: blue } )
+		.to(`#circle-7--1, #circle-7--3`,   { opacity: 1}, ">-1")
+		.to(`#circle-7--1, #circle-7--3`,   { opacity: 0, x: 0, y: 0  }, ">-.5")
+		.to(`#circle-7--2, #circle-7--4`, {opacity:1}, ">-1")
+		.to(`#circle-7--2, #circle-7--4`, { opacity: 0, x: -70, y: 39 }, ">-.5") 
+		.to(`#excavator-8`, { x: 0, y: 0 }, ">-1")
+		.set(`#circle-7--2, #circle-7--4`, {x: 0, y: 0, duration:0 })
+	
+
+	// tl42
+		// .to(':is(#g-1) :is(.st7, .st8)', { fill: '#017AFF' }, ">-1")
+		// .to(stroketl42, { stroke: '#3998FF' }, ">-1") 
 		
 		
 		tl5
@@ -401,31 +384,31 @@ function headSVG() {
 		.to(`#circle-15--2`, { skewX: -31, x: -35, y: 50 })
 		.fromTo(`#circle-15--2`, { opacity: 0 }, { opacity: 1, x: -55, y: 37 })
 		.to(`#circle-15--2`, { skewX: 0, x: 15, y: -10 })
-		.fromTo(`#circle-15--1`, { opacity: 0, x: -34, y: 22, }, { opacity: 1, x: 5, y: -4 }, ">-1")
+		.fromTo(`#circle-15--1`, { opacity: 0, x: -34, y: 22, }, { opacity: 1, x: 5, y: -4 }, ">-.5")
 		.fromTo(`#circle-15--4`, { opacity: 0, x: 34, y: -21, }, { opacity: 1, x: -18, y: 10 })
-		.fromTo(`#circle-15--3`, { opacity: 0, x: 9, y: -5, }, { opacity: 1, x: -26, y: 16 }, ">-1")
+		.fromTo(`#circle-15--3`, { opacity: 0, x: 9, y: -5, }, { opacity: 1, x: -26, y: 16 }, ">-.5")
 		.to(`#circle-15--1, #circle-15--2`, { opacity: 0 }, ">-0.5")
 		
-		.fromTo(`#circle-15--5`, { opacity: 0, x: 30, y: -18, }, { opacity: 1, x: -24, y: 14 }, ">-1")
-		.fromTo(`#circle-15--6`, { opacity: 0, x: 44, y: -26, }, { opacity: 1, x: -57, y: 32 }, ">-1")
+		.fromTo(`#circle-15--5`, { opacity: 0, x: 30, y: -18, }, { opacity: 1, x: -24, y: 14 }, ">-.5")
+		.fromTo(`#circle-15--6`, { opacity: 0, x: 44, y: -26, }, { opacity: 1, x: -57, y: 32 }, ">-.5")
 		.to(`#circle-15--6`, { x: -5, y: 70, skewX: -31 })
-		.to(`#circle-15--5`, { skewX: 0, opacity: 1, x: 19, y: 49 }, ">-1")
-		.to(':is(#circle-15--5, #circle-15--6) :is(.st5, .st6)', { fill: '#0CD1FF' })
-		.to(stroketl8, { stroke: '#0CD1FF'  }, ">-1")
-		.to(`#circle-15--6`,   { opacity: 1, x: -57, y: 32, skewX: -31}, ">-0.5")
-		.to(`#circle-15--5`,   { opacity: 1, x: -24, y: 14, skewX: -31}, ">-1")
+		.to(`#circle-15--5`, { skewX: 0, opacity: 1, x: 19, y: 49 }, ">-.5")
+		.to(':is(#circle-15--5, #circle-15--6) :is(.st5, .st6)', { fill: bluel })
+		.to(stroketl8, { stroke: bluel  })
+		.to(`#circle-15--6`,   { opacity: 1, x: -57, y: 32, skewX: -31} )
+		.to(`#circle-15--5`,   { opacity: 1, x: -24, y: 14, skewX: -31}, ">-.5")
 		
-		.to(`#circle-15--6`, { opacity: 0, x: 44, y: -26,  skewX: 0}, ">-0.5")
-		.to(`#circle-15--5`, { opacity: 0, x: 30, y: -18,  skewX: 0}, ">-1")
-		.to(stroketl8, { stroke: '#3998FF'  }, ">-1")
+		.to(`#circle-15--6`, { opacity: 0, x: 44, y: -26,  skewX: 0} )
+		.to(`#circle-15--5`, { opacity: 0, x: 30, y: -18,  skewX: 0}, ">-.5")
+		.to(stroketl8, { stroke: '#3998FF'  }, ">-.5")
 		
 
-		.fromTo(`#circle-15--7, #circle-15--8`, { opacity: 0, x: -45, y: -62, transformOrigin: "center  center" }, { opacity: 1, x: -90, y: -35, }, ">-1")
+		.fromTo(`#circle-15--7, #circle-15--8`, { opacity: 0, x: -45, y: -62, transformOrigin: "center  center" }, { opacity: 1, x: -90, y: -35, }, ">-.5")
 		.to(':is(#circle-15--7, #circle-15--8) :is(.st5, .st6)', { fill: '#0CD1FF' })
-		.to(stroketl82, { stroke: '#0CD1FF'  }, ">-1")
+		.to(stroketl82, { stroke: '#0CD1FF'  }, ">-.5")
 		.fromTo(`#circle-15--7, #circle-15--8`, { opacity: 0, x: -90, y: -35, }, { opacity: 1, x: -38, y: -67, transformOrigin: "center  center" }, ">-0.5")
 		.to(`#circle-15--7, #circle-15--8`, { opacity: 0 }, ">-0.5")
-		.to(stroketl82, { stroke: '#3998FF'  }, ">-1")
+		.to(stroketl82, { stroke: '#3998FF'  }, ">-.5")
 
 	tl9
 		
