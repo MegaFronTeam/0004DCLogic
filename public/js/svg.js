@@ -88,19 +88,19 @@ function headSVG() {
 		.fromTo('#belaz-1',
 			{ x: 150, y: -150, opacity: 0 },
 			{ x: 0, y: 0, opacity: 1 })
-		.fromTo('#circle-2_3_', { opacity: 0, x: 0, y: 0 }, { opacity: 1, x: -20, y: 17 })
+		.fromTo('#circle-2_3_', { opacity: 0, x: 0, y: 0 }, { opacity: 1, x: -22, y: 17 })
 
-		.to('#circle-2_3_', { x: 35, y: 54, skewX: -35 })
-		.to('#circle-2_3_', { skewX: 0, x: -10, y: 88, transformOrigin: "center  center" })
+		.to('#circle-2_3_', { x: 42, y: 55, skewX: -35 })
+		.to('#circle-2_3_', { skewX: 0, x: -12, y: 86, transformOrigin: "center  center" })
 		.to('#circle-2_3_', { x: 7, y: 100, skewX: -35, transformOrigin: "center  center" })
 		.fromTo('#circle-2_3_1', { opacity: 1, x: 58, y: 34, transformOrigin: "center  center" }, { opacity: 0, x: -16, y: -10, transformOrigin: "center  center" })
 
-		.to('#color1, #color2', { stroke: '#0CD1FF' }, ">-.5")
-		.to(':is(#circle-2_3_1, #circle-2_3_) :is(.st7, .st8)', { fill: '#0CD1FF' }, ">-1")
-		.to('#circle-2_3_1', { opacity: 1, x: 58, y: 34, transformOrigin: "center  center" }, ">-1")
-		.to('#circle-2_3_', { x: -10, y: 88, skewX: -35, transformOrigin: "center  center" })
-		.to('#circle-2_3_', { x: 35, y: 54, skewX: 0, transformOrigin: "center  center" })
-		.to('#circle-2_3_', { x: -20, y: 17, skewX: -35, })
+		.to(':is(#circle-2_3_1, #circle-2_3_) :is(.st7, .st8)', { fill: '#0CD1FF', duration: 0  })
+		.to('#color1, #color2', { stroke: '#0CD1FF'}, ">-1")
+		.to('#circle-2_3_1', { opacity: 1, x: 58, y: 34, transformOrigin: "center  center" })
+		.to('#circle-2_3_', { x: -12, y: 86, skewX: -35, transformOrigin: "center  center" })
+		.to('#circle-2_3_', { x: 42, y: 55, skewX: 0, transformOrigin: "center  center" })
+		.to('#circle-2_3_', { x: -22, y: 17, skewX: -35, })
 		.to('#circle-2_3_', { opacity: 0, x: 0, y: 0, skewX: 0 })
 		.to('#belaz-1',
 			{ x: 150, y: -150, opacity: 0 })
@@ -322,28 +322,28 @@ function headSVG() {
 	let stroketl42 = `#line-42`;
 	tl4
 
-		// .to(`#circle-7--2, #circle-7--4, #circle-7--1, #circle-7--3`, {opacity:0, duration:0 })
+		.to(`#circle-7--2, #circle-7--4, #circle-7--1, #circle-7--3`, {opacity:0, duration:0 })
 		
 		// .add(circleUp(1))
 		// .add(circleUp(3))
-		.to(`#g-1`,  { opacity: 1, x: 180, y: -110 })
-		.to(`#g-1`, { skewX: -31, x: 220, y: -90, opacity: 0 })
+		.to(`#g-1`,  { opacity: 1, x: 185, y: -110 }, ">-1")
+		.to(`#g-1`, { skewX: -31, x: 218, y: -90, opacity: 0 })
 		.to(`#excavator-8`, { x: -12, y: -6 }, ">-1")
 		
 		.to(':is(#g-1) :is(.st7, .st8), :is(#circle-7--1, #circle-7--3) :is(.st7, .st8)', { fill: bluel, duration:0 })
 		.to(strokel4, { stroke: bluel } ) 
-		.to(`#g-1`,  { opacity: 1, x: 180, y: -110,skewX: 0 }, ">-1")
+		.to(`#g-1`,  { opacity: 1, x: 185, y: -110,skewX: 0 }, ">-1")
 		.to(`#g-1`, { opacity: 0, x: 0, y: 0 })
 		 
 		.to(`#circle-7--1, #circle-7--3`, { opacity: 1, duration: speed2 * .4}, ">-1")
-		.to(`#circle-7--1, #circle-7--3`,{ opacity: 0, x: -70, y: 39 }, ">-.1")
+		.to(`#circle-7--1, #circle-7--3`,{ opacity: 0, x: -70, y: 41 }, ">-.1")
 		
 		.to(':is(#g-1) :is(.st7, .st8), :is(#circle-7--1, #circle-7--3) :is(.st7, .st8)', { fill: blue, duration:0 })
 		.to(strokel4, { stroke: blue } )
 		.to(`#circle-7--1, #circle-7--3`,   { opacity: 1}, ">-1")
 		.to(`#circle-7--1, #circle-7--3`,   { opacity: 0, x: 0, y: 0  }, ">-.5")
 		.to(`#circle-7--2, #circle-7--4`, {opacity:1}, ">-1")
-		.to(`#circle-7--2, #circle-7--4`, { opacity: 0, x: -70, y: 39 }, ">-.5") 
+		.to(`#circle-7--2, #circle-7--4`, { opacity: 0, x: -70, y: 41 }, ">-.5") 
 		.to(`#excavator-8`, { x: 0, y: 0 }, ">-1")
 		.set(`#circle-7--2, #circle-7--4`, {x: 0, y: 0, duration:0 }, ">-.5")
 	
@@ -367,7 +367,7 @@ function headSVG() {
 		// // .add(handUp)
 	tl61
 	
-		.from('#circle-10--1', { opacity: 1, x: 30, y: 20 })
+		.from('#circle-10--1', { opacity: 1, x: 30, y: 16 })
 		.to('#circle-10--2', { opacity: 1}, ">-.5") 
 		.to('#circle-10--2', {  x: -10, y: 6, duration: speed2 * .5 }, ">-.5")
 		.to('#circle-10--2', { opacity: 0}, ">-.5") 
@@ -382,31 +382,10 @@ function headSVG() {
 		.to('#circle-10--2', { opacity: 1}, ">-.5") 
 		.to('#circle-10--2', {  x: 0, y: 0, duration: speed2 * .5 }, ">-.5")
 		.to('#circle-10--2', { opacity: 0}, ">-.5") 
-		.to('#circle-10--1', { opacity: 1, x: 30, y: 20 })
+		.to('#circle-10--1', { opacity: 1, x: 30, y: 16 })
 		.to(':is(#circle-10--2, #circle-10--1) :is(.st7, .st8), :is(#g-2) :is(.st7, .st8)', { fill: blue, duration:0})
-		.to('#line-6, #line-28', { stroke: blue })
-	// .to('#circle-10--2', { opacity: 0,}, ">-.5") 
-	// .to('#circle-10--1', { opacity: 0}, ">-.5")
-		// .to(':is(#circle-10--2, #circle-10--1) :is(.st7, .st8)', { fill: bluel, duration:0})
-		// .to('#line-6', { stroke: bluel }, ">-1")
-		
-
-
-		// .to(':is(#g-2) :is(.st7, .st8)', { fill: bluel, duration:0})
-		// .to('#line-28', { stroke: bluel } )
-		// .to(':is(#g-2) :is(.st7, .st8)', { fill: blue, duration:0})
-		// .to('#line-28', { stroke: blue })
-		// .to('#circle-10--2', { opacity: 1}, ">-1")
-			// .to('#circle-10--2', {x: 0, y: 0 })
-			// .to('#circle-10--2', { opacity: 0,})
-			// .to('#circle-10--1', { opacity: 1, x: 0, y: 0 }, ">-2")
-			// .to('#circle-10--1', { opacity: 0,})
-		// .to('#circle-10--1, #circle-10--2', { opacity: 0 })
-
-	// let hand12Down = tl7.to( "#hand-12", {rotate:0,  transformOrigin: "left top"   }); 
+		.to('#line-6, #line-28', { stroke: blue }) 
 	
-	// let hand12Up = tl7.to( "#hand-12", {rotate:8,  transformOrigin:"left top" });  
-	// tl28
 	tl71
 		.to( "#hand-12", {rotate:8,  transformOrigin:"left top" }) 
 		.to('#circle-11--3, #circle-11--4',  { opacity: 1},'>-1')
@@ -416,55 +395,25 @@ function headSVG() {
 			.to( "#hand-12", {rotate:0,  transformOrigin: "left top"   })
 	tl7
 		.fromTo('#circle-11--1, #circle-11--2',  { opacity:0, x: 60, y: 30, duration:0 }, { x: 0, y: 0, opacity:1 })
-		.to('#circle-11--1, #circle-11--2',   {  opacity:0 }, ">-.5")
-		// .to('#circle-11--1, #circle-11--2',  { x: 0, y: 0, opacity:0 }, ">-.5")
-		// .fromTo('#screen-12--1, #screen-12--2', { opacity: 1 }, { opacity: 0 }, `+=${1} `)
-		// .fromTo('#screen-12--3', { opacity: 1 }, { opacity: 0, y: 14 })
-		// .fromTo('#circle-11--1', { opacity: 1 }, { opacity: 0, x: 54, y: 34 })
-		.fromTo('#circle-12', { opacity: 0, x: 0, y: 0 }, { opacity: 1, x: -56, y: 40 },">-.5")
-		.fromTo('#circle-12', { x: -56, y: 40 }, { skewX: -31, x: -140, y: -13 })
-		.fromTo('#circle-12-1', { opacity: 0, x: -98, y: 15 }, { opacity: 1, x: -140, y: 41 },">-1")
+		.to('#circle-11--1, #circle-11--2',   {  opacity:0 }, ">-.5") 
+		.fromTo('#circle-12', { opacity: 0, x: 0, y: 0 }, { opacity: 1, x: -58, y: 35 },">-1")
+		.fromTo('#circle-12', { x: -58, y: 35 }, { skewX: -31, x: -140, y: -11 })
+		.fromTo('#circle-12-1', { opacity: 0, x: -98, y: 15 }, { opacity: 1, x: -140, y: 44 },">-1")
 		.to('#circle-12, #circle-12-1', { opacity: 0 },">-.5")
 		.to(':is(#circle-11--1, #circle-11--2, #circle-12, #circle-12-1) :is(.st7, .st8)', { fill: bluel, duration:0})
 		.to('#line-7-1, #line-7-2, #line-7', { stroke: bluel } )
 		.to('#circle-12, #circle-12-1', { opacity: 1 }, ">-1")
 		.to('#circle-12-1', { opacity: 1, x: -98, y: 15 }, ">-.5")
 		.to('#circle-12-1', { opacity: 0 }, ">-.5")
-		.to('#circle-12', { skewX: 0, x: -56, y: 40 }, ">-1")
+		.to('#circle-12', { skewX: 0, x: -58, y: 35 }, ">-1")
 		.to('#circle-12', { opacity: 0, x: 0, y: 0 })
 		.to('#circle-11--1, #circle-11--2', { opacity: 1,  x: 60, y: 30 }, ">-.5") 
 		.to('#circle-11--1, #circle-11--2', { opacity: 0 })
 		.to(':is(#circle-11--1, #circle-11--2, #circle-12, #circle-12-1) :is(.st7, .st8)', { fill: blue, duration:0})
 		.to('#line-7-1, #line-7-2, #line-7', { stroke: blue })
-		.to('#circle-11--1, #circle-11--2',  { opacity:0, x: 0, y: 0, duration:0 })
-		// .to('#circle-11--1, #circle-11--2',  { opacity:0, x: 0, y: 0, duration:0 })
+		.to('#circle-11--1, #circle-11--2',  { opacity:0, x: 0, y: 0, duration:0 }) 
 
-	// .to('#circle-11--1, #circle-11--2,#circle-11--3, #circle-11--4 ',  { opacity: 0})
-	// .to(':is(#circle-11--1, #circle-11--2) :is(.st7, .st8)', { fill: blue, duration:0})
-	// .to('#line-7-1, #line-7-2', { stroke: blue } )
-
-
-	
-		// .add(hand12Down)
-		// .fromTo('#monitor-20', { opacity: 1 }, { opacity: 0 })
-		// .to('[d="M161.1,250.5l35.3,20.4l59.8-35.8 M161.1,250.5l-57,35.2 M161.1,250.5l-60.6-36.4"]', { stroke: '#0CD1FF' }, ">-.5")
-		// .to('#circle-12 :is(.st7, .st8), #circle-12-1 :is(.st7, .st8)', { fill: '#0CD1FF' }, ">-1")
-		// .to('[d="M161.1,250.5l35.3,20.4l59.8-35.8 M161.1,250.5l-57,35.2 M161.1,250.5l-60.6-36.4"]', { stroke: '#3998FF' })
-		// .from('#circle-12 :is(.st7, .st8), #circle-12-1 :is(.st7, .st8)', { fill: '#017AFF' })
-
-		// .add(hand12Up)
-		// .to('#circle-11--2', { x: 54, y: 30, opacity: 1 })
-		// .to('#circle-11--2', {  opacity: 0 })
-		// .to('#hand-13', { y: -1 })
-		// .fromTo('#circle-11--3', { x: 54, y: 40, opacity: 0 }, { opacity: 1 })
-		// .to('#hand-14', { x: 1, y: 2 })
-		// .fromTo('#circle-11--4', { x: 54, y: 40, opacity: 0 }, { opacity: 1 })
-		// .add(hand12Down)
-
-
-
-	let circleDown15 = el => tl4.fromTo(`#circle-15--${el}`, { opacity: 1, x: 20, y: -16 }, { opacity: 0, x: -29, y: 17 }); 
-	let circleUp15 = el => tl4.fromTo(`#circle-15--${el}`, { opacity: 0 }, { opacity: 1, x: 12, y: -8 });
+ 
  
 	let stroketl8 = `#stroketl8-1, #stroketl8-2, [d="M543,361v-7.6c0-0.8-0.8-1.3-1.5-0.9L438,414.3"],
 										[d="M445.3,422.8c0-0.6,74.6,42.4,111.9,64"], 
@@ -475,34 +424,39 @@ function headSVG() {
 										`
 
 	tl8
-		.to(`#circle-15--2`, { skewX: -31, x: -35, y: 50 })
-		.fromTo(`#circle-15--2`, { opacity: 0 }, { opacity: 1, x: -55, y: 37 })
-		.to(`#circle-15--2`, { skewX: 0, x: 15, y: -10 })
+		.to(`#circle-15--2`, { skewX: -31, x: -30, y: 45 })
+		.fromTo(`#circle-15--2`, { opacity: 0 }, { opacity: 1, x: -55, y: 35 })
+		.to(`#circle-15--2`, { skewX: 0, x: 10, y: -5 })
+		.to(`#circle-15--2`, { opacity: 0 }, ">-0.5")
 		.fromTo(`#circle-15--1`, { opacity: 0, x: -34, y: 22, }, { opacity: 1, x: 5, y: -4 }, ">-.5")
-		.fromTo(`#circle-15--4`, { opacity: 0, x: 34, y: -21, }, { opacity: 1, x: -18, y: 10 })
-		.fromTo(`#circle-15--3`, { opacity: 0, x: 9, y: -5, }, { opacity: 1, x: -26, y: 16 }, ">-.5")
-		.to(`#circle-15--1, #circle-15--2`, { opacity: 0 }, ">-0.5")
+		.to(`#circle-15--1`, { opacity: 0 }, ">-0.5")
+		.fromTo(`#circle-15--4`, { opacity: 0, x: -18, y: 10 }, { opacity: 1 , x: 34, y: -21,}, ">-1.5")
+		.to(`#circle-15--4`, { opacity: 0}, ">-.5")
+		.fromTo(`#circle-15--3`, { opacity: 0 , x: -26, y: 16 }, { opacity: 1, x: 9, y: -5,}, ">-1")
+		.to(`#circle-15--3`, { opacity: 0}, ">-.5")
 		
-		.fromTo(`#circle-15--5`, { opacity: 0, x: 30, y: -18, }, { opacity: 1, x: -24, y: 14 }, ">-.5")
-		.fromTo(`#circle-15--6`, { opacity: 0, x: 44, y: -26, }, { opacity: 1, x: -57, y: 32 }, ">-.5")
-		.to(`#circle-15--6`, { x: -5, y: 70, skewX: -31 })
-		.to(`#circle-15--5`, { skewX: 0, opacity: 1, x: 19, y: 49 }, ">-.5")
+		.fromTo(`#circle-15--5`, { opacity: 0, x: 30, y: -18, }, { opacity: 1, x: -24, y: 14, duration: speed2 * 2 }, ">-.5")
+		.fromTo(`#circle-15--6`, { opacity: 0, x: 44, y: -26, }, { opacity: 1, x: -59, y: 35 }, ">-.5")
+		.to(`#circle-15--5`, { skewX: 0, opacity: 1, x: 19, y: 49, duration: speed2 * 2 }, ">-1")
+		.to(`#circle-15--6`, { x: -10, y: 66, skewX: -31, duration: speed2 * .5 }, ">-1")
 		.to(':is(#circle-15--5, #circle-15--6) :is(.st5, .st6)', { fill: bluel })
 		.to(stroketl8, { stroke: bluel  })
-		.to(`#circle-15--6`,   { opacity: 1, x: -57, y: 32, skewX: -31} )
-		.to(`#circle-15--5`,   { opacity: 1, x: -24, y: 14, skewX: -31}, ">-.5")
+		.to(`#circle-15--5`,   { opacity: 1, x: -24, y: 14, skewX: -31 , duration: speed2 * 2})
+		.to(`#circle-15--6`,   { opacity: 1, x: -59, y: 35, skewX: -31, duration: speed2 * .5} , ">-1")
 		
-		.to(`#circle-15--6`, { opacity: 0, x: 44, y: -26,  skewX: 0} )
-		.to(`#circle-15--5`, { opacity: 0, x: 30, y: -18,  skewX: 0}, ">-.5")
+		.to(`#circle-15--5`, { opacity: 0, x: 30, y: -18,  skewX: 0})
+		.to(`#circle-15--6`, { opacity: 0, x: 44, y: -26,  skewX: 0, duration: speed2 * .5} )
 		.to(stroketl8, { stroke: '#3998FF'  }, ">-.5")
 		
-
-		.fromTo(`#circle-15--7, #circle-15--8`, { opacity: 0, x: -45, y: -62, transformOrigin: "center  center" }, { opacity: 1, x: -90, y: -35, }, ">-.5")
-		.to(':is(#circle-15--7, #circle-15--8) :is(.st5, .st6)', { fill: '#0CD1FF' })
+		.fromTo(`#circle-15--7 `, { opacity: 0, x: -42, y: -59, }, { opacity: 1, x: -88, y: -35, }, ">-.5")
+		.fromTo(` #circle-15--8`, { opacity: 0, x: -36, y: -62, }, { opacity: 1, x: -90, y: -35, }, ">-1")
+		.to(':is(#circle-15--7, #circle-15--8) :is(.st5, .st6)', { fill: '#0CD1FF', duration:0 })
 		.to(stroketl82, { stroke: '#0CD1FF'  }, ">-.5")
-		.fromTo(`#circle-15--7, #circle-15--8`, { opacity: 0, x: -90, y: -35, }, { opacity: 1, x: -38, y: -67, transformOrigin: "center  center" }, ">-0.5")
+		.fromTo(`#circle-15--7`, { opacity: 0, x: -88, y: -35, }, { opacity: 1, x: -42, y: -59 }, ">-0.5")
+		.fromTo(` #circle-15--8`, { opacity: 0, x: -90, y: -35, }, { opacity: 1, x: -36, y: -67 }, ">-1")
 		.to(`#circle-15--7, #circle-15--8`, { opacity: 0 }, ">-0.5")
-		.to(stroketl82, { stroke: '#3998FF'  }, ">-.5")
+		.to(':is(#circle-15--7, #circle-15--8) :is(.st5, .st6)', { fill: blue, duration:0 })
+		.to(stroketl82, { stroke: '#3998FF' }, ">-.5")
 
 	tl9
 		
