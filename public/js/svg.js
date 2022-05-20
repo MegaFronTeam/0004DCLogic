@@ -58,7 +58,7 @@ function headSVG() {
 	let tl24 = gsap.timeline({ repeat: -1, yoyo: true,repeatDelay: 5, defaults: { ...setg, duration: speed2 * .5, } });
 	let tl25 = gsap.timeline({ repeat: -1, defaults: { ...setg, duration: speed2 * .5, } });
 	let tl26 = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 2, defaults: { ...setg, duration: speed2 * .5, } });
-	let tl27 = gsap.timeline({ repeat: -1, repeatDelay: 1, defaults: { ...setg, duration: speed2 * .5, } });
+	let tl27 = gsap.timeline({ repeat: -1,   repeatDelay: 1, defaults: { ...setg, duration: speed2 * .5, } });
 	let tl28 = gsap.timeline({ repeat: -1, repeatDelay: 2, defaults: { ...setg, duration: speed2  } });
 	let tl29 = gsap.timeline({ repeat: -1, repeatDelay: 2, defaults: { ...setg, duration: speed2 * 3  } });
 	let tl30 = gsap.timeline({ repeat: -1,  defaults: { ...setg, duration: speed2 * 3  } });
@@ -162,30 +162,30 @@ function headSVG() {
 			// .to(`#hand-16-2`, { rotate:-4,  transformOrigin:"right  top" })
 
 	let dDown = { opacity: 0, y: 5 }
-	let dUp = { opacity: 1, y: 0 }
-	let handUp27 = { rotate: 8, transformOrigin: "left  top" };
-	let handDown27 = { rotate: 0, transformOrigin: "left  top" };
+	let dUp = { opacity: 1, y: 0, duration: speed2 * .2 }
+	let handUp27 = { rotate: 8, transformOrigin: "left  top", duration: speed2 * .2 };
+	let handDown27 = { rotate: 0, transformOrigin: "left  top", duration: speed2 * .2 };
 	tl27
 		.to(`#hand27-1`, handUp27)
 		.to(`#hand27-1`, handDown27)
 		.to(`#hand27`, handUp27)
 		.to(`#hand27`, handDown27)
 		
-		.set('#diagram3', { opacity: 1, y: 0 })
-		.to('#diagram3', { ...dDown , delay: 5})
-		.to(`#hand27-1`, handUp27)
+		.set('#diagram3', { opacity: 1, y: 0 }, `>-1 `)
+		.to('#diagram3', { ...dDown , delay: 2})
+		.to(`#hand27-1`, handUp27, `>-1 `)
 		.to(`#hand27-1`, handDown27)
 		.to(`#hand27`, handUp27)
 		.to(`#hand27`, handDown27)
-		.fromTo('#diagram2', dDown, dUp, `>-${.1} `)
-		.to('#diagram2', { ...dDown, delay: 5})
-		.to(`#hand27-1`, handUp27)
+		.fromTo('#diagram2', dDown, dUp, `>-1 `)
+		.to('#diagram2', { ...dDown, delay: 2})
+		.to(`#hand27-1`, handUp27, `>-1 `)
 		.to(`#hand27-1`, handDown27)
 		.to(`#hand27`, handUp27)
 		.to(`#hand27`, handDown27)
-		.fromTo('#diagram1', dDown, dUp, `>-${.1} `)
-		.to('#diagram1', { ...dDown, delay: 5})
-		.to(`#hand27-1`, handUp27)
+		.fromTo('#diagram1', dDown, dUp, `>-1 `)
+		.to('#diagram1', { ...dDown, delay: 2})
+		.to(`#hand27-1`, handUp27, `>-1 `)
 		.to(`#hand27-1`, handDown27)
 		.to(`#hand27`, handUp27)
 		.to(`#hand27`, handDown27)
