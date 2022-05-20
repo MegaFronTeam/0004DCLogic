@@ -467,6 +467,7 @@ function eventHandler() {
 	const IndexPartnersSlider = new Swiper('.sInfoNews__partners-wrap-slider', {
 		slidesPerView: 'auto',
 		spaceBetween: 8,
+		rewind: true,
 		navigation: {
 			prevEl: ".swiper-button-hand-prev",
 			nextEl: ".swiper-button-hand-next",
