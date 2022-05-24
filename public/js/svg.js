@@ -163,8 +163,8 @@ function headSVG() {
 
 	let dDown = { opacity: 0, y: 5 }
 	let dUp = { opacity: 1, y: 0, duration: speed2   }
-	let handUp27 = { rotate: 8, transformOrigin: "left  top", duration: speed2   };
-	let handDown27 = { rotate: 0, transformOrigin: "left  top", duration: speed2   };
+	let handUp27 = { rotate: 8, transformOrigin: "left  top", duration: speed2 * .5  };
+	let handDown27 = { rotate: 0, transformOrigin: "left  top", duration: speed2 * .5  };
 	tl27
 		// .to('#diagram3', { opacity: 1, y: 0 } )
 		.to('#diagram3', dUp, `>-1 ` )
@@ -177,19 +177,19 @@ function headSVG() {
 		// .to(`#hand27-1`, handDown27)
 		// .to(`#hand27`, handUp27)
 		// .to(`#hand27`, handDown27)
-		.to('#diagram3', { ...dDown , delay: 2})
+		.to('#diagram3', { ...dDown })
 		.fromTo('#diagram2', dDown, dUp, `>-1 `)
 		.to(`#hand27-1`, handUp27, `>-1 ` )
 		.to(`#hand27-1`, handDown27)
 		.to(`#hand27`, handUp27)
 		.to(`#hand27`, handDown27)
-		.to('#diagram2', { ...dDown, delay: 2})
+		.to('#diagram2', { ...dDown})
 		.fromTo('#diagram1', dDown, dUp, `>-1 `)
 		.to(`#hand27-1`, handUp27, `>-1 `)
 		.to(`#hand27-1`, handDown27)
 		.to(`#hand27`, handUp27)
 		.to(`#hand27`, handDown27)
-		.to('#diagram1', {...dDown, delay: 2})
+		.to('#diagram1', {...dDown})
 		// .to('#diagram1', { ...dDown, delay: 2})
 
 	tl22
